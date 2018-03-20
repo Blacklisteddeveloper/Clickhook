@@ -1,5 +1,5 @@
 .home {
-	background: url(../images/strip.png) no-repeat 69% 90px;
+	@include background(images,strip,png, no-repeat,69%, 90px);
 	.contentbox {
 		@include outer-container($king-ghidorah);
 		text-align: center;

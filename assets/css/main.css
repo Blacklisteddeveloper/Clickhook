@@ -3654,13 +3654,14 @@ big {
 
 a {
   color: #333333;
+  text-decoration: none;
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   transition: all 0.3s; }
   a:visited {
     color: #333333; }
   a:hover, a:focus, a:active, a.nice-select.open {
-    color: #e11f26;
+    color: #333333;
     outline: 0; }
 
 h1, h2, h3, h4, h5, div.title {
@@ -7205,7 +7206,9 @@ object {
 	:: Infinite Scroll
 	*/
 .home {
-  background: url(../images/strip.png) no-repeat 69% 90px; }
+  background-image: url(../images/strip.png);
+  background-repeat: no-repeat;
+  background-position: 69% 90px; }
   .home .contentbox {
     content: "";
     display: table;
