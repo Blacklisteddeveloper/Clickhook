@@ -1,7 +1,7 @@
 %tags{
 	h2,h3,h4 {
 		font-size:rem(32);
-		color:$deep-space-dark;
+		color:$light-black;
 		text-transform:uppercase;
 		margin-bottom:rem(29);
 		line-height: rem(35);
@@ -38,17 +38,17 @@
 		margin-bottom:rem(-5);
 		margin-top: rem(35);
 		letter-spacing:rem(1);
-		color:$red;
+		color:$light-black;
 	}
 	ul.list{
 		font-size:rem(18);
 		@include margin(rem(24) rem(24) rem(18) rem(0));
-		font-family:$main-font;
+		font-family:$light-black;;
 		list-style:none;
 		li{
 			@include background(images,bullets,png, no-repeat,1px, 8px);
 			@include padding(null null rem(13) rem(25));
-			color:$lightgrey;
+			color:$light-black;;
 		}
 	}
 
