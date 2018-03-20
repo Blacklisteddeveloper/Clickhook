@@ -1,0 +1,66 @@
+.fancybox-lock{
+	overflow: hidden;
+}
+.fancybox-margin {
+    margin-right: 16px !important;
+}
+.fancybox-overlay{
+	width: 100% !important;
+    height: 100% !important;
+    float: left;
+    background: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    margin: 0;
+    outline: none;
+    .fancybox-wrap{
+    	outline: none;
+    }
+    .fancybox-inner{
+    	overflow: initial !important;
+    }
+    .gform_anchor{
+    	top: 0;
+    	position: absolute;
+    }
+    .fancybox-close{
+	   	top: -51px;
+	    right: 3px;
+	    bottom: auto;
+	    margin: 0;
+	    opacity: 1;
+	    outline: none;
+	    position: absolute;
+	    text-decoration: none;
+	    color: white;
+	    span{
+		   	font-family:neutrafacemedium;
+		   	font-size:14px;
+		   	text-transform:uppercase;	
+    		letter-spacing: 2.54px;
+		    margin-top: 14px;
+		    float: left;
+		    margin-right: 17px;
+	    }
+      &:before{
+	    content: '\e802';
+	    font-family: 'lightcase', sans-serif;
+	    font-style: normal;
+	    font-weight: normal;
+	    font-size: 40px;
+	    speak: none;
+	    display: inline-block;
+	    text-decoration: inherit;
+	    width: 1em;
+	    text-align: center;
+	    font-variant: normal;
+	    text-transform: none;
+	    line-height: 1em;
+	    /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+      }
+	      &:hover{
+	      	color:$whitegrey;
+	      }
+    }
+}

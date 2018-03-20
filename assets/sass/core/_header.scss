@@ -1,0 +1,414 @@
+.fade-in-page{
+        -webkit-animation: fadeIn ease-in-out 1.3s both;
+    -moz-animation: fadeIn ease-in-out 1.3s both;
+    animation: fadeIn ease-in-out 1.3s both;
+}
+.light{
+	header.site-header{
+		.container{
+			.site-branding{
+				.logo{
+					color:$black;
+				    .logo_dark{
+				    	display:block;
+				    }
+				    .logo_light{
+				    	display:none;
+			    	}
+				}
+			}
+			#hamburger-icon{
+   			 	&.active{
+   			 		.line{
+   			 			background:$white;
+   			 		}
+   			 	}
+   			 	.line {
+   			 		background:$black;
+   			 	}
+   			 }
+			.main-navigation{
+			 	li {
+			 		a{
+			 			color:$black;
+			 		}
+			 		&.btn{
+			 			a{
+			 				color:$white;
+			 			}
+   			 		}
+			 	}
+       		}
+		}
+		div.banner_img {
+			background: $white !important;
+			.overlay{
+				background: $adamantium-light;
+				&:after{
+					opacity: 0.05;
+				}
+			}
+			.banner-txt{
+				color:$black;
+				.intro{
+					font-size:rem(150);
+					@include media($mobile-slg){
+						font-size:rem(80);
+					}
+					span{
+						color:$red;
+					}
+				}
+				.gliches{
+		    		@include background(images,seprater_b,png, no-repeat,center , center);
+		    	}
+			}
+		}
+	}
+}
+header{
+	&.site-header{
+		@include outer-container(100%);
+		width:100%;
+		.container{
+			@include row();
+			@include padding(rem(24) rem(36));
+			position: absolute;
+    		z-index: 200;
+    		width:100%;
+    		-webkit-transition: fadein 1.5s ease;
+            transition: fadein 1.5s ease;
+            @include media($desktop-xsm){
+            	@include padding(null rem(20));
+            }
+    		&.sticky{
+    			 position: fixed;
+    			 background:$white;
+       			 padding: rem(23) rem(52) rem(0) rem(52);
+       			 @include media($desktop-md){
+					padding-bottom:rem(23);
+				}
+				@include media($desktop-xsm){
+			 		padding: rem(24) rem(36) rem(23) rem(23);
+   			 	}
+       			 .site-branding{
+       			 	.logo{
+       			 		color:$black;
+					    transition: color,0.3s,ease-out;
+					    span{
+				    		margin-top: rem(-2);	
+				    	}
+					    .logo_dark{
+					    	display:block;
+					    	width:40px;
+					    	@include media($mobile-slg){
+	    						width: rem(28);
+	    						margin-right:rem(10);
+	    					}
+					    }
+					    .logo_light{
+					    	display:none;
+					    }
+       			 	}
+       			 }
+       			 #hamburger-icon{
+       			 	@include media($mobile-slg){
+   			 			width: rem(28);
+					    height:rem(10);
+					    margin-top: 4px;
+       			 	}
+       			 	&.active{
+       			 		.line{
+       			 			background:$white;
+       			 		}
+       			 	}
+       			 	.line {
+       			 		background:$black;
+       			 		@include media($mobile-slg){
+   			 				width: rem(28);
+       			 		}
+       			 	}
+       			 }
+       			 .main-navigation{
+       			 	li{
+       			 		&.btn{
+       			 			a{
+       			 				color:$white;
+       			 				padding: 10px 24px 8px 24px;
+       			 				border-bottom:0;
+       			 			}
+       			 		}
+	       			 	a{
+	       			 		padding: 12px 2px 32px 2px;
+	       			 		color:$black;
+	       			 		border-bottom:2px solid $white;
+	       			 	}
+       			 	}
+       			 	
+       			 }
+    		}
+			.site-branding{
+				@include float(left);
+				.logo{
+					text-decoration:none;
+					color:$white;
+					transition: color,0.3s,ease-in;
+					 .logo_dark{
+					    	display:none;
+					    }
+					    .logo_light{
+					    	display:block;
+					    }
+					img{
+						float: left;
+    					width: 48px;
+					    margin-right: 20px;
+					    MARGIN-TOP: 2PX;
+					    @include media($mobile-slg){
+    						width: rem(32);
+    						margin-right:rem(10);
+    					}
+					}
+					span{
+					 	font-size:rem(43);
+						text-transform: uppercase;
+	    				letter-spacing: 12px;
+	    				margin-top: 3px;
+	    				float: left;
+	    				@include media($mobile-slg){
+    						font-size:rem(29);
+    						letter-spacing: 6px;
+    					}
+					 	&:nth-child(1){
+					 		font-family:$head-font-bold;
+					 		transition-delay: 0.1s;
+					 	}
+					 	&:nth-child(2){
+					 		font-family:$head-font-bold;
+					 		transition-delay: 0.1s;
+					 	}
+					 	&:nth-child(3){
+					 		font-family:$head-font-bold;
+					 		transition-delay: 0.125s;
+					 	}
+					 	&:nth-child(4){
+					 		font-family:$head-font-bold;
+					 		transition-delay: 0.15s;
+					 	}
+					 	&:nth-child(5){
+					 		font-family:$head-font-bold;
+					 		transition-delay: 0.175s;
+					 	}
+					 	&:nth-child(6){
+					 		transition-delay: 0.2s;
+					 	}
+					 	&:nth-child(7){
+					 		transition-delay: 0.225s;
+					 	}
+					 	&:nth-child(8){
+					 		transition-delay: 0.25s;
+					 	}
+					 	&:nth-child(9){
+					 		transition-delay: 0.30s;
+					 	}
+					 	&:nth-child(10){
+					 		transition-delay: 0.325s;
+					 	}
+					}
+					&:hover{
+					   color:$rocket-red;
+					   transition: color,0.3s,ease-out;
+					}	
+				}
+			}
+			.main-navigation{
+				@include float(right);
+				margin-top: 6px;
+			}
+		}
+		.site-banner{
+			@include float(right);
+			@include position(relative, null null null null);
+		    @include size(100% 100vh);
+		    display: table;
+		   	z-index: 2;
+		   	overflow:hidden;
+		   	transform: translateY(0px);
+		    canvas{
+		    	position: absolute;
+		    	color:$rocket-red;
+			    @include size(100% 100%);
+		    }
+		    .banner{
+		    	position: absolute;
+				z-index: -1;
+				@include size(100% 100%);
+				background-size: cover;
+				background-position: center;
+		    }
+		    .banner-txt{
+		    	display: table-cell;
+    			vertical-align: middle;
+    			font-family:$head-font-light;
+    			@include padding(0 10%);
+    			color:$white;
+    			text-transform:uppercase;
+    			text-align:center;
+    			-webkit-backface-visibility: hidden;
+			    -webkit-transform: translateZ(0);
+			    -webkit-animation: fade-in ease-in-out 3s 1s both;
+			    -moz-animation: fade-in ease-in-out 3s 1s both;
+			    animation: fade-in ease-in-out 3s 1s both;
+    			@include position(relative, null null null null);
+    			z-index: 1;
+		    	.intro{
+		    		font-size:rem(150);
+		    		@include media($desktop-md){
+						font-size:rem(100);
+					}
+					@include media($desktop-xsm){
+						font-size:rem(75);
+					}
+					@include media($mobile-slg){
+						font-size:rem(50);
+					}
+					@include media($mobile-md){
+						font-size: 43px;
+    					margin-bottom: 12px;
+					}
+
+		    	}
+		    	ul{
+		    		    list-style: none;
+		    	}
+		    	span{
+		    		font-size:rem(24);
+		    		font-family:$font-regular;
+		    		letter-spacing: 4px;
+		    		@include media($desktop-xsm){
+						font-size:rem(15);
+						font-family:$font-regular;
+					}
+					@include media($mobile-slg){
+						font-size:rem(12);
+					}
+					@include media($mobile-md){
+						font-size: 14px;
+    					letter-spacing: 2px;
+					}
+		    	}
+		    	.button{
+		    		font-family:$font-regular;
+		    		@include margin(rem(37) null null null);
+		    		@include media($desktop-xsm){
+		    			@include margin(rem(23) null null null);
+		    		}
+		    		@include media($mobile-md){
+		    			@include margin(rem(32) null null null);	
+		    		}
+		    		a{
+		    			font-size:rem(16);
+		    			color:$white;
+		    			letter-spacing: 2px;
+		    			font-family:$font-regular;
+		    			@include padding(rem(12) rem(27) rem(10) rem(27));
+		    			&:nth-child(1){
+		    				@include margin(null rem(22) null null);
+		    			}
+		    			&:hover{
+		    				color:$rocket-red;
+		    			}
+		    			&.mobile{
+		    				display:none;
+		    				@include media($desktop-xsm){
+		    					display:inline-block;
+		    				}
+		    			}
+		    			@include media($desktop-xsm){
+		    				display:none;
+		    			}
+		    		}
+		    	}
+		    }
+		}
+		.inner-banner{
+			@include overlay($black,0.7);
+			@include float(right);
+			@include position(relative, null null null null);
+		    @include size(100% rem(501));
+		    display: table;
+		   	z-index: 2;
+		   	transform: translateY(0px);
+		   	.overlay{
+		   		&:after
+		   		{
+		   			@include background(images,star-web,png, no-repeat,center,center);
+					content:'';
+					@include size(100% 100%);
+					background-size: 110%;
+					@include position(absolute, 0 0 null null);
+					@include media($mobile-slg){
+						background-size: 200%;
+					}			
+		   		}
+		   	}
+		   	.banner_img{
+		   		@include size(100% rem(501));
+			    position: absolute;
+			    float: left;
+			    background-size: cover;
+			    display:table;
+		   	}
+		   	.banner-txt{
+		    	display: table-cell;
+    			vertical-align: middle;
+    			font-family:$head-font-light;
+    			@include padding(0 10%);
+    			color:$white;
+    			text-transform:uppercase;
+    			text-align:center;
+    			-webkit-backface-visibility: hidden;
+			    -webkit-transform: translateZ(0);
+			    -webkit-animation: fade-in ease-in-out 3s 1s both;
+			    -moz-animation: fade-in ease-in-out 3s 1s both;
+			    animation: fade-in ease-in-out 3s 1s both;
+    			@include position(relative, null null null null);
+    			z-index: 1;
+		    	.intro{
+		    		font-size:rem(130);
+    				@include margin(rem(64) auto rem(5) auto);
+    				@include media($mobile-slg){
+						font-size:rem(80);
+					}
+					&.small{
+						font-size:rem(60);
+						@include margin(rem(64) auto rem(24) auto);
+						@include media($mobile-slg){
+							font-size:rem(30);
+						}
+					}
+		    	}
+		    	.gliches{
+		    		@include background(images/svg,seprater,svg, no-repeat,center , center);
+					@include size(rem(129) rem(15));
+					@include margin(0 auto);
+					@include transition(all 0.3 ease);
+		    	}
+		    	.button{
+		    		font-family:$banner-font-bold;
+		    		@include margin(rem(37) null null null);
+		    		a{
+		    			font-size:rem(16);
+		    			@include padding(rem(12) rem(27) rem(10) rem(27));
+		    			&:nth-child(1){
+		    				@include margin(null rem(22) null null);
+		    			}
+		    			&:hover{
+		    				color:$rocket-red;
+		    			}
+		    		}
+		    	}
+		    }
+		}
+	}
+}

@@ -1,0 +1,130 @@
+.ui-slider { 
+  height: 32px;
+  position: relative;
+  margin-bottom: -32px;
+  z-index: 100;
+  
+  input.slider{
+    border: 0px;
+    padding: 0px;
+    display: block;
+  }
+}
+.range-container{
+   width: 100%;
+    label{
+      text-align:center;
+      display:block;
+      width: 100%;
+      margin-bottom: rem(22);
+      margin-top: rem(42);
+    }
+}
+.label-container {
+  -webkit-flex-basis: 100%;
+  display: -webkit-flex;
+  -webkit-flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  margin-top: rem(16);
+}
+.bar{
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  ul{
+    li{
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      color:$lightgrey_p;
+      font-family:$progress_bar;
+      text-transform: uppercase;
+      border: 1px solid $lightgrey_line;
+      @include padding(0.8em null 0.6em);
+      border-radius: 10em;
+      background:$form_bg;
+      position: relative;
+      width: 34%;
+      outline: 0;
+      font-size: 18px;
+      height: 32px;
+    letter-spacing: 2px;
+    }
+    li:nth-child(1){
+        
+    }
+    li:nth-child(2){
+      width: 37.8%;
+      margin-left: -6%;
+      position: relative;
+      z-index: 100;
+      margin-right: -5%;
+    }
+    li:nth-child(3){
+        width: 38.8%;
+        position: relative;
+        z-index: 50;
+    }
+  }
+}
+
+.steps {
+  span{
+    &.first{
+      margin-left: 0;
+    }
+    &:last-child{
+      float:right;
+          margin-left: 0;
+    }
+    color:$deep-space-dark;
+    font-size: rem(16);
+    margin-top: 0.9375rem;
+    text-align: center;
+    font-family: neutrafacebold;
+    float: left;
+    text-align: right;
+    text-align: center;
+    opacity: 0.4;
+    margin-left: 20.2%;
+    @include media($desktop-md){
+      font-size: rem(13);
+    }
+    @include media($mobile-lg){
+      margin-left: 19.2%;
+    }
+  }
+}
+
+.slider-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.ui-slider-range {
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.ui-slider-range {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #df1f26;
+  height: 34px;
+  pointer-events: none;
+  border-radius: 40px;
+  .rocket_img{
+    @include background(images,flatrocket,png, no-repeat,0, 0,100%);
+    float: right; 
+    padding:16px 16px 18px 34px;
+    margin-top: -9px;
+    margin-right: -26px;
+    font-family:$banner-font-display;
+    color:$white;
+  }
+}
+
