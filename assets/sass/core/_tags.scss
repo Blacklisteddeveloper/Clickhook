@@ -43,7 +43,7 @@
 	ul.list{
 		font-size:rem(18);
 		@include margin(rem(24) rem(24) rem(18) rem(0));
-		font-family:$common-txt;
+		font-family:$main-font;
 		list-style:none;
 		li{
 			@include background(images,bullets,png, no-repeat,1px, 8px);
@@ -51,4 +51,5 @@
 			color:$lightgrey;
 		}
 	}
+
 }

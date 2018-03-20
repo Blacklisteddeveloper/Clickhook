@@ -1,0 +1,183 @@
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Proxima Nova', arial;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	text-decoration: none;
+}
+
+a{
+	transition-duration: 1s;
+    transition-timing-function: linear;
+}
+
+
+
+#wrapper {
+	padding: 63px;
+}
+
+.logo {
+	float: left;
+}
+
+.sidebox {
+	position: absolute;
+	left: 60px;
+	top: 50%;
+	margin-top: -110px;
+}
+
+.sidebox ul {
+	list-style: none;
+}
+
+.sidebox ul li {
+	margin-bottom: 13px;
+}
+
+.sidebox ul li a {
+	background: #d5d5d5;
+	padding: 8px;
+	display: block;
+	border-radius: 50%;
+}
+
+.sidebox ul li:hover a,.sidebox ul li.selected a {
+	background: #3a65f4;
+}
+
+.sidebox ul li a img {
+	width: 15px;
+}
+
+nav {
+	float: right;
+	margin-top: -6px;
+}
+
+nav .getdemo {
+	float: left;
+	color: #fff;
+	background: #4870f5;
+	text-decoration: none;
+	padding: 21px 29px;
+	font-size: 21px;
+	border-radius: 23px;
+	margin-top: 0px;
+	letter-spacing: 2.75px;
+	font-weight: 600;
+	transition-property: background;
+}
+
+
+nav .getdemo:hover {
+	background: #303030;
+	
+}
+
+nav .hamburger {
+	float: right;
+    padding: 18px 28px
+}
+
+nav .hamburger-box {
+    position: relative;
+    display: inline-block;
+    width: 33px;
+    height: 30px;
+}
+nav .hamburger-inner,nav .hamburger-inner:after,nav .hamburger-inner:before {
+    width: 33px;
+    height: 6px;
+    background-color: #4870f5;
+}
+
+nav .hamburger--spring .hamburger-inner:before {
+    top: 12px;
+}
+
+nav .hamburger--spring .hamburger-inner:after {
+    top: 24px;
+}
+
+.home {
+	background: url(../images/strip.png) no-repeat 69% 90px;
+}
+
+.home .contentbox {
+	max-width: 1200px;
+	text-align: center;
+	margin: 112px auto;
+}
+
+.home .contentbox h1 {
+	color: #4870f5;
+	font-size: 62px;
+	text-align: left;
+	font-weight: 500;
+	margin-left: -11%;
+}
+
+.home .contentbox .imagecenter {
+	margin-top: 71px;
+}
+
+.home .contentbox .imagecenter img {
+}
+
+footer {
+	max-width: 965px;
+	width: 100%;
+	color: #4870f5;
+	margin: 0 auto;
+	font-size: 13px;
+}
+
+footer .copyright {
+	float: left;
+}
+
+footer .footernav {
+	float: right;
+}
+
+footer .footernav a {
+	text-decoration: none;
+	color: #4870f5;
+}
+
+.chatus {
+	position: absolute;
+	right: 0;
+	background: white;
+	padding: 8px;
+	line-height: 28px;
+	border-radius: 50px 0 0 50px;
+	box-shadow: -7px 0px 6px #ccc;
+	font-size: 17px;
+	margin-top: -19px;
+	color: #333333;
+	padding-right: 33px;
+	transition-property: box-shadow;
+}
+
+
+.chatus:hover {
+	box-shadow: -7px 0px 6px #4870f5;
+}
+
+.chatus:before {
+	content: '';
+	width: 27px;
+	background: url(../images/chaticon.png) no-repeat;
+	height: 28px;
+	float: left;
+	margin-top: -1px;
+	margin-right: 6px;
+}

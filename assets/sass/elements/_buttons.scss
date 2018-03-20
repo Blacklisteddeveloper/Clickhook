@@ -5,7 +5,7 @@
     text-align: center;
     text-decoration: none;
     color: $white;
-    font-family: $main-font-bold;
+    font-family:$main-font-bolder;
     text-transform: uppercase;
     border: 1px solid $white;
     @include padding(0.8em 2.4em 0.6em);
@@ -30,56 +30,6 @@
 	   		width: 100%;
 	   }
     }
-}
-
-
-.tranglebutton
-{
-	text-decoration: none;
-	.top{
-		margin-right: -42px;
-	    padding-bottom: 42px;
-	    @include media($desktop-lg-max){
-			padding-bottom: 15px;
-		}
-	    margin-left: -42px;
-		&:after,&:before{
-			content:'';
-			width: 22px;
-    		height: 21px;
-		}
-		&:after{
-			@include background(images/svg,left_top,svg, no-repeat,0 , 0);
-			float: left;
-		}
-		&:before{
-			@include background(images/svg,left_top,svg, no-repeat,0 , 0);
-			float: right;
-			transform: rotate(90deg);
-		}
-	}
-	.bottom{
-		margin-right: -42px;
-    	padding-top: 24px;
-    	margin-left: -42px;
-    	@include media($desktop-lg-max){
-			padding-top: 12px;
-		}
-		&:after,&:before{
-			content:'';
-			width: 22px;
-    		height: 21px;
-		}
-		&:after{
-			@include background(images/svg,right_top,svg, no-repeat,0 , 0);
-			float: left;
-		}
-		&:before{
-			@include background(images/svg,right_top,svg, no-repeat,0 , 0);
-			float: right;
-    		transform: rotate(-90deg);
-		}
-	}
 }
 button,
 input[type="button"],

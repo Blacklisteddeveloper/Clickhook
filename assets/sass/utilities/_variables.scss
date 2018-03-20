@@ -2,21 +2,11 @@
 /* FONT
 ---------------------------------- */
 
-$main-font: neutrafacelight;
-$main-font-bold: neutrafacebold;
-$head-font-bold: tungstenbold;
-$head-font-light: tungstenlight;
-$banner-font-bold:neutrafacebold;
-$banner-font-display:neutrafacemedium;
-$common-txt:robotoslabregular;
-$font-light:tungstenbook;
-$font-nat2-medium:neutrafacemedium;
-$font-regular:neutrafacedemi;
-$font-light-title:tungstenlight;
-$progress_bar:neutrafacedisplaybold;
-$commonfont-light:robotoslablight;
-$pagination:tungstenmedium;
-$font-light-Display-Titling:neutrafacetitling;
+$main-font: content-font;
+$main-font-bolder: heading-bold;
+$main-font-semibold: heading-semibold;
+$main-font-midbold: heading-midbold;
+$main-font-thin: heading-thin;
 
 /* COLORS
 ---------------------------------- */
@@ -25,50 +15,11 @@ $font-light-Display-Titling:neutrafacetitling;
 
 // Shades
 $white: #ffffff;
-$rocket-red: #df1f26;
-$red_title:#e44125;
-$rocket-red-dark: #c1212b;
-$rocketfuel: #df4335;
-$nebula-red: #9f1d26;
-$reactorcore: #36c0cc;
-$radiation: #12aaad;
-$radiation-dark: #0d9191;
-$aluminum: #efefef;
-$aluminum-dark: #e4e4e4;
-$adamantium-light: #efefef;
-$aluminum-dark: #e4e4e4;
-$aluminum-mid: #dddddd;
-$aluminum-mid-new:#b9b9b9;
-$adamantium: #cee0df;
-$space-craft-light: #bac6c5;
-$space-craft-dark: #9daaa9;
-$space-dock: #7b8081;
-$deep-space-light:#525656;
-$deep-space-dark: #343535;
-$beyond-stars-light: #272b2b;
-$beyond-stars-dark: #212020;
-$black-hole-light: #191c1c;
-$black-hole-dark: #070808;
-$lightgrey: #777777;
-$lightgrey_p: #969696;
-$whitegrey: #dcdcdc;
-$whitegreybg: #b7b7b7;
-$darkgrey: #363636;
-$grey-line: #5f6060;
-$black:#000000;
-$red: #e12025;
-$red_light: #e24124;
-$grey: #a4a4a4;
-$darkgrey: #464646;
-$lightgrey: #8b8b8b;
-$lightgrey_line: #a1a1a1;
-$bottompagination:#e3e3e3;
-$bg_darkgrey:#ebebeb;
-$socialmedia_icon:#a3a3a3;
+$mailcolor: #4870f5;
+$light-black:#333333;
+$black: #000000;
 
-$form_bg: #cfcfcf;
-$form_text : #828282;
-$form_border: #acacac;
+
 
 /* CORE STRUCTURE 
 ---------------------------------- */

@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6,div.title {
 p {
 	margin-bottom: rem(18);
 	line-height: rem(30);
-	font-family:$common-txt;
+	font-family:$main-font;
 	@include media($mobile-md){
 		font-size:rem(16);
 	}
@@ -81,7 +81,7 @@ a {
 	}
 }
 h1,h2,h3,h4,h5,div.title{
-	font-family:$banner-font-bold;
+	font-family:$main-font-bolder;
 }
 
 ul,li{
