@@ -2,7 +2,7 @@
   "name": "clickhook",
   "version": "0.0.1",
   "author": "Inderdeep Singh <Blacklisted.web02@gmail.com>",
-  "homepage": "http://#",
+  "homepage": "https://github.com/Blacklisteddeveloper/Clickhook",
   "private": true,
   "licenses": [
     {
@@ -54,5 +54,12 @@
   },
   "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
   "main": "index.js",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Blacklisteddeveloper/Clickhook.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Blacklisteddeveloper/Clickhook/issues"
+  }
 }

@@ -1,21 +1,21 @@
 {
-	"name": "starbase/hyperdrive",
+	"name": "Clickhook",
 	"type": "wordpress-theme",
 	"license": "MIT",
 	"description": "",
-	"homepage": "http:/github.com/digitech-web-design/hyperdrive",
+	"homepage": "https://github.com/Blacklisteddeveloper/Clickhook",
 	"authors": [
 		{
 			"name": "Brett Bash",
 			"email": "brett@digitechaustin.com",
-			"homepage": "https://github.com/brettbash"
+			"homepage": "https://github.com/Blacklisteddeveloper/Clickhook"
 		}
 	],
 	"keywords": [
 		"wordpress"
 	],
 	"support": {
-		"issues": "https://github.com/digitech-web-design/hyperdrive/issues"
+		"issues": "https://github.com/Blacklisteddeveloper/Clickhook/issues"
 	},
 	"require": {
 		"php": ">=5.4.0",
