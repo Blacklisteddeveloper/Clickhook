@@ -6,7 +6,7 @@
     "Inderdeep Singh <Blacklisted.web02@gmail.com>"
   ],
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "animatewithsass": "~3.2.1",
     "blazy": "~1.5.4",

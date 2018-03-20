@@ -13,6 +13,7 @@
   "scripts": {
     "build": "bower install && gulp",
     "jshint": "gulp jshint",
+	"install": "npm-git install",
     "jscs": "jscs gulpfile.js assets/scripts/*.js"
   },
   "engines": {
@@ -50,7 +51,8 @@
     "wiredep": "^2.2.2"
   },
   "dependencies": {
-    "font-awesome": "^4.6.1"
+    "font-awesome": "^4.6.1",
+    "npm-git-install": "^0.3.0"
   },
   "description": "[![Build Status](https://travis-ci.org/Automattic/_s.svg?branch=master)](https://travis-ci.org/Automattic/_s)",
   "main": "index.js",
