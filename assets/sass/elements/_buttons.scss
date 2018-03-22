@@ -1,34 +1,16 @@
-.btn{
-	cursor: pointer;
-    -webkit-appearance: none;
-    display: inline-block;
-    text-align: center;
+%btnlarge{
+	color: $white;
+    background: $mailcolor;
     text-decoration: none;
-    color: $white;
-    font-family:$main-font-bolder;
-    text-transform: uppercase;
-    border: 1px solid $white;
-    @include padding(0.8em 2.4em 0.6em);
-    border-radius: 10em;
-    position: relative;
-    outline: 0;
-    z-index: 0;
-    white-space: nowrap;
-    @include transition (all 0.5s ease);
-    overflow: hidden;
-    letter-spacing: 2px;
-    &:after {
-	    background:$white;
-	    content: '';
-	    @include size(0 100%);
-	    @include position(absolute,0 null null 0);
-	    @include transition (all 0.3s);
-	    z-index: -1;
-	}
-    &:hover{
-	   &:after{
-	   		width: 100%;
-	   }
+    padding: 21px 45px;
+    font-size: 25px;
+    border-radius: 23px;
+	font-family:$main-font;
+    letter-spacing: 2.75px;
+    font-weight: 600;
+    transition-property: background;
+    &:hover {
+      background: #303030;
     }
 }
 button,

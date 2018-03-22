@@ -1,17 +1,28 @@
 .home {
-	@include background(images,strip,png, no-repeat,69%, 90px);
-	.contentbox {
-		@include outer-container($king-ghidorah);
-		text-align: center;
-		margin: 112px auto;
-		 h1 {
-			color: $mailcolor;
-			font-size: rem(62);
-			text-align: left;
-			margin-left: -11%;
+	#wrapper {
+		@include size(100%);
+		z-index: -1;
+		@include position(absolute);
+		overflow: hidden;
+		.main {
+			@include size(100%);
 		}
-		.imagecenter {
-			margin-top: rem(91);
+		@include background(images,strip,png, no-repeat,69%, 90px);
+		.contentbox {
+			@include outer-container($king-ghidorah);
+			text-align: center;
+			@include margin( rem(246) null null null );
+			 h1 {
+				color: $mailcolor;
+				font-size: rem(65);
+				text-align: left;
+				margin-left: -11%;
+				font-weight: 600;
+			}
+			.imagecenter {
+				margin-top: rem(91);
+			}
 		}
 	}
 }
+

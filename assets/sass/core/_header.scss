@@ -1,87 +1,103 @@
-#wrapper {
-	padding: rem(63);
-}
-
-.logo {
-	float: left;
-}
-
-.sidebox {
-	position: absolute;
-	left: 60px;
-	top: 50%;
-	margin-top: -110px;
-}
-
-.sidebox ul {
-	list-style: none;
-}
-
-.sidebox ul li {
-	margin-bottom: 13px;
-}
-
-.sidebox ul li a {
-	background: #d5d5d5;
-	padding: 8px;
-	display: block;
-	border-radius: 50%;
-}
-
-.sidebox ul li:hover a,.sidebox ul li.selected a {
-	background: #3a65f4;
-}
-
-.sidebox ul li a img {
-	width: 15px;
+header {
+	@include size(100%,auto);
+	@include position(absolute);
+	@include padding(63px);
+	.logo {
+		float: left;
+	}
 }
 
 nav {
+  float: right;
+  margin-top: -6px;
+  .getdemo {
+    float: left;
+    @extend %btnlarge;
+	z-index: -1;
+    position: relative;
+  }
+  .hamburger {    
 	float: right;
-	margin-top: -6px;
-}
-
-nav .getdemo {
-	float: left;
-	color: #fff;
-	background: #4870f5;
-	text-decoration: none;
-	padding: 21px 29px;
-	font-size: 21px;
-	border-radius: 23px;
-	margin-top: 0px;
-	letter-spacing: 2.75px;
-	font-weight: 600;
-	transition-property: background;
-}
-
-
-nav .getdemo:hover {
-	background: #303030;
-	
-}
-
-nav .hamburger {
-	float: right;
-    padding: 18px 28px
-}
-
-nav .hamburger-box {
+    padding: 19px 16px 16px 17px;
+    border-radius: 100%;
+    margin-left: 11px;
+    margin-right: 11px;
+	&.is-active{
+		background:$mailcolor;
+		color:$white;
+		.hamburger-inner {
+			&:after, &:before {
+				background-color: $white;
+			}
+		}
+	}
+  }
+  .hamburger-box {
     position: relative;
     display: inline-block;
     width: 33px;
     height: 30px;
-}
-nav .hamburger-inner,nav .hamburger-inner:after,nav .hamburger-inner:before {
+  }
+  .hamburger-inner {
     width: 33px;
     height: 6px;
-    background-color: #4870f5;
+    background-color: $mailcolor;
+    &:after, &:before {
+      width: 33px;
+      height: 6px;
+      background-color: $mailcolor;
+    }
+  }
+  .hamburger--spring .hamburger-inner {
+    &:before {
+      top: 12px;
+    }
+    &:after {
+      top: 24px;
+    }
+  } 
 }
 
-nav .hamburger--spring .hamburger-inner:before {
-    top: 12px;
-}
-
-nav .hamburger--spring .hamburger-inner:after {
-    top: 24px;
-}
+.hamburgerbox{
+		@include size(100%,100%);
+		background:$white;
+		@include position(absolute, $left: 0, $top: 0);
+	.section{
+		@include size(100%,100%);
+		@include background(images,menuright,jpg, no-repeat,right, bottom);
+		.boximg{
+			width: 70%;
+			float: left;
+			padding: 15% 0px 0 11%;
+			img {
+			}
+		}
+		.navbar {
+			width: 30%;
+			float: left;
+			padding: 14% 11% 0 0;
+			text-align: right;
+			font-family:$main-font;
+			font-size: rem(42);
+			ul {
+				display:inline-block;
+				li {
+					list-style:none;
+					margin-bottom:rem(60);
+					
+					a{	
+						color:$mailcolor;
+						text-transform: uppercase;
+					}
+					&.downloadbtn{
+						margin-top:rem(120);
+						@extend %btnlarge;
+						a{
+							color:$white;
+						}
+					}
+				}
+			}
+		}
+	}
+  }
