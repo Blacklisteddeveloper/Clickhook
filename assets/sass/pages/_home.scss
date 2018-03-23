@@ -1,4 +1,9 @@
 .home {
+	&.viewing-page-2{
+		#wrapper {
+			@include background(images,bg2,jpg, no-repeat,center, center);
+		}
+	}
 	#wrapper {
 		@include size(100%);
 		z-index: -1;
