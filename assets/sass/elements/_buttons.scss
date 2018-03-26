@@ -13,6 +13,29 @@
       background: #303030;
     }
 }
+
+%btnsmall{
+	color: $white;
+    background: $mailcolor;
+    text-decoration: none;
+    padding: 21px 45px;
+    font-size: 25px;
+    border-radius: 23px;
+	font-family:$main-font;
+    letter-spacing: 2.75px;
+	text-transform: uppercase;
+    font-weight: 600;
+    transition-property: background;
+    &:hover {
+      background: #303030;
+    }
+}
+%txtbtn {
+	color: $mailcolor;
+	font-family:$main-font;
+	@include font-size(30);
+	
+}
 button,
 input[type="button"],
 input[type="reset"],

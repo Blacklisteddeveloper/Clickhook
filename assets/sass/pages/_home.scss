@@ -1,9 +1,4 @@
 .home {
-	&.viewing-page-2{
-		#wrapper {
-			@include background(images,bg2,jpg, no-repeat,center, center);
-		}
-	}
 	#wrapper {
 		@include size(100%);
 		z-index: -1;
@@ -25,9 +20,211 @@
 				font-weight: 600;
 			}
 			.imagecenter {
-				margin-top: rem(91);
+				margin-top: rem(92);
 			}
 		}
-	}
-}
+		.page2 {
+			@include background(images,bg2,jpg, no-repeat,center, center);
+			.contentbox {
+				@include outer-container($clover);
+				.comment {
+					@include position(relative);
+					p{
+						font-size:rem(50);
+						padding: 0 14%;
+						line-height: rem(50);
+						margin-bottom: rem(40);
+					}
+					span {
+						font-size:rem(30);
+						font-family:$main-font;
+					}
+					&:after,&:before{
+						@include position(absolute, $top:0);
+						@include size(65px, 53px);
+						@include background(images,comment,png, no-repeat,0, 0,cover);
+					}
+					&:after{
+						content:'';
+						left:0;
+					}
+					&:before{
+						content:'';
+						right:0;
+					}
+				}
+				.intro_section {
+					margint-top:rem(50);
+					.box{
+						@include size(32%, null);
+						float: left;
+						font-size:rem(34);
+						padding-right: 3%;
+						margin-top: rem(40);
+						ul{
+							text-align: right;
+							list-style:none;
+							li{
+								color: $grey;
+								margin-bottom: 15px;
+								list-style:none;
+								font-family:$main-font;
+							}
+						}
+						&:nth-child(2) {
+							font-size:rem(17);
+							@include size(68%, null);
+							padding:3% 5%;
+							box-sizing: border-box;
+							float: left;
+							text-align: left;
+							@include border-right-radius(38px);
+							margin-top: rem(0);
+							@include border-left-radius(38px);
+						}
+						&.whitebg {
+							background:$white;
+						}
+					}
+				}
+			}
+		}
+		.page3{
+			@include background(images,bg2,jpg, no-repeat,center, center);
+			&:after{
+				@include background(images,right-row,png, no-repeat,center, center);
+				content:'';
+				content: '';
+				position: absolute;
+				@include size(291px, 122px);
+				@include position(absolute,$top:25%, $right:0);
+			}
+			&:before{
+				@include background(images,left-arrow,png, no-repeat,center, center);
+				content:'';
+				content: '';
+				position: absolute;
+				@include size(211px, 53px);
+				@include position(absolute,$bottom:16%, $left:0 );
+			}
+			.contentbox {
+				@include outer-container($king-ghidorah);
+				@include margin( rem(160) null null null );
+				h3 {
+					font-size:rem(76);
+					color: $mailcolor;
+					font-family:$main-font;
+					margin-bottom:rem(12);
+					font-weight: 200;
+					letter-spacing: 0;
+					margin-top:rem(0);
+				}
+				span{
+					font-size:rem(30);
+					margin-bottom:rem(50);
+					font-family:$main-font;
+					display: block;
+				}
+				.service {
+					display: inline-block;
+					.box {
+						@include size(26%, null);
+						margin-right:11%;
+						float: left;
+						position: relative;
+						i{
+							img{
+								padding: rem(40) 0;
+							}
+							&:after {
+								@include background(images,round-circle,png, no-repeat,center, center);
+								content:'';
+								@include size(193px, 200px);
+								display: block;
+								@include position(absolute, $left:50%, $top:0);
+								margin-left: -98px;
+							}
+						}
+						h4{
+							@include background(images,shadowbg,png, no-repeat,center, center);
+							color:$light-grey;
+							@include font-size(30);
+							font-family:$main-font-bolder;
+							padding: 19px;
+							padding: 23px 32px 33px 25px;
+							text-transform: uppercase;
+							letter-spacing: 0;
+							margin-bottom: 0;
+						}
+						p{
+							font-size:rem(23);
+							letter-spacing:ren(26);
+							color:$light-black;
+						}
+						&:nth-child(3) {
+							margin-right:0%;
+							color:$light-black;
+						}
+					}
+				}
+				.largetxt {
+					margin-top: rem(60);
+					@extend %txtbtn;
+					display: block;
+				}
+			}
+		}
+		.page4 {
+			@include background(images,bg3,jpg, no-repeat,center, center);
+			.contentbox {
+				@include outer-container($king-ghidorah);
+				@include size(100%, 100%);
+				@include margin( 0px null null null );
+				.manageleads{
+					vertical-align: middle;
+					display: table-cell;
+					
+					.imgbox {
+						float:left;
+					}
+					.desciption {
+						@include size(63%, null);
+						float:right;
+						color: $white;
+						text-align: left;
+						h3 {
+							@include font-size(72);
+							line-height:rem(88);
+							font-family:$main-font;
+							font-weight: normal;
+							letter-spacing: 0px;
+							margin-bottom: 0;
+							margin-top: rem(129);
+						}
+						p {
+							@include font-size(21);
+							line-height:rem(33);
+							margin-bottom: rem(40);
+							margin-top: rem(32);
+						}
+						a {
+							margin-right:rem(30);
+						}
+					}
+				}
 
+			}
+		}
+		.page5 {
+			@include background(images,bg4,jpg, no-repeat,center, center);
+			.contentbox {
+				@include outer-container($king-ghidorah);
+				@include size(100%, 100%);
+				@include margin( 0px null null null );
+			}	
+		}
+		.footer {
+			@extend %footer;
+		}
+	}	
+}
