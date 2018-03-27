@@ -3824,7 +3824,8 @@ header {
   width: 100%;
   height: auto;
   position: absolute;
-  padding: 63px; }
+  padding: 40px 63px;
+  z-index: 20; }
   header .logo {
     float: left; }
 
@@ -3832,9 +3833,7 @@ nav {
   float: right;
   margin-top: -6px; }
   nav .getdemo {
-    float: left;
-    z-index: -1;
-    position: relative; }
+    float: left; }
   nav .hamburger {
     float: right;
     padding: 19px 16px 16px 17px;
@@ -3943,7 +3942,7 @@ footer {
   width: 100%;
   height: auto;
   position: absolute;
-  bottom: 3.9375rem; }
+  bottom: 2.5rem; }
   footer section {
     max-width: 965px;
     width: 100%;
@@ -4131,7 +4130,7 @@ nav .getdemo, .hamburgerbox .section .navbar ul li.downloadbtn {
   nav .getdemo:hover, .hamburgerbox .section .navbar ul li.downloadbtn:hover {
     background: #303030; }
 
-.home #wrapper .footer .contentbox .copyright a {
+.home #wrapper .footer .contentbox .copyright a, .home #wrapper .page5 .contentbox .calltoaction a {
   color: #ffffff;
   background: #4870f5;
   text-decoration: none;
@@ -4143,7 +4142,7 @@ nav .getdemo, .hamburgerbox .section .navbar ul li.downloadbtn {
   text-transform: uppercase;
   font-weight: 600;
   transition-property: background; }
-  .home #wrapper .footer .contentbox .copyright a:hover {
+  .home #wrapper .footer .contentbox .copyright a:hover, .home #wrapper .page5 .contentbox .calltoaction a:hover {
     background: #303030; }
 
 .home #wrapper .page3 .contentbox .largetxt {
@@ -7399,7 +7398,11 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           left: 0; }
         .home #wrapper .page2 .contentbox .comment:before {
           content: '';
-          right: 0; }
+          right: 0;
+          background-image: url(../images/comment_r.png);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: cover; }
       .home #wrapper .page2 .contentbox .intro_section {
         margint-top: 3.125rem; }
         .home #wrapper .page2 .contentbox .intro_section .box {
@@ -7563,7 +7566,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             margin-bottom: 2.5rem;
             margin-top: 2rem; }
           .home #wrapper .page4 .contentbox .manageleads .desciption a {
-            margin-right: 1.875rem; }
+            margin-right: 1.9375rem; }
   .home #wrapper .page5 {
     background-image: url(../images/bg4.jpg);
     background-repeat: no-repeat;
@@ -7578,6 +7581,88 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       width: 100%;
       height: 100%;
       margin-top: 0; }
+      .home #wrapper .page5 .contentbox section {
+        vertical-align: middle;
+        display: table-cell; }
+      .home #wrapper .page5 .contentbox .testimonials {
+        position: relative; }
+        .home #wrapper .page5 .contentbox .testimonials:after, .home #wrapper .page5 .contentbox .testimonials:before {
+          position: absolute;
+          top: 29px;
+          width: 65px;
+          height: 53px;
+          background-image: url(../images/comment.png);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: cover; }
+        .home #wrapper .page5 .contentbox .testimonials:after {
+          content: '';
+          left: -150px; }
+        .home #wrapper .page5 .contentbox .testimonials:before {
+          content: '';
+          right: -150px;
+          background-image: url(../images/comment_r.png);
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-size: cover; }
+        .home #wrapper .page5 .contentbox .testimonials li {
+          list-style: none;
+          background-image: url(../images/testimonials_bg.png);
+          background-repeat: no-repeat;
+          background-position: left bottom;
+          width: 47%;
+          float: left;
+          text-align: left;
+          padding-bottom: 127px;
+          padding-left: 40px;
+          margin-right: 6%; }
+          .home #wrapper .page5 .contentbox .testimonials li p {
+            font-size: 1.875rem;
+            font-size: 30px;
+            line-height: 2.8125rem;
+            margin-top: 19px; }
+          .home #wrapper .page5 .contentbox .testimonials li span {
+            font-size: 1.875rem;
+            font-size: 30px;
+            color: #4870f5;
+            color: #4870f5;
+            text-transform: uppercase; }
+          .home #wrapper .page5 .contentbox .testimonials li em {
+            font-size: 1.3125rem;
+            font-size: 21px;
+            display: block; }
+          .home #wrapper .page5 .contentbox .testimonials li:nth-child(2) {
+            margin-right: 0%; }
+      .home #wrapper .page5 .contentbox .calltoaction {
+        margin-top: 2.5rem;
+        margin-left: -10%;
+        float: left; }
+        .home #wrapper .page5 .contentbox .calltoaction h3, .home #wrapper .page5 .contentbox .calltoaction span {
+          font-size: 2rem;
+          font-size: 32px;
+          text-transform: uppercase;
+          text-align: left;
+          letter-spacing: -1.5px;
+          font-weight: 100;
+          margin-bottom: 0;
+          float: left; }
+        .home #wrapper .page5 .contentbox .calltoaction span {
+          color: #4870f5;
+          font-family: content-font; }
+        .home #wrapper .page5 .contentbox .calltoaction p {
+          margin-top: 1.5625rem;
+          float: left;
+          text-align: left;
+          font-size: 1.25rem;
+          font-size: 20px;
+          width: 74%; }
+        .home #wrapper .page5 .contentbox .calltoaction a {
+          float: right;
+          margin-top: 1.5rem; }
+.home.viewing-page-6 footer section {
+  color: #ffffff; }
+.home.viewing-page-6 footer .footernav a {
+  color: #ffffff; }
 
 /* Pages
 	:: Pages

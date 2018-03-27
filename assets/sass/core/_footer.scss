@@ -1,4 +1,4 @@
-%footer {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    %footer {
 	@include background(images,footer,jpg, no-repeat,center, center);
 	.contentbox {
 		@include outer-container($king-ghidorah);
@@ -36,7 +36,7 @@
 
 footer {
 	@include size(100%,auto);	
-	@include position(absolute, $bottom: rem(63));
+	@include position(absolute, $bottom: rem(40));
 	section {
 		max-width: 965px;
 		@include size(100%,auto);	
@@ -54,7 +54,7 @@ footer {
 		color: #4870f5;
 	}
 	}
-}
+}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 .chatus {
   position: absolute;

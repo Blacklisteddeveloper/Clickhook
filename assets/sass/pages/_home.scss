@@ -51,6 +51,7 @@
 					&:before{
 						content:'';
 						right:0;
+						@include background(images,comment_r,png, no-repeat,0, 0,cover);
 					}
 				}
 				.intro_section {
@@ -208,7 +209,7 @@
 							margin-top: rem(32);
 						}
 						a {
-							margin-right:rem(30);
+							margin-right:rem(31);
 						}
 					}
 				}
@@ -221,10 +222,103 @@
 				@include outer-container($king-ghidorah);
 				@include size(100%, 100%);
 				@include margin( 0px null null null );
+				section{
+					vertical-align: middle;
+					display: table-cell;
+				}
+				.testimonials {
+					@include position(relative);
+					&:after,&:before{
+						@include position(absolute, $top:29px);
+						@include size(65px, 53px);
+						@include background(images,comment,png, no-repeat,0, 0,cover);
+					}
+					&:after{
+						content:'';
+						left:-150px;
+					}
+					&:before{
+						content:'';
+						right:-150px;
+						@include background(images,comment_r,png, no-repeat,0, 0,cover);
+					}
+				 li{
+					list-style:none;
+					@include background(images,testimonials_bg,png, no-repeat,left, bottom);
+					@include size(47%, null);
+					float: left;
+					text-align: left;
+					padding-bottom: 127px;
+					padding-left: 40px;
+					margin-right: 6%;
+					p{
+						@include font-size(30);
+						line-height: rem(45);
+						margin-top: 19px;
+					}
+					span {
+						@include font-size(30);
+						color:$mailcolor;
+						@include padding(null null null null);
+						color: $mailcolor;
+						text-transform: uppercase;
+					}
+					em {
+						@include font-size(21);
+						display: block;
+					}
+					&:nth-child(2) {
+						margin-right: 0%;
+					}
+				 }
+				}
+				.calltoaction {
+					margin-top:rem(40);
+					margin-left: -10%;
+					float: left;
+					h3,span{
+						@include font-size(32);
+						text-transform: uppercase;
+						text-align: left;
+						letter-spacing: -1.5px;
+						font-weight:100;
+						margin-bottom: 0;
+						float: left;
+					}
+					span{
+						color:$mailcolor;
+						font-family:$main-font;
+					}
+					p{
+						margin-top:rem(25);
+						float: left;
+						text-align: left;
+						@include font-size(20);
+						width: 74%;
+					}
+					a{
+						@extend %btnsmall;
+						float:right;
+						margin-top: rem(24);
+						
+					}
+				}
 			}	
 		}
 		.footer {
 			@extend %footer;
 		}
-	}	
+	}
+	&.viewing-page-6 {
+		footer {
+			section{
+				color:$white;
+			}
+			.footernav{
+				a{
+					color:$white;
+				}
+			}
+		}
+	}
 }
