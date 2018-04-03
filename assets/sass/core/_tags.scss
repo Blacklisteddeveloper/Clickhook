@@ -1,13 +1,13 @@
 %tags{
 	h2,h3,h4 {
-		font-size:rem(32);
+		@include font-size(32);
 		color:$light-black;
 		text-transform:uppercase;
 		margin-bottom:rem(29);
 		line-height: rem(35);
 		margin-top: rem(20);
 		@include media($mobile-slg){
-			font-size:rem(26);
+			@include font-size(26);
 			line-height: rem(26);
 		}
 		&:after{
@@ -20,19 +20,19 @@
 		}
 	}
 	h3{
-		font-size:rem(28);
+		@include font-size(28);
 		@include media($mobile-slg){
-			font-size:rem(22);
+			@include font-size(22);
 		}
 	}
 	h4{
-		font-size:rem(24);
+		@include font-size(24);
 		@include media($mobile-slg){
-			font-size:rem(20);
+			@include font-size(20);
 		}
 	}
 	h5{
-		font-size:rem(18);
+		@include font-size(18);
 		text-transform:uppercase;
 		line-height: rem(18);
 		margin-bottom:rem(-5);
@@ -41,7 +41,7 @@
 		color:$light-black;
 	}
 	ul.list{
-		font-size:rem(18);
+		@include font-size(18);
 		@include margin(rem(24) rem(24) rem(18) rem(0));
 		font-family:$light-black;;
 		list-style:none;

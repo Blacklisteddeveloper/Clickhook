@@ -86,8 +86,8 @@ $scuti: 2500px;
 		$desktop-lg: new-breakpoint(min-width $kaiju); /*
 	:: 1370px >    */
 		$desktop-lg-max: new-breakpoint(max-width $kaiju); /*
-	:: 1400px >    */
-		$desktop-lg-large: new-breakpoint(max-width $kaiju + 30); /*		
+	:: 1440px >    */
+		$desktop-lg-large: new-breakpoint(max-width $kaiju + 70); /*		
 	:: 1370px < + 900px <    */
 		$desktop-lg-wh: new-breakpoint(min-width $kaiju min-height $voltron+60px); /*
 	:: 1260px > + 770px <    */
@@ -119,7 +119,7 @@ $scuti: 2500px;
 	:: 660px <    */
 		$mobile-slg-min: new-breakpoint(min-width $megatron); /*
 	:: 576px >    */
-		$mobile-md: new-breakpoint(max-width $optimus-prime); /*
+		$mobile-md: new-breakpoint(max-width $optimus-prime+24px); /*
 	:: 576px <    */
 		$mobile-md-min: new-breakpoint(min-width $optimus-prime); /*
 	:: 450px >    */

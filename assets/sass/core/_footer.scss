@@ -1,33 +1,58 @@
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    %footer {
+%footer {
 	@include background(images,footer,jpg, no-repeat,center, center);
 	.contentbox {
 		@include outer-container($king-ghidorah);
 		@include size(100%, 100%);
 		@include margin( 0px null null null );
+		@include media($mobile-md){
+			@include size(100%, 100vh);
+		}
 		.copyright{
 			vertical-align: middle;
 			display: table-cell;
 			h3{
 				@include font-size(76);
-				line-height:rem(110);
+				@include line-height(110);
 				font-family:$main-font;
 				font-weight: normal;
 				letter-spacing: 0px;
 				margin-bottom: 0;
 				margin-top: rem(0);	
 				color:$mailcolor;
+				@include media($desktop-lg-max){
+					@include font-size(50);
+					@include line-height(50);
+				}
+				@include media($mobile-lg){
+					@include font-size(32);
+					@include line-height(23);
+				
+				}
+				@include media($mobile-md){
+					@include line-height(33);
+				}
 			}
 			span{
 				font-family:$main-font;
 				font-weight: normal;
 				margin-bottom: 0;
 				@include font-size(30);
-				margin-top: rem(18);	
+				margin-top: rem(18);
+				@include media($desktop-lg-max){
+					@include font-size(20);
+					display:block;
+				}
+				@include media($mobile-lg){
+					padding: 0 11%;
+				}				
 			}
 			a{	
 				display: inline-block;
 				margin-top: rem(100);	
 				@extend %btnsmall;
+				@include media($mobile-lg){
+					margin-top: rem(50);	
+				}
 			}
 		}
 	}	
@@ -37,49 +62,79 @@
 footer {
 	@include size(100%,auto);	
 	@include position(absolute, $bottom: rem(40));
+	@include media($mobile-md){
+		@include position(relative, $bottom: 0);
+	}
+	@include media($mobile-md){
+		background: #3157c4;
+		    padding: 10px;
+	}
 	section {
-		max-width: 965px;
+		max-width: 964px;
 		@include size(100%,auto);	
 		color: #4870f5;
 		margin: 0 auto;
 		font-size: 13px;
+		@include media($desktop-md-mid){
+			@include outer-container($millenniumfalcon);
+			text-align: center;
+		}
+		@include media($mobile-md){
+			color: #fff;
+		}
 	}
 	.copyright {
 		float: left;
+		@include media($desktop-md-mid){
+			float: none;
+		}
 	}
 	.footernav {
 		float: right;
+		@include media($desktop-md-mid){
+			float: none;
+			margin-top: 10px;
+		}
 	a {
 		text-decoration: none;
 		color: #4870f5;
+		@include media($desktop-md-mid){
+			color: #fff;
+		}
 	}
 	}
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
 
 .chatus {
-  position: absolute;
-  right: 0;
-  background: white;
-  border-radius: 50px 0 0 50px;
-  box-shadow: -7px 0px 6px #ccc;
-  padding: 8px;
-  line-height: 28px;
-  
-  font-size: 17px;
-  margin-top: -19px;
-  color: #333333;
-  padding-right: 33px;
-  transition-property: box-shadow;
-  &:hover {
-    box-shadow: -7px 0px 6px #4870f5;
-  }
-  &:before {
-    content: '';
-    width: 27px;
-    background: url(../images/chaticon.png) no-repeat;
-    height: 28px;
-    float: left;
-    margin-top: -1px;
-    margin-right: 6px;
-  }
+	position: absolute;
+	right: 0;
+	background: white;
+	border-radius: 50px 0 0 50px;
+	box-shadow: -7px 0px 6px #ccc;
+	padding: 8px;
+	line-height: 28px;
+	font-size: 17px;
+	margin-top: -19px;
+	color: #333333;
+	padding-right: 33px;
+	transition-property: box-shadow;
+	@include media($mobile-lg){
+		margin-right: -9px;
+		margin-top: -81px;
+	}
+	@include media($mobile-md){
+		display:none;
+	}
+	&:hover {
+		box-shadow: -7px 0px 6px #4870f5;
+	}
+	&:before {
+		content: '';
+		width: 27px;
+		background: url(../images/chaticon.png) no-repeat;
+		height: 28px;
+		float: left;
+		margin-top: -1px;
+		margin-right: 6px;
+	}
 }

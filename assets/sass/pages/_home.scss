@@ -4,45 +4,159 @@
 		z-index: -1;
 		@include position(absolute);
 		overflow: hidden;
+		@include media($mobile-md){
+			height: auto;			
+			position: inherit;
+		}
 		.main {
 			@include size(100%);
+
 		}
 		@include background(images,strip,png, no-repeat,69%, 90px);
+		.page1.section{
+			@include media($desktop-mds){
+				display: table;
+			}
+			@include media($mobile-md){
+				height: 100vh;
+			}
+		}
 		.contentbox {
 			@include outer-container($king-ghidorah);
 			text-align: center;
-			@include margin( rem(246) null null null );
-			 h1 {
+			@include margin( 183px null null null );
+			@include media($desktop-lg-max){
+				@include outer-container($clover);
+				@include margin( 150px null null null );
+			}
+			@include media($desktop-mds){
+				@include outer-container($megatron);
+				vertical-align: middle;
+				margin-top: 0;
+				display: table-cell;
+			}
+			@include media($mobile-md){
+				padding: 0 10%;
+			}
+			h1 {
 				color: $mailcolor;
-				font-size: rem(65);
+				@include font-size(65);
 				text-align: left;
 				margin-left: -11%;
 				font-weight: 600;
+				@include media($milky-way-large){
+					@include font-size(50);
+					margin-left: 0;
+				}
+				@include media($desktop-mds){
+					@include font-size(36);
+					text-align: center;
+				}
+				@include media($mobile-lg){
+					@include font-size(26);
+				}
+				@include media($mobile-slg){
+					@include font-size(21);
+				}
+				br{
+					@include media($mobile-md){
+						display:none;
+					}
+				}
 			}
 			.imagecenter {
-				margin-top: rem(92);
+				margin-top: 92px;
+				@include media($desktop-mds){
+					margin: 32px auto 0 auto;
+					width: 80%;
+					padding-left: 29px;
+				}
+				@include media($mobile-md){
+					width: 100%;
+					padding-left: 0px;
+				}
 			}
 		}
 		.page2 {
 			@include background(images,bg2,jpg, no-repeat,center, center);
+			@include media($mobile-md){
+				@include padding(100px 10% 100px 10%);
+			}
+			&.section{
+				@include media($desktop-mds){
+					display: table;
+				}
+			}
+			.middle{
+				@include media($desktop-mds){
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
+			}
+			
 			.contentbox {
 				@include outer-container($clover);
+				@include media($milky-way-large){
+					@include margin( 105px null null null );
+				}
+				@include media($desktop-mds){
+					@include outer-container($voltron);
+				}
+				@include media($desktop-mds){
+					@include outer-container($megatron);
+					margin: 0 auto;
+				}
+				@include media($mobile-slg){
+					@include outer-container($xenomorph);
+				}
+				@include media($mobile-md){
+					max-width:100%;
+					padding:0;
+				}
 				.comment {
 					@include position(relative);
+					
 					p{
-						font-size:rem(50);
+						@include font-size(45);
 						padding: 0 14%;
-						line-height: rem(50);
-						margin-bottom: rem(40);
+						line-height: 50px;
+						margin-bottom: 40px;
+						@include media($desktop-lg-max){
+							@include font-size(35);
+							line-height: 40px;
+							margin-bottom: 27px;
+						}
+						@include media($desktop-mds){
+							@include font-size(24);
+							line-height: 27px;
+						}
+						@include media($mobile-slg){
+							@include font-size(18);
+							line-height: 21px;
+							margin-bottom: 13px;
+						}
 					}
 					span {
-						font-size:rem(30);
+						@include font-size(30);
 						font-family:$main-font;
+						@include media($desktop-lg-max){
+							@include font-size(26);
+						}
+						@include media($desktop-mds){
+							@include font-size(20);
+						}
+						@include media($mobile-slg){
+							@include font-size(16);
+						}
 					}
 					&:after,&:before{
 						@include position(absolute, $top:0);
 						@include size(65px, 53px);
 						@include background(images,comment,png, no-repeat,0, 0,cover);
+						@include media($mobile-slg){
+							@include size(40px, 32px);
+						}
 					}
 					&:after{
 						content:'';
@@ -55,13 +169,25 @@
 					}
 				}
 				.intro_section {
-					margint-top:rem(50);
+					margin-top:50px;
+					@include media($desktop-lg-max){
+						margin-top:30px;
+					}
+					@include media($mobile-slg){
+						margin-top:16px;
+					}
 					.box{
 						@include size(32%, null);
 						float: left;
-						font-size:rem(34);
+						@include font-size(32);
 						padding-right: 3%;
-						margin-top: rem(40);
+						margin-top:40px;
+						@include media($desktop-mds){
+							@include font-size(20);
+						}
+						@include media($mobile-slg){
+							@include font-size(14);
+						}
 						ul{
 							text-align: right;
 							list-style:none;
@@ -73,7 +199,7 @@
 							}
 						}
 						&:nth-child(2) {
-							font-size:rem(17);
+							@include font-size(17);
 							@include size(68%, null);
 							padding:3% 5%;
 							box-sizing: border-box;
@@ -82,6 +208,24 @@
 							@include border-right-radius(38px);
 							margin-top: rem(0);
 							@include border-left-radius(38px);
+							@include media($desktop-lg-max){
+								padding:2% 4%;
+								@include font-size(16);
+							}
+							@include media($desktop-mds){
+								@include font-size(14);
+							}
+							@include media($mobile-slg){
+								@include font-size(12);
+								border-radius: 10px;
+							}
+							p{
+								@include media($desktop-mds){
+									line-height: 20px;
+									margin-top: 4px;
+									margin-bottom: 10px;
+								}
+							}
 						}
 						&.whitebg {
 							background:$white;
@@ -92,39 +236,99 @@
 		}
 		.page3{
 			@include background(images,bg2,jpg, no-repeat,center, center);
+			@include media($mobile-md){
+				@include padding(100px 10% 100px 10%);
+				background-size: cover;
+			}
 			&:after{
 				@include background(images,right-row,png, no-repeat,center, center);
 				content:'';
-				content: '';
-				position: absolute;
 				@include size(291px, 122px);
 				@include position(absolute,$top:25%, $right:0);
+				@include media($mobile-lg){
+					display:none;
+				}
 			}
 			&:before{
 				@include background(images,left-arrow,png, no-repeat,center, center);
 				content:'';
-				content: '';
-				position: absolute;
 				@include size(211px, 53px);
 				@include position(absolute,$bottom:16%, $left:0 );
+				@include media($mobile-lg){
+					display:none;
+				}
+			}
+			&.section{
+				@include media($desktop-mds){
+					display: table;
+				}
+			}
+			.middle{
+				@include media($desktop-mds){
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
 			}
 			.contentbox {
 				@include outer-container($king-ghidorah);
-				@include margin( rem(160) null null null );
+				@include margin( 140px null null null );
+				@include media($milky-way-large){
+					@include font-size(60);
+				}
+				@include media($desktop-lg-large){
+					@include outer-container($gipsy-danger);
+					@include margin( 120px null null null );
+				}
+				@include media($desktop-mds){
+					@include margin( 0px null null null );
+					@include outer-container($megatron);
+				}
+				@include media($mobile-slg){
+					@include outer-container($xenomorph);
+				}
+				@include media($mobile-md){
+					max-width:100%;
+					padding:0;
+				}
 				h3 {
-					font-size:rem(76);
+					@include font-size(76);
 					color: $mailcolor;
 					font-family:$main-font;
-					margin-bottom:rem(12);
+					margin-bottom:12px;
 					font-weight: 200;
 					letter-spacing: 0;
 					margin-top:rem(0);
+					@include media($milky-way-large){
+						@include font-size(60);
+					}
+					@include media($desktop-lg-max){
+						@include font-size(45);
+					}
+					@include media($desktop-mds){
+						@include font-size(35);
+					}
+					@include media($mobile-slg){
+						@include font-size(26);
+					}
 				}
 				span{
-					font-size:rem(30);
-					margin-bottom:rem(50);
+					@include font-size(30);
+					margin-bottom:50px;
 					font-family:$main-font;
 					display: block;
+					@include media($desktop-lg-max){
+						@include font-size(30);
+						margin-bottom:50px;
+					}
+					@include media($desktop-mds){
+						@include font-size(20);
+						margin-bottom:20px;
+					}
+					@include media($mobile-slg){
+						@include font-size(16);
+						margin-bottom:16px;
+					}
 				}
 				.service {
 					display: inline-block;
@@ -133,9 +337,26 @@
 						margin-right:11%;
 						float: left;
 						position: relative;
+						@include media($desktop-lg-max){
+							@include size(31%, null);
+							margin-right:3%;
+						}
+						@include media($mobile-md){
+							width: 100%;
+							margin-right: 0;
+							margin-bottom: 15px;
+						}
 						i{
 							img{
-								padding: rem(40) 0;
+								padding: 40px 0;
+								@include media($desktop-lg-max){
+									padding: 37px 0;
+									width: 68px;
+								}
+								@include media($mobile-slg){
+									padding:35px 0 21px 0;
+									width: 48px;
+								}
 							}
 							&:after {
 								@include background(images,round-circle,png, no-repeat,center, center);
@@ -144,6 +365,16 @@
 								display: block;
 								@include position(absolute, $left:50%, $top:0);
 								margin-left: -98px;
+								@include media($desktop-lg-max){
+									@include size(151px, 151px);
+									background-size: contain;
+									margin-left: -75px;
+								}
+								@include media($mobile-slg){
+									@include size(90px, 129px);
+									background-size: contain;
+									margin-left: -48px;
+								}
 							}
 						}
 						h4{
@@ -156,11 +387,51 @@
 							text-transform: uppercase;
 							letter-spacing: 0;
 							margin-bottom: 0;
+							@include media($milky-way-large){
+								margin-top: 10px;
+							}
+							@include media($desktop-lg-large){
+								font-size: 27px;
+								background-size: 100%;
+							}
+							@include media($desktop-lg-max){
+								font-size: 21px;
+								background-size: 78%;
+								padding: 17px 32px 24px 25px;
+							}
+							@include media($mobile-slg){
+								font-size: 14px;
+								background-size: 101%;
+								padding: 19px 11px 24px 7px;
+								text-align: center;
+								margin-top: 0;
+							}
+							@include media($mobile-md){
+								background-size: contain;
+								width: auto;
+								margin-top: 18px;
+								margin-bottom: 15px;
+								
+							}
 						}
 						p{
-							font-size:rem(23);
-							letter-spacing:ren(26);
+							@include font-size(20);
+							@include line-height(26);
 							color:$light-black;
+							@include media($milky-way-large){
+								margin-top: 6px;
+							}
+							@include media($desktop-lg-large){
+								font-size: 16px;
+							}
+							@include media($desktop-mds){
+								@include font-size(13);
+								margin-top: 0;
+							}
+							@include media($mobile-slg){
+								@include font-size(12);
+								line-height: 17px;
+							}
 						}
 						&:nth-child(3) {
 							margin-right:0%;
@@ -169,47 +440,159 @@
 					}
 				}
 				.largetxt {
-					margin-top: rem(60);
+					margin-top: 26px;
 					@extend %txtbtn;
 					display: block;
+					@include media($desktop-mds){
+						@include font-size(16);
+					}
 				}
 			}
 		}
 		.page4 {
 			@include background(images,bg3,jpg, no-repeat,center, center);
+			background-color: #f2f2f2;
+			
+			@include media($milky-way-large){
+				background-size: 122%;
+			}
+			@include media($desktop-lg-large){
+				background-size: 105%;
+			}
+			@include media($desktop-mds){
+				background-size: 134%;
+			}
+			@include media($mobile-lg){
+				background-size: 161%;
+			}
+			@include media($mobile-slg){
+				background-size: 186%;
+			}
+			
+			@include media($mobile-md){
+				@include background(images,bg3-m,png, no-repeat,center, center);
+				background-size: cover;
+				@include padding(100px 10% 100px 10%);
+				
+				
+			}
 			.contentbox {
 				@include outer-container($king-ghidorah);
 				@include size(100%, 100%);
 				@include margin( 0px null null null );
+				@include media($desktop-lg-large){
+					@include outer-container($gipsy-danger);
+				}
+				@include media($desktop-mds){
+					@include outer-container($megatron);
+				}
+				@include media($mobile-lg){
+					@include outer-container($optimus-prime);
+				}
+				@include media($mobile-slg){
+					@include outer-container($xenomorph);
+				}
+				@include media($mobile-md){
+					max-width:100%;
+					padding:0;
+				}
 				.manageleads{
 					vertical-align: middle;
 					display: table-cell;
-					
 					.imgbox {
 						float:left;
+						@include media($desktop-lg-large){
+							width: 24%;
+						}
+						@include media($mobile-slg){
+							width: 24%;
+							margin: 0 auto;
+							float: none;
+						}
+						@include media($mobile-md){
+							width: 24%;
+						}
 					}
 					.desciption {
 						@include size(63%, null);
 						float:right;
 						color: $white;
 						text-align: left;
+						@include media($mobile-slg){
+							@include size(95%, null);
+							text-align: center;
+							margin: 0 auto;
+							float: none;
+						}
 						h3 {
 							@include font-size(72);
-							line-height:rem(88);
+							@include line-height(88);
 							font-family:$main-font;
 							font-weight: normal;
 							letter-spacing: 0px;
 							margin-bottom: 0;
-							margin-top: rem(129);
+							margin-top: 129px;
+							@include media($desktop-lg-large){
+								@include font-size(58);
+								@include line-height(62);
+								margin-top: 37px;
+							}
+							@include media($desktop-mds){
+								font-size: 39px;
+								line-height: 40px;
+								margin-top: 36px;
+							}
+							@include media($mobile-lg){
+								font-size: 32px;
+								line-height: 34px;
+							}
+							@include media($mobile-slg){
+								font-size:25px;
+								line-height:28px;
+								margin-top: 14px;
+							}
 						}
 						p {
 							@include font-size(21);
-							line-height:rem(33);
-							margin-bottom: rem(40);
-							margin-top: rem(32);
+							@include line-height(33);
+							margin-bottom: 40px;
+							margin-top: 32px;
+							@include media($milky-way-large){
+								@include font-size(25);
+								@include line-height(37);
+							}
+							@include media($desktop-lg-large){
+								@include font-size(20);
+								@include line-height(26);
+							}
+							@include media($desktop-mds){
+								font-size: 15px;
+								line-height: 26px;
+							}
+							@include media($mobile-lg){
+								font-size: 15px;
+								line-height: 26px;
+								margin-top: 19px;
+								margin-bottom: 22px;
+							}
+							@include media($mobile-slg){
+								font-size: 13px;
+								line-height: 18px;
+								margin-top: 6px;
+								margin-bottom: 14px
+							}
 						}
 						a {
-							margin-right:rem(31);
+							margin-right:31px;
+							@include media($desktop-mds){
+								margin-right:15px;
+							}
+							img {
+								@include media($mobile-lg){
+									width: 34%;
+								}
+							}
+							
 						}
 					}
 				}
@@ -218,13 +601,35 @@
 		}
 		.page5 {
 			@include background(images,bg4,jpg, no-repeat,center, center);
+			@include media($mobile-md){
+				@include padding(100px 10% 100px 10%);
+			}
 			.contentbox {
 				@include outer-container($king-ghidorah);
 				@include size(100%, 100%);
 				@include margin( 0px null null null );
+				@include media($desktop-lg-large){
+					@include outer-container($gipsy-danger);
+				}
+				@include media($desktop-lg-max){
+					@include outer-container($clover);
+				}
+				@include media($desktop-mds){
+					@include outer-container($megatron);
+				}
+				@include media($mobile-lg){
+					@include outer-container($optimus-prime);
+				}
 				section{
 					vertical-align: middle;
 					display: table-cell;
+				}
+				@include media($mobile-slg){
+					@include outer-container($xenomorph);
+				}
+				@include media($mobile-md){
+					max-width:100%;
+					padding:0;
 				}
 				.testimonials {
 					@include position(relative);
@@ -232,15 +637,24 @@
 						@include position(absolute, $top:29px);
 						@include size(65px, 53px);
 						@include background(images,comment,png, no-repeat,0, 0,cover);
+						@include media($mobile-lg){
+							display:none;
+						}
 					}
 					&:after{
 						content:'';
 						left:-150px;
+						@include media($desktop-lg-max){
+							left:-100px;
+						}
 					}
 					&:before{
 						content:'';
 						right:-150px;
 						@include background(images,comment_r,png, no-repeat,0, 0,cover);
+						@include media($desktop-lg-max){
+							right:-100px;
+						}
 					}
 				 li{
 					list-style:none;
@@ -251,31 +665,85 @@
 					padding-bottom: 127px;
 					padding-left: 40px;
 					margin-right: 6%;
+					@include media($milky-way-large){
+						padding-bottom: 107px;
+					}
+					@include media($desktop-lg-max){
+						padding-bottom: 56px;
+						padding-left:24px;
+						background-size: 116px;
+					}
+					@include media($desktop-mds){
+						padding-bottom: 45px;
+						padding-left:20px;
+						background-size: 116px;
+					}
+					@include media($mobile-slg){
+						width: 100%;
+						margin-right: 1px;
+						padding-bottom: 55px;
+					}
 					p{
 						@include font-size(30);
-						line-height: rem(45);
+						line-height: 45px;
 						margin-top: 19px;
+						@include media($desktop-lg-large){
+							@include font-size(24);
+							line-height: 33px;
+						}
+						@include media($desktop-lg-max){
+							@include font-size(20);
+							line-height: 28px;
+						}
+						@include media($desktop-mds){
+							@include font-size(14);
+							line-height: 20px;
+						}
 					}
+
 					span {
 						@include font-size(30);
 						color:$mailcolor;
 						@include padding(null null null null);
 						color: $mailcolor;
 						text-transform: uppercase;
+						@include media($desktop-lg-max){
+							@include font-size(25);
+						}
+						@include media($desktop-mds){
+							@include font-size(20);
+						}
 					}
 					em {
 						@include font-size(21);
 						display: block;
+						@include media($desktop-lg-max){
+							@include font-size(18);
+						}
+						@include media($desktop-mds){
+							@include font-size(14);
+						}
 					}
 					&:nth-child(2) {
 						margin-right: 0%;
+						@include media($mobile-slg){
+							display:none;
+						}
 					}
 				 }
 				}
 				.calltoaction {
-					margin-top:rem(40);
+					margin-top:40px;
 					margin-left: -10%;
 					float: left;
+					@include media($milky-way-large){
+						margin-top:10px;
+						margin-left: -3%;
+					}
+					@include media($desktop-lg-max){
+						margin-left: 0%;
+						margin-top:20px;
+					}
 					h3,span{
 						@include font-size(32);
 						text-transform: uppercase;
@@ -284,22 +752,76 @@
 						font-weight:100;
 						margin-bottom: 0;
 						float: left;
+						@include media($desktop-lg-max){
+							@include font-size(26);
+						}
+						@include media($desktop-mds){
+							@include font-size(20);
+						}
+						@include media($mobile-lg){
+							@include font-size(18);
+						}
+						@include media($mobile-slg){
+							@include font-size(17);
+							float: none;
+							text-align: center;
+							display: inline;
+						}
+						@include media($mobile-md){
+							@include font-size(20);
+							line-height: 26px;
+						}
 					}
 					span{
 						color:$mailcolor;
 						font-family:$main-font;
 					}
 					p{
-						margin-top:rem(25);
+						margin-top:25px;
 						float: left;
 						text-align: left;
 						@include font-size(20);
 						width: 74%;
+						@include media($desktop-lg-large){
+							width: 70%;
+						}
+						@include media($desktop-lg-max){
+							margin-top:6px;
+							line-height: 24px;
+							@include font-size(16);
+						}
+						@include media($desktop-mds){
+							width: 65%;
+							@include font-size(14);
+						}
+						@include media($mobile-lg){
+							width: 55%;
+						}
+						@include media($mobile-slg){
+							width: 100%;
+							float: left;
+							text-align: center;
+							margin-bottom: 0;
+							font-size: 12px;
+							line-height: 17px;
+						}
+						@include media($mobile-md){
+							margin-bottom: 13px;
+							font-size: 14px;
+							line-height: 23px;
+						}
 					}
 					a{
 						@extend %btnsmall;
 						float:right;
-						margin-top: rem(24);
+						margin-top: 24px;
+						@include media($mobile-slg){
+							width: 100%;
+							float: none;
+							display: inline-block;
+							margin-top: 5px;
+							
+						}
 						
 					}
 				}
@@ -307,6 +829,7 @@
 		}
 		.footer {
 			@extend %footer;
+			
 		}
 	}
 	&.viewing-page-6 {
@@ -322,3 +845,4 @@
 		}
 	}
 }
+

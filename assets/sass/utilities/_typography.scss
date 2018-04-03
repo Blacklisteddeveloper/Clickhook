@@ -2,8 +2,8 @@
 /* FONTS
 ---------------------------------- */
 
-@include font-face("heading-bold", "../fonts/Mark Simonson - Proxima Nova Alt Bold-webfont");
-@include font-face("heading-semibold", "../fonts/Mark Simonson - Proxima Nova Alt Condensed Semibold-webfont");
-@include font-face("content-font", "../fonts/Mark Simonson - Proxima Nova Alt Regular-webfont");
-@include font-face("heading-midbold", "../fonts/Mark Simonson - Proxima Nova Semibold-webfont");
-@include font-face("heading-thin", "../fonts/Mark Simonson - Proxima Nova Thin-webfont");
+@include font-face("heading-bold", "../fonts/ProximaNovaAltBold");
+@include font-face("heading-semibold", "../fonts/ProximaNovaAltCondensedSemibold");
+@include font-face("content-font", "../fonts/ProximaNovaAltRegular");
+@include font-face("heading-midbold", "../fonts/ProximaNovaSemibold");
+@include font-face("heading-thin", "../fonts/ProximaNovaThin");

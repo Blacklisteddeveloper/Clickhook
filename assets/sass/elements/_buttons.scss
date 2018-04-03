@@ -9,6 +9,11 @@
     letter-spacing: 2.75px;
     font-weight: 600;
     transition-property: background;
+	@include media($desktop-lg-max){
+		padding: 16px 34px;
+		font-size: 20px;
+		margin-top: 7px;
+	}
     &:hover {
       background: #303030;
     }
@@ -26,6 +31,14 @@
 	text-transform: uppercase;
     font-weight: 600;
     transition-property: background;
+	@include media($desktop-lg-max){
+		padding: 16px 35px;
+		font-size:21px;
+	}
+	@include media($mobile-slg){
+		padding: 10px 35px;
+		font-size: 16px;
+	}
     &:hover {
       background: #303030;
     }

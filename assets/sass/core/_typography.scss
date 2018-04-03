@@ -18,10 +18,10 @@ h1, h2, h3, h4, h5, h6,div.title {
 
 p {
 	margin-bottom: rem(18);
-	line-height: rem(30);
+	@include line-height(30);
 	font-family:$main-font;
 	@include media($mobile-md){
-		font-size:rem(16);
+		@include font-size(16);
 	}
 }
 

@@ -42,7 +42,7 @@
 }
 
 .disabled-onepage-scroll {
-  overflow: auto;
+  overflow-y: auto !important;
   .wrapper {
     overflow: auto;
   }
@@ -69,10 +69,16 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 
 .sidebox {
 	position: absolute;
-	left: rem(60);
+	left: 60px;
 	top: 50%;
-	margin-top: -70px;
+	margin-top: -120px;
 	list-style: none;
+	@include media($mobile-lg){
+		left: 20px;
+	}
+	@include media($mobile-md){
+		display:none;
+	}
 	li {
 	  margin-bottom: 13px;
 	  a {
