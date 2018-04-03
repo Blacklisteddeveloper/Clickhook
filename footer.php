@@ -10,25 +10,23 @@
  */
 
 ?>
-
-	</div><!-- #content -->
-
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'clickhook' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'clickhook' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'clickhook' ), 'clickhook', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer >
+		<section>
+			<div class="copyright animated bounceInUp">Copyright © ClickHook. A Division of EMethod. </div>
+			<div class="footernav animated bounceInUp">
+				<a href="#">White Label CRM</a> | 
+				<a href="#">Private Label</a>   |   
+				<a href="#">Privacy</a>   |   
+				<a href="#">Terms of Service</a>   |   
+				<a href="#">Insurance</a>   |   
+				<a href="#">API Documentation</a>
+			</div>
+			<a class="chatus" href="#">Chat With Us</a>
+		</section>
+	</footer>
+</section>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery-1.9.1.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/customizer.js"></script> 
 
 <?php wp_footer(); ?>
 
