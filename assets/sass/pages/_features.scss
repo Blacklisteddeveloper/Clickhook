@@ -21,6 +21,9 @@
 				@include media($desktop-lg-max){
 					background-size: contain;
 				}
+				@include media($short-xlg){
+					background-size: 50%;	
+				}
 				div.content{
 					padding-left: 0%;
 				    padding-right: 11%;
@@ -54,6 +57,9 @@
 				@include background(images,box,png, no-repeat,right, top);
 				@include media($desktop-lg-max){
 					background-size: contain;
+				}
+				@include media($short-xlg){
+					background-size: 50%;	
 				}
 				.middle{
 					@include size(100%, null);
