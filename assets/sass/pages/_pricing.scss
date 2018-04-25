@@ -1,0 +1,353 @@
+.pricing {
+	#wrapper {
+		@include size(100%);
+		z-index: -1;
+		@include position(absolute);
+		overflow: hidden;
+		@include media($mobile-md){
+			height: auto;			
+			position: inherit;
+		}
+		.main {
+			@include size(100%);
+		}
+		.pp-tableCell{
+			display: table;
+			width: 100%;
+		}
+		.page1.pp-section{
+			@include background(images,bg-pricing,jpg, no-repeat,center, center);
+			background-color:$white;
+			@include media($short-xxlg22){
+				background-size: cover;
+			}
+			@include media($short-xxxlg){
+				background-size: cover;
+			}
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($kaiju);
+					width: 100%;
+					@include media($milky-way-large) {
+						@include outer-container($king-ghidorah);
+					}
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-sm-mid){
+						@include outer-container($millenniumfalcon);	
+					}
+					.content-top{
+						@include position(absolute);
+						width: 52%;
+						margin-left: -4%;
+						h2{
+							color: $mailcolor;
+							@include font-size(65);
+							text-align: left;
+							font-weight: 200;
+						    margin: 0;
+						    letter-spacing: 0;
+						    @include media($desktop-lg-large){
+								@include font-size(50);
+							}
+							@include media($desktop-sm-mid){
+								@include font-size(32);
+							}
+						}
+						p{
+							@include font-size(21);
+							@include media($desktop-lg-large){
+								@include font-size(16);
+								line-height: 24px;
+							}
+							@include media($desktop-sm-mid){
+								@include font-size(13);
+								line-height: 19px;
+								width: 47%;
+							}
+						}
+					}
+				}
+				.pricing{
+					margin-top: 2%;
+					ul {
+						display: table;
+						width: 100%;
+						li.list{							
+							list-style: none;
+						    width: 24%;
+						    vertical-align: baseline;
+						    display: inline-block;
+						    margin: 0 5.2% 0 4%;
+						    text-align: center;
+						    @include media($desktop-lg-large){
+								width: 29%;
+								margin: 0 2% 0 2%;
+							}
+							@include media($desktop-sm-mid){
+								width: 31%;
+    							margin: 0 1% 0 1%;
+							}
+							.box{
+								text-align: left;
+								background: #ffffff;
+							    border-radius: 20px;
+							    overflow: hidden;
+							    box-shadow: 0 1px 12px #b1b1b1;
+								i{
+									margin-top: -50px;
+    								margin-left: -15px;
+									@include position(absolute);
+									svg{
+										@include size(62px, 67px);
+									}
+								}
+								.title{
+									background: #e7ecfe;
+								    font-size: 17px;
+								    text-align: center;
+								    padding: 28px 28px 22px 28px;
+								    @include media($desktop-lg-large){
+										padding:15px 28px 15px 28px;
+										font-size: 15px;
+									}
+									@include media($desktop-sm-mid){
+										padding: 11px 28px 11px 28px;
+    									font-size: 13px;
+									}
+									h3{
+										color: #333333;
+									    margin: 0;
+									    padding: 0;
+									    font-family: $main-font-bolder;
+									    font-weight: bold;
+									    letter-spacing: 0;
+									    text-transform: uppercase;
+									}
+									p{
+										line-height: 18px;
+    									letter-spacing: 0px;
+    									margin: 0;
+									   	padding: 11px 32px 0px;
+									   	@include media($desktop-sm-mid){
+											padding: 11px 13px 0px;
+										}
+									}
+								}
+								ul{
+									color: #828282;
+								    font-size: 18px;
+								    text-align: center;
+								    padding: 18px 28px 22px 28px;
+								    line-height: 34px;
+								    @include media($desktop-lg-large){
+										font-size: 15px;
+    									line-height: 27px;
+									    padding: 9px 28px 9px 28px;
+									}
+									@include media($desktop-sm-mid){
+										font-size: 13px;
+    									line-height: 24px;
+									    padding: 8px 28px 8px 28px;
+									}
+									li{
+										list-style: none;
+										font-family: $main-font;
+									}
+								}
+								span{
+									background: #646464;
+								    text-align: center;
+								    color: #ffffff;
+								    font-size: 19px;
+								    width: 100%;
+								    float: left;
+								    padding: 18px;
+								    text-transform: uppercase;
+								    @include media($desktop-lg-large){
+										padding: 10px;
+										font-size: 16px;
+									}
+								}
+							}
+							.buttom{
+								display: inline-block;
+    							margin-top: 34px;
+								@extend %btnlarge;
+								@include media($desktop-sm-mid){
+									font-size: 16px;
+    								padding: 13px 29px;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.page2.pp-section{
+			@include background(images,bg2,jpg, no-repeat,center, center);
+			background-color:$white;
+			@include media($short-xxlg22){
+				background-size: cover;
+			}
+			@include media($short-xxxlg){
+				background-size: cover;
+			}
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($kaiju);
+					width: 100%;
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-sm-mid){
+						@include outer-container($millenniumfalcon);	
+					}
+					.content-top{
+						h2{
+							color: $mailcolor;
+							@include font-size(60);
+							text-align: left;							    
+    						font-weight: 400;
+    						width: 82%;
+    						letter-spacing: 0;
+    						@include media($desktop-lg-large){
+								@include font-size(45);
+							    margin-top: 0;
+							    margin-bottom: 9px;
+							}
+							@include media($desktop-sm-mid){
+								@include font-size(35);
+							    margin-top: 0;
+							    margin-bottom: 9px;
+							    width: 100%;
+							}
+						}
+						.box{
+							padding-left:50px;
+						    width: 50%;
+						    float: left;
+						    box-sizing: border-box;
+						    font-size: 20px;
+						    @include media($desktop-lg-large){
+								@include font-size(16);
+								padding-left:25px;
+							}
+							@include media($desktop-sm-mid){
+								font-size: 16px;
+							}
+						    &.last {
+						    	padding-left: 100px;
+						    	@include media($desktop-lg-large){
+									padding-left:50px;
+								}
+						    }
+						    p{
+						    	@include media($desktop-sm-mid){
+									line-height: 21px;
+								}
+						    }
+						}
+					}
+				}
+			}
+		}
+		.page3.pp-section{
+			@include background(images,contact-us,jpg, no-repeat,center, center);
+			background-color:$white;
+			@include media($short-xxlg22){
+				background-size: cover;
+			}
+			@include media($short-xxxlg){
+				background-size: cover;
+			}
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($kaiju);
+					width: 100%;
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-sm-mid){
+						@include outer-container($millenniumfalcon);	
+					}
+					.contact_form{
+						h2{
+							color: $mailcolor;
+							@include font-size(55);
+							text-align: center;							    
+    						font-weight: 400;
+    						letter-spacing: 0;
+    						margin-top: 0px;
+    						@include media($desktop-lg-large){
+								@include font-size(45);
+								margin-bottom: 18px;
+							}
+							@include media($desktop-sm-mid){
+								@include font-size(28);
+							}
+						}
+						strong{
+							@include font-size(26);
+							font-family: $main-font;
+							font-weight: normal;
+							@include media($desktop-sm-mid){
+								@include font-size(16);
+							}
+						}
+						.form{
+							margin-top: 9px;
+							background:rgba(#8498c1, 0.5);
+				 			padding: 63px 84px 90px;
+				 			text-align: center;
+				 			@include media($desktop-sm-mid){
+								padding: 40px 40px 66px;
+							}
+				 			form{
+				 				@include position(relative);
+				 				input.wpcf7-text{
+				 					width: 47%;
+				 					float: left;
+    								&:nth-child(2n+2) {
+    									margin-left: 6%;
+    								}
+    								@include media($desktop-sm-mid){
+										font-size: 16px;
+	    								padding: 16px;
+									}
+				 				}
+				 				input.wpcf7-text-full{
+				 					width: 100%;
+				 					margin-bottom: 0;
+				 				}
+				 			}
+				 			input[type="submit"]{
+				 				position: absolute;
+				 				@extend %btnlarge;
+				 				margin-top: 56px;
+    							margin-left: -97px;
+    							@include media($desktop-sm-mid){
+									margin-top: 33px;
+    								margin-left: -81px;
+								}
+				 				&.black{
+				 					background:#333333;
+				 					margin-right: -23px;
+				 					right: 0;
+				 				}
+				 			}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

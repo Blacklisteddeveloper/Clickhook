@@ -11,6 +11,10 @@ html {
 body {
 	font-family:$main-font-midbold;
 	background: $white; /* Fallback for when there is no custom background color defined. */
+	@include media($short-xsm){
+		overflow: scroll !important;
+    	overflow-x: hidden !important;
+	}
 }
 
 blockquote, q {

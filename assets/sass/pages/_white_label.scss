@@ -1,0 +1,464 @@
+.white_label {
+	#wrapper {
+		@include size(100%);
+		z-index: -1;
+		@include position(absolute);
+		overflow: hidden;
+		@include media($mobile-md){
+			height: auto;			
+			position: inherit;
+		}
+		.main {
+			@include size(100%);
+		}
+		.pp-tableCell{
+			display: table;
+			width: 100%;
+			@include media($desktop-md-mid){
+				display: table;
+				width: 100%;
+			}
+		}
+		.page1.pp-section,.page3.pp-section{
+			@include background(images,box-ins_right,png, no-repeat,right, top);
+			background-color:#fff; 
+			.middle{
+				display: block;
+				height: 100%;
+				.content{
+					width: 50%;
+					height: 100%;
+					display: table;
+					padding-left: 10%;
+					.centercontent{
+						display: table-cell;
+    					vertical-align: middle;
+    					text-align: left;
+    					h2 {
+    						text-transform: capitalize;
+    						margin-top:0;
+							color:$mailcolor;
+							font-size: 75px;
+							font-weight: 400;
+							margin-bottom: 0;
+							letter-spacing: 0;
+						}
+						p{
+							font-size: 30px;
+							color:$light-black;
+							margin-top: 12px;
+							line-height: 38px;
+						}
+					}
+				}
+				.circle{
+				   	width: 45%;
+				    padding-top: 299px;
+				    padding-right: 3px;
+				    text-align: right;
+				    float: right;
+				    img.graphic {
+				    	border:0;
+						border-radius:0;
+				    }
+				}
+			}
+				
+		}
+		.page2.pp-section{
+			@include background(images,bg2,jpg, no-repeat,center, center);
+			background-color:$white;
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($godzilla);
+					width: 100%;
+					font-size: 30px;
+					.content{
+						float: left;
+						width: 52%;
+						h2{
+							color: $mailcolor;
+							@include font-size(63);
+							text-align: left;							    
+    						font-weight: 400;
+    						letter-spacing: 0;
+    						margin-bottom: 19px;
+    						margin-top: 0px;
+						}
+						img.graphic{
+							float: left;
+	    					margin-top: 112px;
+						}
+						
+					}
+					.box{
+					    margin-top: 74px;
+					    padding-left: 70px;
+					    box-sizing: border-box;
+					    font-size: 20px;
+					    float: right;
+					    width: 47%;
+					    p {
+					    	line-height: 25px;
+					    }
+					}
+					
+				}
+			}
+		}
+		.page3.pp-section{
+			@include background(images,whitelabel3,png, no-repeat,right, top);
+			.middle{
+				.content{
+					width: 42%;
+					.centercontent{
+    					h2 {
+						}
+						p{
+							font-size:20px;
+							line-height: 26px;
+						}
+					}
+				}
+			}
+				
+		}
+		.page4.pp-section{
+			@include background(images,bg2,jpg, no-repeat,center, center);
+			background-color:$white;
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($godzilla);
+					width: 100%;
+					font-size: 30px;
+					.content{
+						float: left;
+						width: 47%;
+						h2{
+							color: $mailcolor;
+							@include font-size(65);
+							text-align: left;							    
+    						font-weight: 400;
+    						letter-spacing: 0;
+    						margin-bottom: 19px;
+    						margin-top: 0px;
+						}
+						.box{
+						    margin-top:16px;
+						    box-sizing: border-box;
+						    font-size: 20px;
+						    float: right;
+						    width: 90%;
+						    p {
+						    	line-height: 25px;
+						    }
+						}
+					}
+					.listbox{
+						width: 50%;
+    					float: right;
+						ul{
+							li{
+								list-style: none;
+								margin-top: 66px;
+    							display: inline-block;	
+								.number{									
+								    @include size(193px, 193px);
+								    background: $mailcolor;
+								    border-radius: 100%;
+								    color: #fff;
+								    text-align: center;
+								    font-size: 130px;
+								    font-weight: 100;
+								    line-height: 201px;
+								    float: left;
+								    font-family: $main-font-thin;
+								}
+								.desc{
+									float: left;
+								    width: 75%;
+								    padding-left: 6%;
+
+									h3 {
+										margin: 0;
+									    font-size: 34px;
+									    text-transform: uppercase;
+									    letter-spacing: 0;
+									    font-family: $main-font-thin;
+									    span{
+									    	color:$mailcolor;
+									    }
+									}	
+									p {
+										font-size: 20px;
+										line-height: 26px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.page5.pp-section{
+			@include background(images,bg2,jpg, no-repeat,center, center);
+			background-color:$white;
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($godzilla);
+					width: 100%;
+					font-size: 30px;
+					.content{
+						float: left;
+						width: 100%;	
+						h2{
+							color: $mailcolor;
+							@include font-size(76);
+							text-align: left;							    
+    						font-weight: 400;
+    						letter-spacing: 0;
+    						margin-bottom: 19px;
+    						margin-top: 0px;
+						}
+						.box{
+						    margin-top:16px;
+						    box-sizing: border-box;
+						    font-size: 20px;
+						    float: right;
+						    width: 100%;
+    						padding-left: 5%;
+						    p {
+						    	line-height: 25px;
+						    	&:nth-child(4n),&:nth-child(5n){
+									width: 44%;
+						    	}
+						    }
+						    .comment {
+								@include position(relative);
+								float: right;
+    							width: 60%;
+    							margin-top: -53px;
+    							margin-left: 6%;
+								p{
+									@include font-size(40);
+									font-size: 40px;
+								    padding: 0 11%;
+								    line-height: 50px;
+								    margin-bottom: 40px;
+								    margin-top: 13px;
+								}
+								span {
+									@include font-size(30);
+									font-family:$main-font;
+									
+								}
+								&:after,&:before{
+									@include position(absolute, $top:0);
+									@include size(65px, 53px);
+									@include background(images,comment,png, no-repeat,0, 0,cover);
+									@include media($mobile-slg){
+										@include size(40px, 32px);
+									}
+								}
+								&:after{
+									content:'';
+									left:0;
+								}
+								&:before{
+									content:'';
+									right:0;
+									@include background(images,comment_r,png, no-repeat,0, 0,cover);
+								}
+							}
+						}
+					}
+					.listbox{
+						width: 50%;
+    					float: right;
+						ul{
+							li{
+								list-style: none;
+								margin-top: 66px;
+    							display: inline-block;	
+								.number{									
+								    @include size(193px, 193px);
+								    background: $mailcolor;
+								    border-radius: 100%;
+								    color: #fff;
+								    text-align: center;
+								    font-size: 130px;
+								    font-weight: 100;
+								    line-height: 201px;
+								    float: left;
+								    font-family: $main-font-thin;
+								}
+								.desc{
+									float: left;
+								    width: 75%;
+								    padding-left: 6%;
+
+									h3 {
+										margin: 0;
+									    font-size: 34px;
+									    text-transform: uppercase;
+									    letter-spacing: 0;
+									    font-family: $main-font-thin;
+									    span{
+									    	color:$mailcolor;
+									    }
+									}	
+									p {
+										font-size: 20px;
+										line-height: 26px;
+									}
+								}
+							}
+						}
+					}
+				}
+			}	
+		}
+		.page6.pp-section{
+			background-color:$white;
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($godzilla);
+					width: 100%;
+					font-size: 30px;
+					.listbox{
+						width: 100%;
+						ul{
+							li{
+								list-style: none;
+							    margin-top: 66px;
+							    display: table;
+							    padding-right: 10%;
+								.icon{									
+								    @include size(346px, 346px);
+								    background: $mailcolor;
+								    border-radius: 100%;
+								    color: #fff;
+								    text-align: center;
+								    font-size: 130px;
+								    font-weight: 100;
+								    line-height: 201px;
+								    float: left;
+								    font-family: $main-font-thin;
+								    @include position(relative);
+								    &:after{
+								    	content:'';
+								    	@include size(100%);
+								    	@include position(absolute, $left: 0,  $top: 0);
+								    }
+								    &.icon1:after{
+								    	@include background(images,icon_1,png, no-repeat,center, center);
+								    }
+								    &.icon2:after{
+								    	@include background(images,icon_2,png, no-repeat,center, center);
+								    }
+								}
+								.desc{
+									width: 75%;
+								    padding-left: 3%;
+								    vertical-align: middle;
+								    display: table-cell;
+
+									h3 {
+										margin: 0;
+									    font-size: 54px;
+									    text-transform: capitalize;
+									    letter-spacing: 0;
+									    color:$mailcolor;
+									    font-family: $main-font-thin;
+									}	
+									p {
+										font-size: 20px;
+										line-height: 26px;
+									}
+								}
+								&.right-align{
+									padding-right: 0%;
+									padding-left: 10%;
+									.icon{									
+									    float: right;
+									}
+									.desc{
+										padding-right: 7%;
+										padding-left: 0%;
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		.page7.pp-section{
+			@include background(images,contact-us,jpg, no-repeat,center, center);
+			background-color:$white;
+			.contentbox {
+				vertical-align: middle;
+				display: table-cell;
+				.middle-cont{
+					@include outer-container($kaiju);
+					width: 100%;
+					.contact_form{
+						h2{
+							color: $mailcolor;
+							@include font-size(55);
+							text-align: center;							    
+    						font-weight: 400;
+    						letter-spacing: 0;
+    						margin-top: 0;
+						}
+						strong{
+							@include font-size(26);
+							font-family: $main-font;
+							font-weight: normal;
+						}
+						.form{
+							margin-top: 9px;
+							background:rgba(#8498c1, 0.5);
+				 			padding: 63px 84px 90px;
+				 			text-align: center;
+				 			form{
+				 				@include position(relative);
+				 				input.wpcf7-text{
+				 					width: 47%;
+				 					float: left;
+    								&:nth-child(2n+2) {
+    									margin-left: 6%;
+    								}
+				 				}
+				 				input.wpcf7-text-full{
+				 					width: 100%;
+				 					margin-bottom: 0;
+				 				}
+				 			}
+				 			input[type="submit"]{
+				 				position: absolute;
+				 				@extend %btnlarge;
+				 				margin-top: 56px;
+    							margin-left: -97px;
+				 				&.black{
+				 					background:#333333;
+				 					margin-right: -23px;
+				 					right: 0;
+				 				}
+				 			}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+

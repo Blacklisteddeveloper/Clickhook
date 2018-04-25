@@ -45,7 +45,7 @@
 			 </a>
 		</div>
 		<nav class="animated bounceInDown">
-			<a href="#" class="getdemo">GET A DEMO</a>
+			<a href="#" class="getdemo">TRY FOR FREE</a>
 			<div class="hamburger hamburger--spring">
 				<div class="hamburger-box">
 				  <div class="hamburger-inner"></div>

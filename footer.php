@@ -26,7 +26,7 @@
 	</footer>
 </section>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/customizer.js"></script> 
+<script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script> 
 
 <?php wp_footer(); ?>
 

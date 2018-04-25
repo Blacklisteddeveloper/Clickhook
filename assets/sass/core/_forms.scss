@@ -19,16 +19,44 @@ input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"],
 textarea {
-	border: 1px solid #222628;
-	border-radius: 3px;
-
-	&:focus {
-		color: #222628;
+	border: 0px solid #222628;
+	font-size: 20px;
+	color:$mailcolor;
+	border-radius: 8px;
+    margin-bottom: 29px;
+    width: 100%;
+    font-family: $main-font;
+    font-weight: bold;
+	@include padding(20px);
+	@include media($desktop-lg-large) {
+		@include padding(15px);
+		font-size: 16px;
+	}
+	@include media($desktop-md-mid) {
+		 margin-bottom: 18px;
+	}
+	&:focus,&:placeholder {
+		color:$mailcolor;
+	}
+	&::-webkit-input-placeholder {
+		color:$mailcolor;
+	}
+	 
+	&:-moz-placeholder { /* Firefox 18- */
+		color:$mailcolor;
+	}
+	 
+	&::-moz-placeholder {  /* Firefox 19+ */
+		color:$mailcolor;
+	}
+	 
+	&:-ms-input-placeholder {  
+		color:$mailcolor;
 	}
 }
 
 select {
-	border: 1px solid #222628;
+	border: 0px solid #222628;
 }
 
 input[type="text"],
@@ -46,7 +74,7 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
-	padding: 3px;
+	
 }
 
 textarea {

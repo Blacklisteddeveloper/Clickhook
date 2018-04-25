@@ -120,15 +120,8 @@ add_action( 'widgets_init', 'clickhook_widgets_init' );
  * Enqueue scripts and styles.
  */
 function clickhook_scripts() {
-	wp_enqueue_style( 'clickhook-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'clickhook-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'clickhook-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
-	}
+	
 }
 add_action( 'wp_enqueue_scripts', 'clickhook_scripts' );
 
@@ -172,3 +165,19 @@ if( function_exists('acf_add_options_page') ) {
 	
 	
 }
+
+function inline_svg($name) {
+	$file = get_template_directory();
+	$file .= "/assets/svg/" .$name .".svg";
+	include ($file);
+}
+
+
+// Remove jQuery Migrate Script from header and Load jQuery from Google API
+function crunchify_stop_loading_wp_embed_and_jquery() {
+	if (!is_admin()) {
+		wp_deregister_script('wp-embed');
+		wp_deregister_script('jquery');  // Bonus: remove jquery too if it's not required
+	}
+}
+add_action('init', 'crunchify_stop_loading_wp_embed_and_jquery');

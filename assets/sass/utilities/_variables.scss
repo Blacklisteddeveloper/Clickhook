@@ -16,6 +16,7 @@ $main-font-thin: heading-thin;
 // Shades
 $white: #ffffff;
 $mailcolor: #4870f5;
+$dark-blue: #3253c3;
 $light-black:#333333;
 $black: #000000;
 $grey: #858585;
@@ -50,6 +51,7 @@ $gipsy-danger: 1000px;
 $king-ghidorah: 1200px;
 $kaiju: 1370px;
 $godzilla: 1570px;
+$godzilla2: 1500px;
 
 // _Astronomical
 $betelgeuse: 1740px;
@@ -87,9 +89,9 @@ $scuti: 2500px;
 	:: 1370px >    */
 		$desktop-lg-max: new-breakpoint(max-width $kaiju); /*
 	:: 1440px >    */
-		$desktop-lg-large: new-breakpoint(max-width $kaiju + 70); /*		
-	:: 1370px < + 900px <    */
-		$desktop-lg-wh: new-breakpoint(min-width $kaiju min-height $voltron+60px); /*
+		$desktop-lg-large: new-breakpoint(max-width $kaiju + 70); /*	
+	:: 1370px < + 1280px <    */
+		$desktop-lg-wh: new-breakpoint(max-width $kaiju min-width 1280px); /*
 	:: 1260px > + 770px <    */
 		$desktop-md-wh: new-breakpoint(max-width $king-ghidorah+60px min-height $megatron+110px); /*
 	:: 1300px >    */
@@ -130,8 +132,12 @@ $scuti: 2500px;
 		$mobile-xsm: new-breakpoint(max-width $xenomorph - 45px);
  // _Short
  /*
+	:: 1600px > 1200   */
+		$short-xxlg22: new-breakpoint(max-width 1600px min-height $gipsy-danger+200px); /*
 	:: 1110px >    */
 		$short-xxlg: new-breakpoint(max-height $gipsy-danger+110px); /*
+	::1200px >    */
+		$short-xxxlg: new-breakpoint(max-height $king-ghidorah); /*
 	:: 1020px >    */
 		$short-xlg: new-breakpoint(max-height $gipsy-danger+20px); /*
 	:: 900px >    */

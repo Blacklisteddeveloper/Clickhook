@@ -8,18 +8,19 @@
  */
 get_header();
 ?>
-
 <div id="wrapper">
 	  <div class="main">
-		<aside class="page1">
+		<aside class="page1 pages active" data-menuanchor="page1">
 			<div class="contentbox">
 				<h1>The World's Most Simple, Flexible<br/> Lead Management Software!</h1>
 				<div class="imagecenter">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/homeslide.jpg" width="1207" height="422" alt="" />
+					<img class="web" src="<?php bloginfo('template_url'); ?>/assets/images/homeslide.jpg" width="1207" height="422" alt="" />
+					<img class="mobile" src="<?php bloginfo('template_url'); ?>/assets/images/homeslide-mobile.png" alt="" />
 				</div>
+				<a href="#" class="getdemo">TRY FOR FREE</a>
 			</div>
 		</aside>
-		<aside class="page2">
+		<aside class="page2 pages" data-menuanchor="page2">
 			<div class="middle">
 				<div class="contentbox">
 					<div class="comment">
@@ -42,7 +43,7 @@ get_header();
 				</div>
 			</div>
         </aside>
-		<aside class="page3">
+		<aside class="page3 pages" data-menuanchor="page3">
 			<div class="middle">
 				<div class="contentbox">
 					<h3>ClickHook is Simple Yet Powerful.</h3>
@@ -64,11 +65,28 @@ get_header();
 							<p>It doesn’t matter where you go. ClickHook goes with you. With our apps for iPhone and Android, you can manage your leads anywhere you want.</p>
 						</div>
 					</div>
+					<div class="service mobile slick">
+						<div class="box">
+							<i><img src="<?php bloginfo('template_url'); ?>/assets/images/icon1.png"/></i>
+							<h4>Simplicity</h4>
+							<p>Simplicity is at the core of ClickHook. You don’t have to jump through hoops to get things done. It has everything you need, and nothing that you don’t.</p>
+						</div>
+						<div class="box">
+							<i><img src="<?php bloginfo('template_url'); ?>/assets/images/icon2.png"/></i>
+							<h4>Workflows</h4>
+							<p>Workflows allow you to organize your leads in a way that you’ve never seen before. Customize your pipeline, drag and drop your leads as easy as it gets.</p>
+						</div>
+						<div class="box">
+							<i><img src="<?php bloginfo('template_url'); ?>/assets/images/icon3.png"/></i>
+							<h4>On The Go</h4>
+							<p>It doesn’t matter where you go. ClickHook goes with you. With our apps for iPhone and Android, you can manage your leads anywhere you want.</p>
+						</div>
+					</div>
 					<a href="#" class="largetxt">View More Features...</a>
 				</div>
 			</div>
 		</aside>
-		<aside class="page4">
+		<aside class="page4 pages" data-menuanchor="page4"> 
 			<div class="contentbox">
 				<div class="manageleads">
 					<div class="imgbox">
@@ -83,19 +101,31 @@ get_header();
 				
 			</div>
 		</aside>
-		<aside class="page5">
+		<aside class="page5 pages" data-menuanchor="page5">
 			<div class="contentbox">
 				<section>
 					<ul class="testimonials">
-						<li>
+						<li class="testimonial">
 							<p>ClickHook has greatly helped our organization manage our leads better. And I love its simplicity. Our website forms are fully integrated with ClickHook and the mobile apps have made everything so easy.</p>
 							<span>Andrea Hadlington</span>
 							<em>Director of Marketing <br/>Communications at CCV Insurance</em>
 						</li>
-						<li>
+						<li class="testimonial">
+							<p>Easiest CRM to learn and use that I have seen. It is simple, clean and on-boarding is a breeze. </p>
+							<span>CODY DOUMA</span>
+							<em>Director of Business Development <br/>at Billyard Insurance</em>
+						</li>
+					</ul>
+					<ul class="testimonials mobile slick">
+						<li class="testimonial">
 							<p>ClickHook has greatly helped our organization manage our leads better. And I love its simplicity. Our website forms are fully integrated with ClickHook and the mobile apps have made everything so easy.</p>
 							<span>Andrea Hadlington</span>
 							<em>Director of Marketing <br/>Communications at CCV Insurance</em>
+						</li>
+						<li class="testimonial">
+							<p>Easiest CRM to learn and use that I have seen. It is simple, clean and on-boarding is a breeze. </p>
+							<span>CODY DOUMA</span>
+							<em>Director of Business Development <br/>at Billyard Insurance</em>
 						</li>
 					</ul>
 					<div class="calltoaction">
@@ -107,7 +137,7 @@ get_header();
 				</section>
 			</div>
 		</aside>
-		<aside class="footer">
+		<aside class="footer pages" data-menuanchor="footer">
 			<div class="contentbox">
 				<div class="copyright">
 					<h3>Try ClickHook Now. It’s Free!</h3>
@@ -117,6 +147,5 @@ get_header();
 			</div>
 		</aside>
 	  </div>
-	</div>
-<?php
+	</div><?php
 get_footer();

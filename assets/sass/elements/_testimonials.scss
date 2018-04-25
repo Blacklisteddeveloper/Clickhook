@@ -1,0 +1,145 @@
+%testimonials {
+    @include position(relative);
+    display:table;
+    @include media($mobile-slg) {
+        display:none;
+    }
+    &.mobile {
+        display:none;
+        padding-top: 65px;
+        @include media($mobile-slg) {
+            display:block;
+        }
+        li.slick-slide {
+            @include media($mobile-slg){
+                width: 100%;
+                margin-right: 1px;
+                padding-bottom: 55px;
+                @include background(images,testimonials_bm,png, no-repeat,center, bottom);
+                background-size: auto;
+                padding-left: 0;
+                text-align: center;
+            }
+        }
+        .slick-dots {
+            bottom: -21px;
+        }
+        
+    }
+    &:after,&:before{
+        @include position(absolute, $top:29px);
+        @include size(65px, 53px);
+        @include background(images,comment,png, no-repeat,0, 0,cover);
+        @include media($mobile-lg){
+            display:none;
+        }
+    }
+    &:after{
+        content:'';
+        left:-150px;
+        @include media($desktop-lg-max){
+            left:-100px;
+        }
+    }
+    &:before{
+        content:'';
+        right:-150px;
+        @include background(images,comment_r,png, no-repeat,0, 0,cover);
+        @include media($desktop-lg-max){
+            right:-100px;
+        }
+    }
+ li.testimonial{
+    list-style:none;
+    @include background(images,testimonials_bg,png, no-repeat,left, bottom);
+    @include size(47%, null);
+    vertical-align: bottom;
+    display: inline-block;
+    text-align: left;
+    padding-bottom: 127px;
+    padding-left: 40px;
+    margin-right: 6%;
+
+    @include media($milky-way-large){
+        padding-bottom: 107px;
+    }
+    @include media($desktop-lg-max){
+        padding-bottom: 56px;
+        padding-left:24px;
+        background-size: 116px;
+    }
+    @include media($desktop-lg-large){
+        padding-bottom: 55px;
+        background-size: 115px;
+        padding-left: 18px;
+    }
+    @include media($desktop-lg-wh){
+        @include font-size(36);
+    }
+    @include media($desktop-mds){
+        padding-bottom: 45px;
+        padding-left:20px;
+        background-size: 116px;
+    }
+    p{
+        @include font-size(30);
+        line-height: 39px;
+        margin-top: 19px;
+        @include media($desktop-lg-large){
+            font-size: 20px;
+            line-height: 31px;
+        }
+        @include media($desktop-lg-max){
+            @include font-size(18);
+            line-height: 28px;
+            margin: 6px 0px;
+        }
+        @include media($desktop-mds){
+            @include font-size(14);
+            line-height: 20px;
+        }
+        @include media($mobile-slg){
+            @include font-size(16);
+            line-height: 24px;
+        }
+        @include media($mobile-xsm){
+            @include font-size(13);
+            line-height: 19px;
+        }
+    }
+
+    span {
+        @include font-size(30);
+        color:$mailcolor;
+        @include padding(null null null null);
+        color: $mailcolor;
+        text-transform: uppercase;
+        @include media($desktop-lg-max){
+            @include font-size(25);
+        }
+        @include media($desktop-mds){
+            @include font-size(20);
+        }
+        @include media($mobile-xsm){
+            @include font-size(18);
+        }
+    }
+    em {
+        @include font-size(21);
+        display: block;
+        @include media($desktop-lg-max){
+            @include font-size(18);
+        }
+        @include media($desktop-mds){
+            @include font-size(14);
+        }
+        @include media($mobile-xsm){
+            @include font-size(13);
+        }
+    }
+    &:nth-child(2) {
+        margin-right: 0%;
+        
+    }
+ }
+}

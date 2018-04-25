@@ -50,6 +50,30 @@ function clickhook_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function clickhook_customize_preview_js() {
-	wp_enqueue_script( 'clickhook-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	
 }
 add_action( 'customize_preview_init', 'clickhook_customize_preview_js' );
+
+
+
+add_filter( 'body_class','halfhalf_body_class' );
+function halfhalf_body_class( $classes ) {
+ 
+    if ( is_page_template( 'page-halfhalf.php' ) ) {
+        $classes[] = 'halfhalf-page';
+    }
+     
+    return $classes;
+     
+}
+
+
+
+function add_slug_body_class( $classes ) {
+global $post;
+if ( isset( $post ) ) {
+$classes[] = $post->post_name;
+}
+return $classes;
+}
+add_filter( 'body_class', 'add_slug_body_class' );

@@ -10,21 +10,64 @@
 		}
 		.main {
 			@include size(100%);
-
 		}
-		@include background(images,strip,png, no-repeat,69%, 90px);
-		.page1.section{
+		.pp-tableCell{
+			@include media($desktop-md-mid){
+				display: table;
+				width: 100%;
+			}
+		}
+		.page1.pp-section{
+			@include background(images,strip,png, no-repeat,69%, 90px);
+			background-color:$white;
 			@include media($desktop-mds){
+				display: table;
+			}
+			@include media($short-xxlg22){
 				display: table;
 			}
 			@include media($mobile-md){
 				height: 100vh;
+				@include background(images,strip,png, no-repeat,0, 126px);	
+				background-size: 95%;
+			}
+			
+			.scroll{
+				width: 100%;
+				float: left;
+				font-size: 13px;
+				display:none;
+				color: #313131;
+				z-index: 100;
+				cursor: pointer;
+				
+				@include media($mobile-md){
+					display: block;
+				}
+				@include position(absolute, $bottom:12%);
+				i{
+					font-size: 18px;
+					color: #4971f5;
+				}
+				span{
+				    display: block;
+				}
+			}
+			.idbox{
+				position: absolute;
+				bottom: 20px;
+				width: 80%;
+				height: 20px;
 			}
 		}
 		.contentbox {
 			@include outer-container($king-ghidorah);
 			text-align: center;
 			@include margin( 183px null null null );
+			@include media($desktop-lg-large){
+				@include outer-container($gipsy-danger);
+				@include margin( 159px null null null );
+			}
 			@include media($desktop-lg-max){
 				@include outer-container($clover);
 				@include margin( 150px null null null );
@@ -35,9 +78,21 @@
 				margin-top: 0;
 				display: table-cell;
 			}
-			@include media($mobile-md){
-				padding: 0 10%;
+			@include media($desktop-md-mid){
+				display: table-cell;
+				vertical-align: middle;
 			}
+			@include media($short-xxlg22){
+				padding: 0 10%;
+				vertical-align: middle;
+				margin-top: 0;
+				display: table-cell;
+			}
+			@include media($mobile-slg){
+				display: block;
+				margin-top: 32%;
+			}
+			
 			h1 {
 				color: $mailcolor;
 				@include font-size(65);
@@ -52,14 +107,25 @@
 					@include font-size(36);
 					text-align: center;
 				}
+				@include media($desktop-lg-wh){
+					@include font-size(36);
+				}
+				@include media($desktop-md-mid){
+					@include font-size(36);
+					text-align: center;
+				}
 				@include media($mobile-lg){
-					@include font-size(26);
+					@include font-size(45);
+					padding: 0 10%;
 				}
 				@include media($mobile-slg){
-					@include font-size(21);
+					@include font-size(25);
+				}
+				@include media($mobile-xsm){
+					@include font-size(23);
 				}
 				br{
-					@include media($mobile-md){
+					@include media($mobile-lg){
 						display:none;
 					}
 				}
@@ -68,31 +134,104 @@
 				margin-top: 92px;
 				@include media($desktop-mds){
 					margin: 32px auto 0 auto;
-					width: 80%;
+					width: 100%;
 					padding-left: 29px;
 				}
-				@include media($mobile-md){
-					width: 100%;
-					padding-left: 0px;
+				@include media($desktop-lg-large){
+					margin-top:52px;
+				}
+				@include media($desktop-md-mid){
+					margin-top:52px;
+				}
+				@include media($desktop-lg-wh){
+					margin-top:22px;
+				}
+				@include media($mobile-slg){
+					width: 96%;
+					padding-left: 2%;
+					margin: 4% 0 5% 0; 
+				}
+				img{
+					&.web {
+						@include media($mobile-slg){
+							display:none;
+						}
+					}
+					&.mobile {
+						display:none;
+						@include media($mobile-slg){
+							display:block;
+						}
+					}
+				}
+			}
+			.getdemo{
+				display:none;
+				@extend %btnlarge;
+				margin-top: 20px;
+				@include media($mobile-slg){
+					display: inline-block;	
+					width: 80%;
+					bottom: 9%;
+					left: 0;
+					margin: 10%;
+					position: absolute;
+				}
+				@include media($mobile-xsm){
+					padding: 12px 27px;
+					font-size: 16px;
+					
+				}
+				@include media($mobile-xsm){
+					bottom: 0;		
 				}
 			}
 		}
 		.page2 {
 			@include background(images,bg2,jpg, no-repeat,center, center);
 			@include media($mobile-md){
-				@include padding(100px 10% 100px 10%);
+				@include padding(82px 10% 0px 10%);
 			}
-			&.section{
+			@include media($mobile-xsm){
+				@include padding(50px 10% 0px 10%);
+			}
+			&.pp-section{
 				@include media($desktop-mds){
 					display: table;
 				}
+				@include media($desktop-md-mid){
+					display: table;
+				}
+				@include media($short-xxlg22){
+					display:table;
+				}
 			}
+			.pp-tableCell{
+				@include media($desktop-lg-wh){
+					display: table;
+				}	width: 100%;
+			}
+			@include media($desktop-md-mid){
+					display: table;
+					width: 100%;
+				}
 			.middle{
+				@include media($short-xxlg22){
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
 				@include media($desktop-mds){
 					vertical-align: middle;
 					margin-top: 0;
 					display: table-cell;
 				}
+				@include media($desktop-md-mid){
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
+				
 			}
 			
 			.contentbox {
@@ -100,15 +239,20 @@
 				@include media($milky-way-large){
 					@include margin( 105px null null null );
 				}
-				@include media($desktop-mds){
+				@include media($short-xxlg22){
+					margin: 0 auto;
+					padding: 0;
+				}
+				@include media($desktop-md-mid){
 					@include outer-container($voltron);
+					margin: 0 auto;
 				}
 				@include media($desktop-mds){
 					@include outer-container($megatron);
 					margin: 0 auto;
 				}
 				@include media($mobile-slg){
-					@include outer-container($xenomorph);
+					max-width:90%;
 				}
 				@include media($mobile-md){
 					max-width:100%;
@@ -122,10 +266,24 @@
 						padding: 0 14%;
 						line-height: 50px;
 						margin-bottom: 40px;
+						
+						@include media($desktop-lg-large){
+							@include font-size(35);
+							line-height: 40px;
+							margin-bottom: 27px;
+						}
 						@include media($desktop-lg-max){
 							@include font-size(35);
 							line-height: 40px;
 							margin-bottom: 27px;
+						}
+						@include media($desktop-lg-wh){
+							    font-size: 30px;
+						}
+						@include media($desktop-md-mid){
+							@include font-size(27);
+							line-height: 32px;
+							margin-bottom: 19px;
 						}
 						@include media($desktop-mds){
 							@include font-size(24);
@@ -136,6 +294,11 @@
 							line-height: 21px;
 							margin-bottom: 13px;
 						}
+						@include media($mobile-xsm){
+							@include font-size(14);
+							line-height:20px;
+							margin-bottom: 13px;
+						}
 					}
 					span {
 						@include font-size(30);
@@ -143,11 +306,23 @@
 						@include media($desktop-lg-max){
 							@include font-size(26);
 						}
+						@include media($desktop-lg-large){
+							@include font-size(24);
+						}
+						@include media($desktop-lg-wh){
+							@include font-size(20);
+						}
+						@include media($desktop-md-mid){
+							@include font-size(20);
+						}
 						@include media($desktop-mds){
 							@include font-size(20);
 						}
 						@include media($mobile-slg){
 							@include font-size(16);
+						}
+						@include media($mobile-xsm){
+							@include font-size(13);
 						}
 					}
 					&:after,&:before{
@@ -174,7 +349,7 @@
 						margin-top:30px;
 					}
 					@include media($mobile-slg){
-						margin-top:16px;
+						margin-top:0;
 					}
 					.box{
 						@include size(32%, null);
@@ -182,20 +357,43 @@
 						@include font-size(32);
 						padding-right: 3%;
 						margin-top:40px;
+						@include media($desktop-lg-wh){
+							@include font-size(28);
+						}
+						@include media($desktop-md-mid) {
+							@include font-size(27);
+						}
 						@include media($desktop-mds){
 							@include font-size(20);
 						}
 						@include media($mobile-slg){
-							@include font-size(14);
+							@include font-size(16);
+							text-align: center;
+							width: 100%;
+							margin-top:20px;
+							margin-bottom:20px;
+							padding:0 10%;
 						}
+						@include media($mobile-xsm){
+							@include font-size(13);
+							margin-top:6px;
+							margin-bottom:6px;
+						}
+
 						ul{
 							text-align: right;
 							list-style:none;
+							@include media($mobile-slg){
+								text-align: center;
+							}
 							li{
 								color: $grey;
 								margin-bottom: 15px;
 								list-style:none;
 								font-family:$main-font;
+								@include media($mobile-slg){
+									display:inline;
+								}
 							}
 						}
 						&:nth-child(2) {
@@ -208,22 +406,42 @@
 							@include border-right-radius(38px);
 							margin-top: rem(0);
 							@include border-left-radius(38px);
+							@include media($desktop-lg-large){
+								padding:1% 4%;
+								@include font-size(16);
+							}
 							@include media($desktop-lg-max){
 								padding:2% 4%;
+								@include font-size(16);
+							}
+							@include media($desktop-lg-wh){
+								padding:1% 3%;
 								@include font-size(16);
 							}
 							@include media($desktop-mds){
 								@include font-size(14);
 							}
 							@include media($mobile-slg){
-								@include font-size(12);
+								@include font-size(14);
 								border-radius: 10px;
+								@include size(100%, null);
 							}
+							
 							p{
+								
 								@include media($desktop-mds){
 									line-height: 20px;
 									margin-top: 4px;
 									margin-bottom: 10px;
+									text-align: center;
+								}
+								@include media($mobile-slg){
+									@include font-size(14);
+									line-height:19px;
+								}
+								@include media($mobile-xsm){
+									@include font-size(13);
+									line-height:16px;
 								}
 							}
 						}
@@ -237,16 +455,30 @@
 		.page3{
 			@include background(images,bg2,jpg, no-repeat,center, center);
 			@include media($mobile-md){
-				@include padding(100px 10% 100px 10%);
+				@include padding(82px 10% 0px 10%);
 				background-size: cover;
+			}
+			@include media($mobile-xsm){
+				@include padding(82px 10% 0px 10%);
 			}
 			&:after{
 				@include background(images,right-row,png, no-repeat,center, center);
 				content:'';
 				@include size(291px, 122px);
 				@include position(absolute,$top:25%, $right:0);
+				@include media($milky-way-large){
+				    right: -55px;
+				}
+				@include media($desktop-lg-large) {
+					@include size(242px, 118px);
+					background-position: center left;
+				}
 				@include media($mobile-lg){
 					display:none;
+				}
+				@include media($desktop-mds){
+					top: 14%;
+					right: -6%;
 				}
 			}
 			&:before{
@@ -254,21 +486,67 @@
 				content:'';
 				@include size(211px, 53px);
 				@include position(absolute,$bottom:16%, $left:0 );
+				@include media($milky-way-large){
+				    left: -55px;
+				}
+				@include media($desktop-lg-large) {
+					@include size(186px, null);
+					background-position: center right;
+				}
 				@include media($mobile-lg){
 					display:none;
 				}
+				@include media($desktop-mds){
+					left: -6%;
+				}
 			}
-			&.section{
+			&.pp-section{
 				@include media($desktop-mds){
 					display: table;
 				}
+				@include media($desktop-lg-wh){
+					display: table;
+				}
+				@include media($desktop-md-mid) {
+					display: table;
+				}
+				@include media($short-xxlg22){
+					display: table;
+				}
+				
+			}
+			.pp-tableCell{
+				@include media($desktop-lg-wh){
+					display: table;
+					width: 100%;
+				}
+				@include media($desktop-md-mid){
+					display: table;
+					width: 100%;
+				}
 			}
 			.middle{
+				@include media($short-xxlg22){
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
+				@include media($desktop-md-mid) {
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
 				@include media($desktop-mds){
 					vertical-align: middle;
 					margin-top: 0;
 					display: table-cell;
 				}
+				@include media($desktop-lg-wh){
+					vertical-align: middle;
+					margin-top: 0;
+					display: table-cell;
+				}
+				
 			}
 			.contentbox {
 				@include outer-container($king-ghidorah);
@@ -279,6 +557,18 @@
 				@include media($desktop-lg-large){
 					@include outer-container($gipsy-danger);
 					@include margin( 120px null null null );
+				}
+				@include media($short-xxlg22){
+					margin: 0 auto;
+					padding: 0;
+				}
+				@include media($desktop-lg-wh){
+					@include margin( 0px null null null );
+					@include outer-container($millenniumfalcon);
+				}
+				@include media($desktop-md-mid) {
+					@include margin( 0px null null null );
+					@include outer-container($millenniumfalcon);
 				}
 				@include media($desktop-mds){
 					@include margin( 0px null null null );
@@ -305,11 +595,17 @@
 					@include media($desktop-lg-max){
 						@include font-size(45);
 					}
+					@include media($desktop-md-mid) {
+						@include font-size(35);
+					}
 					@include media($desktop-mds){
 						@include font-size(35);
 					}
 					@include media($mobile-slg){
 						@include font-size(26);
+					}
+					@include media($mobile-xsm){
+						@include font-size(19px);
 					}
 				}
 				span{
@@ -321,17 +617,53 @@
 						@include font-size(30);
 						margin-bottom:50px;
 					}
+					@include media($desktop-lg-wh){
+						@include font-size(27);
+						margin-bottom: 20px;
+					}
+					@include media($desktop-md-mid) {
+						@include font-size(20);
+						margin-bottom:30px;
+					}
 					@include media($desktop-mds){
 						@include font-size(20);
 						margin-bottom:20px;
 					}
 					@include media($mobile-slg){
-						@include font-size(16);
+						@include font-size(18);
 						margin-bottom:16px;
+					}
+					@include media($mobile-xsm){
+						font-size: 13px;
+						margin-bottom: 12px;
 					}
 				}
 				.service {
 					display: inline-block;
+					@include media($mobile-slg){
+						display:none;
+					}
+					&.mobile{
+						display:none;
+						@include media($mobile-slg){
+							display:block;
+							width: 320px;
+							margin: 0 auto;
+						}
+						@include media($mobile-smd){
+							width: 280px;
+						}
+						@include media($mobile-xsm){
+							margin-top: -36px;
+						}
+						.box {
+							margin-top: 31px;
+						}
+						img{
+							display: inline-block;
+						}
+						
+					}
 					.box {
 						@include size(26%, null);
 						margin-right:11%;
@@ -341,6 +673,7 @@
 							@include size(31%, null);
 							margin-right:3%;
 						}
+						
 						@include media($mobile-md){
 							width: 100%;
 							margin-right: 0;
@@ -352,6 +685,14 @@
 								@include media($desktop-lg-max){
 									padding: 37px 0;
 									width: 68px;
+								}
+								@include media($desktop-lg-large){
+									padding: 37px 0;
+									width: 68px;
+								}
+								@include media($desktop-lg-wh){
+									padding:32px 0;
+									width: 56px;
 								}
 								@include media($mobile-slg){
 									padding:35px 0 21px 0;
@@ -370,6 +711,23 @@
 									background-size: contain;
 									margin-left: -75px;
 								}
+								@include media($desktop-lg-large){
+									@include size(151px, 151px);
+									background-size: contain;
+									margin-left: -75px;
+								}
+								@include media($desktop-md-mid) {
+									@include size(129px, 147px);
+									background-size: contain;
+									margin-left: -63px;
+								}
+									
+								@include media($desktop-lg-wh){
+									@include size(109px, 129px);
+									background-size: contain;
+									margin-left: -55px;
+								}
+								
 								@include media($mobile-slg){
 									@include size(90px, 129px);
 									background-size: contain;
@@ -399,6 +757,21 @@
 								background-size: 78%;
 								padding: 17px 32px 24px 25px;
 							}
+							
+							@include media($desktop-lg-large){
+								font-size: 27px;
+								background-size: 100%;
+								margin-top: 4px;
+								margin-bottom: -10px;
+							}
+							@include media($desktop-lg-wh){
+								font-size: 19px;
+								background-size: 90%;
+							}
+							@include media($desktop-md-mid) {
+								font-size: 19px;
+								background-size: 90%;
+							}
 							@include media($mobile-slg){
 								font-size: 14px;
 								background-size: 101%;
@@ -411,7 +784,10 @@
 								width: auto;
 								margin-top: 18px;
 								margin-bottom: 15px;
-								
+							}
+							@include media($mobile-xsm){
+								margin-top: 12px;
+								margin-bottom: 8px;
 							}
 						}
 						p{
@@ -422,15 +798,26 @@
 								margin-top: 6px;
 							}
 							@include media($desktop-lg-large){
-								font-size: 16px;
+								@include font-size(16);
+							}
+							@include media($desktop-lg-wh){
+								@include font-size(16);
+								line-height: 19px;
+							}
+							@include media($desktop-md-mid) {
+								@include font-size(14);
 							}
 							@include media($desktop-mds){
 								@include font-size(13);
 								margin-top: 0;
 							}
 							@include media($mobile-slg){
-								@include font-size(12);
-								line-height: 17px;
+								@include font-size(16);
+								line-height: 24px;
+							}
+							@include media($mobile-xsm){
+								@include font-size(13);
+								line-height: 19px;
 							}
 						}
 						&:nth-child(3) {
@@ -446,21 +833,29 @@
 					@include media($desktop-mds){
 						@include font-size(16);
 					}
+					@include media($desktop-lg-large){
+						margin-top: 20px;
+						font-size: 21px;
+						display: block;
+					}
 				}
 			}
 		}
 		.page4 {
 			@include background(images,bg3,jpg, no-repeat,center, center);
 			background-color: #f2f2f2;
-			
 			@include media($milky-way-large){
 				background-size: 122%;
 			}
 			@include media($desktop-lg-large){
 				background-size: 105%;
 			}
+			@include media($desktop-lg-wh){
+				background-size: 105%;
+				@include background(images,bg3_small,jpg, no-repeat,center, center);
+			}
 			@include media($desktop-mds){
-				background-size: 134%;
+				background-size: 112%;
 			}
 			@include media($mobile-lg){
 				background-size: 161%;
@@ -468,13 +863,14 @@
 			@include media($mobile-slg){
 				background-size: 186%;
 			}
-			
 			@include media($mobile-md){
 				@include background(images,bg3-m,png, no-repeat,center, center);
 				background-size: cover;
-				@include padding(100px 10% 100px 10%);
+				@include padding(82px 10% 0px 10%);
 				
-				
+			}
+			@include media($mobile-xsm){
+				@include padding(50px 10% 0px 10%);
 			}
 			.contentbox {
 				@include outer-container($king-ghidorah);
@@ -482,6 +878,9 @@
 				@include margin( 0px null null null );
 				@include media($desktop-lg-large){
 					@include outer-container($gipsy-danger);
+				}
+				@include media($short-xxlg22){
+					padding:0;
 				}
 				@include media($desktop-mds){
 					@include outer-container($megatron);
@@ -504,13 +903,16 @@
 						@include media($desktop-lg-large){
 							width: 24%;
 						}
+						@include media($desktop-lg-wh){
+							width: 20%;
+						}
 						@include media($mobile-slg){
 							width: 24%;
 							margin: 0 auto;
 							float: none;
 						}
 						@include media($mobile-md){
-							width: 24%;
+							width: 32%;
 						}
 					}
 					.desciption {
@@ -519,11 +921,12 @@
 						color: $white;
 						text-align: left;
 						@include media($mobile-slg){
-							@include size(95%, null);
+							@include size(100%, null);
 							text-align: center;
 							margin: 0 auto;
 							float: none;
 						}
+						
 						h3 {
 							@include font-size(72);
 							@include line-height(88);
@@ -537,6 +940,11 @@
 								@include line-height(62);
 								margin-top: 37px;
 							}
+							@include media($desktop-lg-wh){
+								@include font-size(52);
+								@include line-height(56);
+								margin-top: 32px;
+							}
 							@include media($desktop-mds){
 								font-size: 39px;
 								line-height: 40px;
@@ -547,9 +955,14 @@
 								line-height: 34px;
 							}
 							@include media($mobile-slg){
-								font-size:25px;
-								line-height:28px;
-								margin-top: 14px;
+								font-size: 32px;
+								line-height: 34px;
+								margin-top: 29px;
+							}
+							@include media($mobile-xsm){
+								font-size: 22px;
+							    line-height: 27px;
+							    margin-top: 14px;
 							}
 						}
 						p {
@@ -565,6 +978,10 @@
 								@include font-size(20);
 								@include line-height(26);
 							}
+							@include media($desktop-lg-wh){
+								margin-top: 19px;
+								margin-bottom: 22px;
+							}
 							@include media($desktop-mds){
 								font-size: 15px;
 								line-height: 26px;
@@ -576,10 +993,16 @@
 								margin-bottom: 22px;
 							}
 							@include media($mobile-slg){
+								font-size: 16px;
+								line-height: 24px;
+								margin-top: 14px;
+								margin-bottom: 21px
+							}
+							@include media($mobile-xsm){
 								font-size: 13px;
-								line-height: 18px;
-								margin-top: 6px;
-								margin-bottom: 14px
+							    line-height: 21px;
+							    margin-top: 9px;
+							    margin-bottom: 19px;
 							}
 						}
 						a {
@@ -602,7 +1025,7 @@
 		.page5 {
 			@include background(images,bg4,jpg, no-repeat,center, center);
 			@include media($mobile-md){
-				@include padding(100px 10% 100px 10%);
+				@include padding(50px 10% 50px 10%);
 			}
 			.contentbox {
 				@include outer-container($king-ghidorah);
@@ -613,6 +1036,9 @@
 				}
 				@include media($desktop-lg-max){
 					@include outer-container($clover);
+				}
+				@include media($short-xxlg22){
+					padding:0;
 				}
 				@include media($desktop-mds){
 					@include outer-container($megatron);
@@ -632,105 +1058,7 @@
 					padding:0;
 				}
 				.testimonials {
-					@include position(relative);
-					&:after,&:before{
-						@include position(absolute, $top:29px);
-						@include size(65px, 53px);
-						@include background(images,comment,png, no-repeat,0, 0,cover);
-						@include media($mobile-lg){
-							display:none;
-						}
-					}
-					&:after{
-						content:'';
-						left:-150px;
-						@include media($desktop-lg-max){
-							left:-100px;
-						}
-					}
-					&:before{
-						content:'';
-						right:-150px;
-						@include background(images,comment_r,png, no-repeat,0, 0,cover);
-						@include media($desktop-lg-max){
-							right:-100px;
-						}
-					}
-				 li{
-					list-style:none;
-					@include background(images,testimonials_bg,png, no-repeat,left, bottom);
-					@include size(47%, null);
-					float: left;
-					text-align: left;
-					padding-bottom: 127px;
-					padding-left: 40px;
-					margin-right: 6%;
-					@include media($milky-way-large){
-						padding-bottom: 107px;
-					}
-					@include media($desktop-lg-max){
-						padding-bottom: 56px;
-						padding-left:24px;
-						background-size: 116px;
-					}
-					@include media($desktop-mds){
-						padding-bottom: 45px;
-						padding-left:20px;
-						background-size: 116px;
-					}
-					@include media($mobile-slg){
-						width: 100%;
-						margin-right: 1px;
-						padding-bottom: 55px;
-					}
-					p{
-						@include font-size(30);
-						line-height: 45px;
-						margin-top: 19px;
-						@include media($desktop-lg-large){
-							@include font-size(24);
-							line-height: 33px;
-						}
-						@include media($desktop-lg-max){
-							@include font-size(20);
-							line-height: 28px;
-						}
-						@include media($desktop-mds){
-							@include font-size(14);
-							line-height: 20px;
-						}
-					}
-
-					span {
-						@include font-size(30);
-						color:$mailcolor;
-						@include padding(null null null null);
-						color: $mailcolor;
-						text-transform: uppercase;
-						@include media($desktop-lg-max){
-							@include font-size(25);
-						}
-						@include media($desktop-mds){
-							@include font-size(20);
-						}
-					}
-					em {
-						@include font-size(21);
-						display: block;
-						@include media($desktop-lg-max){
-							@include font-size(18);
-						}
-						@include media($desktop-mds){
-							@include font-size(14);
-						}
-					}
-					&:nth-child(2) {
-						margin-right: 0%;
-						@include media($mobile-slg){
-							display:none;
-						}
-					}
-				 }
+					@extend %testimonials;
 				}
 				.calltoaction {
 					margin-top:40px;
@@ -740,9 +1068,15 @@
 						margin-top:10px;
 						margin-left: -3%;
 					}
+					@include media($desktop-lg-large){
+						margin-top:30px;
+					}
 					@include media($desktop-lg-max){
 						margin-left: 0%;
 						margin-top:20px;
+					}
+					@include media($mobile-slg){
+						margin-top:20px;	
 					}
 					h3,span{
 						@include font-size(32);
@@ -752,8 +1086,12 @@
 						font-weight:100;
 						margin-bottom: 0;
 						float: left;
+						margin-top: 0;
 						@include media($desktop-lg-max){
 							@include font-size(26);
+						}
+						@include media($desktop-lg-large){
+							margin-top: 0px;
 						}
 						@include media($desktop-mds){
 							@include font-size(20);
@@ -769,7 +1107,11 @@
 						}
 						@include media($mobile-md){
 							@include font-size(20);
-							line-height: 26px;
+							line-height: 28px;
+						}
+						@include media($mobile-xsm){
+							@include font-size(17);
+							line-height: 24px;
 						}
 					}
 					span{
@@ -784,11 +1126,16 @@
 						width: 74%;
 						@include media($desktop-lg-large){
 							width: 70%;
+							font-size: 18px;
+							line-height: 23px;
 						}
 						@include media($desktop-lg-max){
 							margin-top:6px;
 							line-height: 24px;
 							@include font-size(16);
+						}
+						@include media($desktop-lg-large){
+							margin-top:3px;
 						}
 						@include media($desktop-mds){
 							width: 65%;
@@ -804,11 +1151,14 @@
 							margin-bottom: 0;
 							font-size: 12px;
 							line-height: 17px;
+							margin-top: 9px;
+							display:none;
 						}
 						@include media($mobile-md){
 							margin-bottom: 13px;
-							font-size: 14px;
-							line-height: 23px;
+							font-size:16px;
+							line-height:24px;
+
 						}
 					}
 					a{
@@ -819,7 +1169,7 @@
 							width: 100%;
 							float: none;
 							display: inline-block;
-							margin-top: 5px;
+							margin-top: 10px;
 							
 						}
 						
@@ -832,7 +1182,7 @@
 			
 		}
 	}
-	&.viewing-page-6 {
+	&.pp-viewing-footer {
 		footer {
 			section{
 				color:$white;

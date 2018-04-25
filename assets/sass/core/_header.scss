@@ -9,14 +9,25 @@ header {
 			float: none;
 			text-align: center;
 		}
+		img {
+			@include media($mobile-sm){
+				width: 150px;
+			}
+		}
+	}
+	@include media($desktop-lg-wh){
+		@include padding(20px 0 20px 20px);
 	}
 	@include media($mobile-lg){
 		@include padding(20px 0 20px 20px);
 	}
+	@include media($desktop-md-mid) {
+		@include padding(20px 0 20px 20px);
+	}
 	@include media($mobile-md){
-		@include position(fixed);
+		@include position(absolute);
 		background: #fff;
-		@include padding(10px 10px 10px 10px);
+		@include padding(15px 15px 15px 15px);
 	}
 }
 
@@ -26,6 +37,9 @@ nav {
   .getdemo {
     float: left;
     @extend %btnlarge;
+	&.hide{
+		display:none;
+	}
 	@include media($mobile-lg){
 		display:none;
 	}
@@ -40,6 +54,9 @@ nav {
 		margin-top: -53px;
 		position: absolute;
 		left: -8px;
+	}
+	@include media($mobile-sm){
+		margin-top: -46px;
 	}
 	&.is-active{
 		background:$mailcolor;
@@ -77,35 +94,63 @@ nav {
   } 
 }
 
-.hamburgerbox{
-		position: absolute;
+.bgbackground{
+	position: absolute;
 		left: -100px;
 		top: -100px;
-		z-index: 100;
+		z-index: 1;
 		width: 100px;
 		height: 100px;
 		background: #FFF;
 		border-radius: 50% 50% 50% 50%;
-		-webkit-transition: .5s ease-in-out;
-		transition: .5s ease-in-out;
+		-webkit-transition: 1s ease-in-out;
+		transition: 1s ease-in-out;
 		-webkit-box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
 		box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
 		cursor: pointer;
 		overflow: hidden;
 		&.active {
-			-webkit-box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
-			box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+			-webkit-box-shadow: 0 0 0 101vw $mailcolor, 0 0 0 100vh $mailcolor;
+			box-shadow: 0 0 0 100vw $mailcolor, 0 0 0 100vh $mailcolor;
 			border-radius: 0;
 		}
-		
+}
+.hamburgerbox2{
+	position: absolute;
+	left: -100px;
+	top: -100px;
+	z-index: 2;
+	width: 100px;
+	height: 100px;
+	background: #FFF;
+	border-radius: 50% 50% 50% 50%;
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+	-webkit-box-shadow: 0 0 0 0 $white, 0 0 0 0 $white;
+	box-shadow: 0 0 0 0 $white, 0 0 0 0 $white;
+	cursor: pointer;
+	overflow: hidden;
+	&.active {
+		-webkit-box-shadow: 0 0 0 101vw $white, 0 0 0 63vh $white;
+		box-shadow: 0 0 0 101vw $white, 0 0 0 63vh $white;
+		border-radius: 13px;
+	}
+}
+.hamburgerbox{
+	position: absolute;
+	z-index: 4;
+	@include size(100%,100%);
+	display:none;
+	&.active {
+		display:block;
+	}
 	.section{
 		@include size(100%,100%);
-		opacity: 0;
-		@include background(images,menuright,jpg, no-repeat,right, bottom);
+		opacity: 1;
 		.boximg{
 			width: 70%;
 			float: left;
-			padding: 15% 0px 0 11%;
+			padding: 15% 0px 0 10%;
 			img {
 			}
 		}

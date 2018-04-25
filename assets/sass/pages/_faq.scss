@@ -1,4 +1,108 @@
 .faq {
+	@include background(images,bg4,jpg, no-repeat,center, center);
+	background-color:#f7f7f7;
+	@include media($short-xxlg22){
+		background-size: cover;
+	}
+	@include media($short-xxlg22){
+		background-size: cover;
+	}
+	@include media($short-xxxlg){
+		background-size: cover;
+	}
+	#wrapper {
+		@include outer-container($godzilla);
+		@include size(100%, 100vh);
+		@include margin( 0px null null null );
+		display:table;
+		@include media($milky-way-large){
+			@include outer-container($king-ghidorah);
+		}
+		@include media($desktop-md-mid){
+			@include outer-container($gipsy-danger);
+		}
+		@include media($desktop-md){
+			@include outer-container($voltron);
+		}
+		.main{
+			display:table-cell;
+			vertical-align: middle;
+			.accordian_box {
+				h2{
+					text-transform:uppercase;
+					@include font-size(76);
+					color:$mailcolor;
+					@include margin(0 null 50px null);
+					@include media($desktop-lg-large){
+						@include font-size(60);
+					}
+				}
+				.accordian{
+					@include position(relative);
+					h3{
+					    @include font-size(30);
+						@include line-height(26);
+						font-family: $main-font-bolder;
+						letter-spacing: 0;
+						cursor: pointer;
+						@include media($desktop-lg-large){
+							 @include font-size(20);
+							@include line-height(24);
+						}
+						&:hover{
+							color:$mailcolor;
+						}
+					}
+					div{
+						@include position(absolute);
+						@include display(none);
+					    background: #fff;
+					    border-radius: 20px;
+					    box-shadow: 0px 0px 22px 7px #28282812;
+					    z-index: 200;
+					    padding: 11px 39px 28px 39px;
+					    margin-top: -96px;
+					    z-index: 100;
+					    @include size(100%, null);
+					    margin-left: -39px;
+					     @include media($desktop-lg-large){
+							margin-top: -75px;
+						}
+					    h3{
+						    font-size: 30px;
+						    line-height: 26px;
+						    margin-bottom: 0;
+						    cursor: auto;
+						    color:$black;
+						    @include media($desktop-lg-large){
+								 @include font-size(20);
+								@include line-height(24);
+							}
+						    &:hover{
+								color:$black;
+							}
+					    }
+					    p{
+					    	@include media($desktop-lg-large){
+								 @include font-size(16);
+							}
+					    }
+
+					}
+				 	&.active {
+				    	div{
+				    		display: block;
+				    	}
+				    }
+				}
+				&.active{
+					div{
+						display:block;
+					}
+				}
+			}
+		}
+	}
 	
 }
 
