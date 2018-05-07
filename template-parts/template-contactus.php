@@ -27,6 +27,7 @@ get_header();
 						<input type="text" name="text-696" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="Phone" aria-required="true" aria-invalid="false" placeholder="Phone Number" />
 						<input type="text" name="text-697" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="email" aria-required="true" aria-invalid="false" placeholder="Email ID" />
 						<input type="text" name="text-698" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="email" aria-required="true" aria-invalid="false" placeholder="Your Message" />
+						<div class="clearfix"></div>
 						<input type="submit" value="I AM A CUSTOMER" class="wpcf7-form-control wpcf7-submit  " id="IAMACUSTOMER" />
 						<input type="submit" value="I WANT A DEMO" class="wpcf7-form-control wpcf7-submit black" id="IWANTADEMO" />
 					</form>

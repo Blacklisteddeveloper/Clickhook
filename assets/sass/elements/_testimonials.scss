@@ -30,6 +30,11 @@
         @include position(absolute, $top:29px);
         @include size(65px, 53px);
         @include background(images,comment,png, no-repeat,0, 0,cover);
+        
+        @include media($desktop-md){
+            @include size(48px, 39px);
+            top:10px;
+        }
         @include media($mobile-lg){
             display:none;
         }
@@ -37,16 +42,23 @@
     &:after{
         content:'';
         left:-150px;
-        @include media($desktop-lg-max){
-            left:-100px;
+
+        @include media($desktop-lg-large){
+            left:-95px;
+        }
+        @include media($desktop-md){
+            left:-65px;
         }
     }
     &:before{
         content:'';
         right:-150px;
         @include background(images,comment_r,png, no-repeat,0, 0,cover);
-        @include media($desktop-lg-max){
-            right:-100px;
+        @include media($desktop-lg-large){
+            right:-95px;
+        }
+        @include media($desktop-md){
+            right:-65px;
         }
     }
  li.testimonial{

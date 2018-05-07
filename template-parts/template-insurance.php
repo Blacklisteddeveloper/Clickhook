@@ -13,7 +13,7 @@ get_header();
 		<aside class="page1 pages active" data-menuanchor="page1">
 			<div class="middle">
 				<div class="circle">
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/insurance_1.png" class="graphic" alt="" />
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/umbrella.gif" class="graphic" alt="" />
 				</div>
 				<div class="content">
 					<div class="centercontent">
@@ -34,7 +34,7 @@ get_header();
 							<p>But from our experience what most brokers really need is a simple way to manage their leads across all their different lines of insurance. You already have a broker management system but what most brokers do not have is a really good system for making sure all your leads are looked after.</p>
 						</div>
 					</div>
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/insurance_2.png" class="graphic" alt="" />
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/keyHole.gif" class="graphic" alt="" />
 				</div>
 				<a href="#" class="largetxt">View Features...</a>
 			</div>
@@ -68,7 +68,7 @@ get_header();
 						<p>Does that mean ClickHook is not a CRM? Well, not exactly. To be honest, it can be used as a CRM as it has most of the common features found in a customer relationship management tool. But remember, we are trying to solve the major problem most companies are having nowadays… namely, how to manage and organize their leads in a simple way while automating as much as possible such as integrating all forms from their website.</p>
 						<p>If other insurance brokers find ClickHook to be EXACTLY what they are looking for then you should at least give it a try to see for yourself. We have different levels of pricing to fit the size of your brokerage. If you want the full service package where we will help you every step of the way including integrating your web forms and training your staff then please select the Enterprise solution.</p>
 					</div>
-					<img src="<?php bloginfo('template_url'); ?>/assets/images/insurance_3.png" class="graphic" alt="" />
+					<img src="<?php bloginfo('template_url'); ?>/assets/images/insurance_3.gif" class="graphic" alt="" />
 
 				</div>
 				<a href="#" class="largetxt">View Features...</a>
@@ -120,6 +120,7 @@ get_header();
 								<input type="text" name="text-696" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="Phone" aria-required="true" aria-invalid="false" placeholder="Company Size" />
 								<input type="text" name="text-697" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" id="email" aria-required="true" aria-invalid="false" placeholder="Email" />
 								<input type="text" name="text-698" value="" size="40" class="wpcf7-form-control wpcf7-text-full wpcf7-validates-as-required" id="email" aria-required="true" aria-invalid="false" placeholder="Comments" />
+								<div class="clearfix"></div>
 								<input type="submit" value="SUBMIT" class="wpcf7-form-control wpcf7-submit" id="submitcontact" />
 							</form>
 						</div>

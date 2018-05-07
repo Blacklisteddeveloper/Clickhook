@@ -1,3 +1,18 @@
+body.white_label {
+	footer{
+		section{
+			@include media($mobile-slg){
+				color:$black;
+			}
+			a{
+				@include media($mobile-slg){
+					color:$black;
+				}
+			}
+		}
+	}
+}
+
 .white_label {
 	#wrapper {
 		@include size(100%);
@@ -20,8 +35,10 @@
 			}
 		}
 		.page1.pp-section,.page3.pp-section{
-			@include background(images,box-ins_right,png, no-repeat,right, top);
-			background-color:#fff; 
+			background-color:$white; 
+			@include media($mobile-smd){
+				background-color: #f4f7fc; 
+			}
 			.middle{
 				display: block;
 				height: 100%;
@@ -30,10 +47,18 @@
 					height: 100%;
 					display: table;
 					padding-left: 10%;
+					@include media($mobile-slg){
+						width: 100%;
+					    height: auto;
+					    padding: 7% 10% 0% 10%;
+					}
 					.centercontent{
 						display: table-cell;
     					vertical-align: middle;
     					text-align: left;
+    					@include media($mobile-slg){
+							text-align: center;
+						}
     					h2 {
     						text-transform: capitalize;
     						margin-top:0;
@@ -42,24 +67,117 @@
 							font-weight: 400;
 							margin-bottom: 0;
 							letter-spacing: 0;
+							@include media($milky-way-large-new){
+								font-size: 55px;
+	    					}
+	    					@include media($desktop-lg-max){
+	    						font-size: 40px;
+	    					}
+	    					@include media($desktop-sm-mid){
+								font-size: 32px;
+							}
+							@include media($mobile-slg){
+								font-size: 22px;
+							}
 						}
 						p{
 							font-size: 30px;
 							color:$light-black;
 							margin-top: 12px;
 							line-height: 38px;
+							@include media($milky-way-large-new){
+								font-size: 26px;
+	    					}
+	    					@include media($desktop-lg-max){
+	    						font-size:21px;
+	    					}
+	    					@include media($desktop-sm-mid){
+								font-size: 17px;
+    							line-height: 20px;
+							}
+							@include media($mobile-slg){
+								font-size: 14px;
+    							line-height: 18px;
+							}
+							@include media($mobile-smd){
+								font-size: 12px;
+    							line-height: 16px;
+							}
+							br{
+								
+								@include media($mobile-slg){
+									display: none;
+								}
+							}
 						}
 					}
 				}
 				.circle{
 				   	width: 45%;
-				    padding-top: 299px;
 				    padding-right: 3px;
 				    text-align: right;
 				    float: right;
+				    height: 100%;
+				    position: relative;
+					@include background(images,box-ins_right,jpg, repeat,right, top);
+					@include media($milky-way-large){
+						@include media($short-xxxlg-min){
+							width: 50%;
+						}
+					}
+					@include media($desktop-md-mid){
+						@include media($short-xlg){
+							width: 50%;
+						}
+					}
+					@include media($desktop-sm-mid){
+						width: 50%;
+					}
+					@include media($mobile-slg){
+						width: 100%;
+    					height:60%;
+					}
 				    img.graphic {
 				    	border:0;
 						border-radius:0;
+						padding-top: 27%;
+						padding-left: 2px;
+    					width: 100%;
+    					@include media($andromeda){
+    						@include media($short-xxxlg-min){
+								padding-top: 36%;
+							}
+    					}
+    					@include media($milky-way-large-new){
+							padding-top: 44%;
+    					}
+    					@include media($desktop-lg-max){
+    						padding-top: 34%;	
+    					}
+    					@include media($desktop-md-mid){
+							@include media($short-xlg){
+								padding-top: 47%;
+							}
+						}
+						@include media($mobile-slg){
+							padding-top: 21%;
+						}
+						@include media($mobile-smd){
+							padding-top: 32%;
+						}
+				    }
+				    &:after{
+				    	content:'';
+				    	@include background(svg,right-arrow2,svg, no-repeat,left, center);
+				    	width: 100%;
+					    position: absolute;
+					    height: 100%;
+					    left: 0;
+					    top: 0;
+					    z-index: 200;
+					    @include media($mobile-slg){
+							display:none;
+						}
 				    }
 				}
 			}
@@ -68,6 +186,9 @@
 		.page2.pp-section{
 			@include background(images,bg2,jpg, no-repeat,center, center);
 			background-color:$white;
+			@include media($short-xxxlg-min){
+				background-size: cover;
+			}
 			.contentbox {
 				vertical-align: middle;
 				display: table-cell;
@@ -75,9 +196,29 @@
 					@include outer-container($godzilla);
 					width: 100%;
 					font-size: 30px;
+					@include media($milky-way-large-new){
+						@include outer-container($king-ghidorah);
+					}
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-mds) {
+						@include outer-container($millenniumfalcon);	
+					}
+					@include media($mobile-slg){
+						width: 100%;
+					    height: auto;
+					    padding: 22% 10% 0% 10%;
+					}
 					.content{
 						float: left;
 						width: 52%;
+						@include media($desktop-mds) {
+							width: 48%;
+						}
+						@include media($mobile-slg){
+							width: 100%;
+						}
 						h2{
 							color: $mailcolor;
 							@include font-size(63);
@@ -86,10 +227,28 @@
     						letter-spacing: 0;
     						margin-bottom: 19px;
     						margin-top: 0px;
+    						@include media($milky-way-large-new){
+								@include font-size(48);
+							}
+							@include media($desktop-lg-large){
+								@include font-size(40);
+							}
+							@include media($desktop-mds) {
+								@include font-size(28);
+							}
+							@include media($mobile-slg){
+								@include font-size(22);
+							}
+							@include media($mobile-smd){
+								@include font-size(18);
+							}
 						}
 						img.graphic{
 							float: left;
 	    					margin-top: 112px;
+	    					@include media($mobile-slg){
+								margin-top: 0px;
+							}
 						}
 						
 					}
@@ -100,8 +259,43 @@
 					    font-size: 20px;
 					    float: right;
 					    width: 47%;
+					    @include media($milky-way-large-new){
+							font-size: 18px;
+						}
+						@include media($desktop-lg-large){
+							margin-top: 20px;
+							padding-left: 40px;
+						}
+						@include media($desktop-mds) {
+							width: 52%;
+							margin-top: 0px;
+						}
+						@include media($mobile-slg){
+							width: 100%;
+							padding: 0px;
+						}
 					    p {
 					    	line-height: 25px;
+					    	@include media($milky-way-large-new){
+								line-height: 22px;
+							}
+							@include media($desktop-lg-large){
+								@include font-size(16);
+								line-height: 16px;
+							}
+							@include media($desktop-mds) {
+								@include font-size(14);
+								line-height: 14px;
+							}
+							@include media($mobile-slg){
+								@include font-size(11);
+								line-height: 11px;
+							}
+							&:nth-child(3n),&:nth-child(4n),&:nth-child(5n){
+								@include media($mobile-smd){
+									display: none;
+								}
+							}
 					    }
 					}
 					
@@ -109,16 +303,66 @@
 			}
 		}
 		.page3.pp-section{
-			@include background(images,whitelabel3,png, no-repeat,right, top);
+			@include media($mobile-smd){
+				background-color: #fff; 
+			}
 			.middle{
+				.circle{
+					width: 55%;
+					@include background(images,whitelabel3,jpg, no-repeat,right, top);
+					@include media($milky-way-large){
+						@include media($short-xxxlg-min){
+							background-size: cover;
+    						background-position: center;
+						}
+					}
+					@include media($milky-way-large-new){
+							background-size: cover;
+    						background-position: center;
+					}
+					@include media($mobile-slg){
+						width: 100%;
+						background-size: cover;
+						height: 56%;
+    					margin-top: 55px;
+					}
+					@include media($mobile-smd){
+						margin-top: 25px;
+						height: 66%;
+					}
+				}
 				.content{
 					width: 42%;
+					@include media($mobile-slg){
+						width: 100%;
+						padding-top: 0;
+					}
 					.centercontent{
     					h2 {
+    						@include media($mobile-slg){
+								@include font-size(22);
+							}
 						}
 						p{
 							font-size:20px;
 							line-height: 26px;
+							@include media($desktop-lg-large){
+								font-size:18px;
+								line-height:22px;
+							}
+							@include media($desktop-md-mid){
+								font-size:16px;
+								line-height:18px;
+							}
+							@include media($mobile-slg){
+								@include font-size(11);
+								line-height: 12px;
+							}
+							&:nth-child(2n){
+								@include media($mobile-smd){
+									display: none;
+								}
+							}
 						}
 					}
 				}
@@ -128,6 +372,9 @@
 		.page4.pp-section{
 			@include background(images,bg2,jpg, no-repeat,center, center);
 			background-color:$white;
+			@include media($short-xxxlg-min){
+				background-size: cover;
+			}
 			.contentbox {
 				vertical-align: middle;
 				display: table-cell;
@@ -135,9 +382,29 @@
 					@include outer-container($godzilla);
 					width: 100%;
 					font-size: 30px;
+					@include media($milky-way-large-new){
+						@include outer-container($king-ghidorah);
+					}
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-mds) {
+						@include outer-container($millenniumfalcon);	
+					}
+					@include media($mobile-slg){
+						width: 100%;
+					    height: auto;
+					    padding: 10% 10% 0% 10%;
+					}
+					@include media($mobile-smd){
+						padding: 22% 10% 0% 10%;
+					}
 					.content{
 						float: left;
 						width: 47%;
+						@include media($mobile-slg){
+							width: 100%;
+						}
 						h2{
 							color: $mailcolor;
 							@include font-size(65);
@@ -146,6 +413,22 @@
     						letter-spacing: 0;
     						margin-bottom: 19px;
     						margin-top: 0px;
+    						@include media($milky-way-large-new){
+								@include font-size(48);
+							}
+							@include media($desktop-lg-large){
+								@include font-size(38);
+							}
+							@include media($desktop-mds) {
+								@include font-size(30);
+							}
+							@include media($mobile-slg){
+								@include font-size(21);
+								margin-bottom: 5px;
+							}
+							@include media($mobile-smd){
+								margin-bottom: 0px;
+							}
 						}
 						.box{
 						    margin-top:16px;
@@ -153,19 +436,56 @@
 						    font-size: 20px;
 						    float: right;
 						    width: 90%;
+						    @include media($milky-way-large-new){
+								font-size: 18px;
+							}
+							@include media($desktop-lg-large){
+								
+								 margin-top:5px;
+							}
+							@include media($mobile-slg){
+								width: 100%;
+								margin-top:0px;
+							}
 						    p {
 						    	line-height: 25px;
+						    	@include media($milky-way-large-new){
+									line-height: 23px;
+								}
+								@include media($desktop-mds) {
+									@include font-size(14);
+									line-height: 18px;
+								}
+								@include media($mobile-slg){
+									@include font-size(11);
+									line-height:12px;
+								}
+								@include media($mobile-slg){
+									margin-bottom: 0;
+								}
 						    }
 						}
 					}
 					.listbox{
 						width: 50%;
     					float: right;
+    					@include media($mobile-slg){
+							width: 100%;
+						}
 						ul{
+							@include media($mobile-slg){
+								margin-top: 20px;
+							}
 							li{
 								list-style: none;
 								margin-top: 66px;
-    							display: inline-block;	
+    							display: inline-block;
+    							@include media($desktop-mds) {
+									margin-top: 20px;
+								}
+								@include media($mobile-slg){
+									margin-top: 0px;
+								}
 								.number{									
 								    @include size(193px, 193px);
 								    background: $mailcolor;
@@ -177,12 +497,40 @@
 								    line-height: 201px;
 								    float: left;
 								    font-family: $main-font-thin;
+								    @include media($desktop-lg-large){
+										@include size(150px, 150px);
+										font-size: 101px;
+    									font-weight: 100;
+    									line-height: 150px;
+									}
+									@include media($desktop-mds) {
+										@include size(100px, 100px);
+										font-size: 50px;
+    									line-height: 100px;
+									}
+									@include media($mobile-slg){
+										@include size(75px, 75px);
+										font-size: 35px;
+    									line-height: 75px;
+									}
+									@include media($mobile-smd){
+										display: none;
+									}
 								}
 								.desc{
 									float: left;
 								    width: 75%;
 								    padding-left: 6%;
-
+								    @include media($milky-way-large-new){
+										 width: 66%;
+									}
+									@include media($mobile-slg){
+										width: 75%;
+									}
+									@include media($mobile-smd){
+										width: 100%;
+										padding-left: 0%;
+									}
 									h3 {
 										margin: 0;
 									    font-size: 34px;
@@ -192,10 +540,41 @@
 									    span{
 									    	color:$mailcolor;
 									    }
+									    @include media($milky-way-large-new){
+											font-size: 28px;
+										}
+										@include media($desktop-lg-large){
+											font-size: 23px;
+										}
+										@include media($desktop-mds) {
+											font-size: 18px;
+										}
+										@include media($mobile-slg){
+											font-size: 16px;
+										}
 									}	
 									p {
 										font-size: 20px;
 										line-height: 26px;
+										@include media($milky-way-large-new){
+											font-size: 18px;
+											line-height: 23px;
+										}
+										@include media($desktop-lg-large){
+											font-size: 16px;
+											line-height: 18px;
+										}
+										@include media($desktop-mds) {
+											font-size: 14px;
+											line-height: 16px;
+										}
+										@include media($mobile-slg){
+											font-size: 11px;
+											line-height: 13px;
+										}
+										@include media($mobile-smd){
+											margin-top: 4px;
+										}
 									}
 								}
 							}
@@ -207,6 +586,9 @@
 		.page5.pp-section{
 			@include background(images,bg2,jpg, no-repeat,center, center);
 			background-color:$white;
+			@include media($short-xxxlg-min){
+				background-size: cover;
+			}
 			.contentbox {
 				vertical-align: middle;
 				display: table-cell;
@@ -214,9 +596,28 @@
 					@include outer-container($godzilla);
 					width: 100%;
 					font-size: 30px;
+					@include media($milky-way-large-new){
+						@include outer-container($king-ghidorah);
+						font-size: 28px;
+					}
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-mds) {
+						@include outer-container($millenniumfalcon);	
+					}
+					@include media($mobile-slg){
+						width: 100%;
+					    height: auto;
+					    padding: 10% 10% 0% 10%;
+					    text-align: center;
+					}
+					@include media($mobile-smd){
+					    padding: 18% 10% 0% 10%;
+					}
 					.content{
 						float: left;
-						width: 100%;	
+						width: 100%;
 						h2{
 							color: $mailcolor;
 							@include font-size(76);
@@ -225,6 +626,20 @@
     						letter-spacing: 0;
     						margin-bottom: 19px;
     						margin-top: 0px;
+    						@include media($milky-way-large-new){
+								@include font-size(70);
+							}
+							@include media($desktop-lg-large){
+								@include font-size(55);
+							}
+							@include media($desktop-mds) {
+								@include font-size(35);
+								margin-bottom:5px;
+							}
+							@include media($mobile-slg){
+								@include font-size(21);
+								text-align: center;
+							}
 						}
 						.box{
 						    margin-top:16px;
@@ -233,11 +648,36 @@
 						    float: right;
 						    width: 100%;
     						padding-left: 5%;
+    						@include media($desktop-mds) {
+								margin-top:5px;
+							}
+							@include media($mobile-slg){
+								padding-left: 0%;
+								margin-top:0px;
+							}
 						    p {
 						    	line-height: 25px;
 						    	&:nth-child(4n),&:nth-child(5n){
 									width: 44%;
+									@include media($mobile-slg){
+										width: 100%;
+									}
 						    	}
+						    	@include media($milky-way-large-new){
+									line-height: 24px;
+								}
+								@include media($desktop-lg-large){
+									@include font-size(18);
+									line-height:19px;
+								}
+								@include media($desktop-mds) {
+									@include font-size(14);
+									line-height:16px;
+								}
+								@include media($mobile-slg){
+									@include font-size(11);
+									line-height:12px;
+								}
 						    }
 						    .comment {
 								@include position(relative);
@@ -245,23 +685,44 @@
     							width: 60%;
     							margin-top: -53px;
     							margin-left: 6%;
+    							@include media($mobile-slg){
+									width: 100%;
+	    							margin-top: 0px;
+	    							margin-left: 0%;
+								}
 								p{
 									@include font-size(40);
-									font-size: 40px;
 								    padding: 0 11%;
 								    line-height: 50px;
 								    margin-bottom: 40px;
 								    margin-top: 13px;
-								}
-								span {
-									@include font-size(30);
-									font-family:$main-font;
-									
+								    @include media($desktop-lg-large){
+										@include font-size(24);
+										padding: 0 14%;
+										line-height: 33px;
+									}
+									@include media($desktop-mds) {
+										@include font-size(20);
+										line-height: 33px;
+									}
+									@include media($mobile-slg){
+										@include font-size(14);
+										line-height:16px;
+										margin-bottom: 25px;
+									}
+									@include media($mobile-smd){
+										font-size: 12px;
+									    line-height: 15px;
+									    margin-bottom: 16px;
+									}
 								}
 								&:after,&:before{
 									@include position(absolute, $top:0);
 									@include size(65px, 53px);
 									@include background(images,comment,png, no-repeat,0, 0,cover);
+									@include media($desktop-mds) {
+										@include size(40px, 33px);
+									}
 									@include media($mobile-slg){
 										@include size(40px, 32px);
 									}
@@ -333,6 +794,20 @@
 					@include outer-container($godzilla);
 					width: 100%;
 					font-size: 30px;
+					@include media($milky-way-large-new){
+						@include outer-container($king-ghidorah);
+						font-size: 28px;
+					}
+					@include media($desktop-lg-large){
+						@include outer-container($gipsy-danger);
+					}
+					@include media($desktop-mds) {
+						@include outer-container($millenniumfalcon);	
+					}
+					@include media($mobile-slg){
+						width: 100%;
+					    padding: 10% 10% 0% 10%;
+					}
 					.listbox{
 						width: 100%;
 						ul{
@@ -341,6 +816,18 @@
 							    margin-top: 66px;
 							    display: table;
 							    padding-right: 10%;
+							    @include media($desktop-lg-large){
+									margin-top: 26px;
+								}
+								@include media($desktop-mds) {
+									margin-top: 30px;
+									padding-right: 5%;
+									padding-left: 0%;
+								}
+								@include media($mobile-slg){
+									margin-top: 10px;
+									padding-right:0;
+								}
 								.icon{									
 								    @include size(346px, 346px);
 								    background: $mailcolor;
@@ -353,10 +840,29 @@
 								    float: left;
 								    font-family: $main-font-thin;
 								    @include position(relative);
+								    @include media($desktop-lg-large){
+										@include size(250px, 250px);
+									}
+									@include media($desktop-mds) {
+										@include size(200px, 200px);
+									}
+									@include media($mobile-slg){
+										@include size(80px, 80px);
+										float: none;
+										margin: 0 auto;
+										margin-bottom: 18px;
+									}
+									@include media($mobile-smd){
+									    @include size(60px, 60px);
+									    margin-bottom: 10px;
+									}
 								    &:after{
 								    	content:'';
 								    	@include size(100%);
 								    	@include position(absolute, $left: 0,  $top: 0);
+							    	 	@include media($desktop-lg-large){
+										    background-size: 70%;
+										}
 								    }
 								    &.icon1:after{
 								    	@include background(images,icon_1,png, no-repeat,center, center);
@@ -370,7 +876,12 @@
 								    padding-left: 3%;
 								    vertical-align: middle;
 								    display: table-cell;
-
+								    @include media($mobile-slg){
+										width: 100%;
+										padding-left: 0%;
+										text-align: center;
+										display: inline-block;
+									}
 									h3 {
 										margin: 0;
 									    font-size: 54px;
@@ -378,21 +889,78 @@
 									    letter-spacing: 0;
 									    color:$mailcolor;
 									    font-family: $main-font-thin;
+									    @include media($milky-way-large-new){
+											font-size: 45px;
+										}
+										@include media($desktop-lg-large){
+											font-size: 35px;
+										}
+										@include media($desktop-mds) {
+											font-size: 26px;
+										}
+										@include media($mobile-slg){
+											font-size: 21px;
+										}
+										@include media($mobile-smd){
+										   font-size: 18px;
+										}
 									}	
 									p {
 										font-size: 20px;
 										line-height: 26px;
+										@include media($desktop-lg-large){
+											font-size: 18px;
+											line-height: 20px;
+										}
+										@include media($desktop-mds) {
+											font-size: 16px;
+											line-height: 18px;
+										}
+										@include media($mobile-slg){
+											font-size: 11px;
+											line-height: 12px;
+										}
+										@include media($mobile-smd){
+										   font-size: 10px;
+											line-height: 12px;
+										}
 									}
 								}
 								&.right-align{
 									padding-right: 0%;
 									padding-left: 10%;
+									@include media($desktop-mds) {
+										padding-left: 5%;
+									}
+									@include media($mobile-slg){
+										padding-right: 0%;
+										padding-left: 0%;
+									}
 									.icon{									
 									    float: right;
+									    @include media($mobile-slg){
+											float: none;
+										}
+										&.mobile{
+											display: none;
+											@include media($mobile-lg){
+												display: block;
+											}
+										}
+										&.web{
+											display: block;
+											@include media($mobile-lg){
+												display: none;
+											}
+										}
 									}
 									.desc{
 										padding-right: 7%;
 										padding-left: 0%;
+										@include media($mobile-slg){
+											padding-right: 0%;
+											padding-left: 0%;
+										}
 									}
 								}
 							}
@@ -402,62 +970,7 @@
 			}
 		}
 		.page7.pp-section{
-			@include background(images,contact-us,jpg, no-repeat,center, center);
-			background-color:$white;
-			.contentbox {
-				vertical-align: middle;
-				display: table-cell;
-				.middle-cont{
-					@include outer-container($kaiju);
-					width: 100%;
-					.contact_form{
-						h2{
-							color: $mailcolor;
-							@include font-size(55);
-							text-align: center;							    
-    						font-weight: 400;
-    						letter-spacing: 0;
-    						margin-top: 0;
-						}
-						strong{
-							@include font-size(26);
-							font-family: $main-font;
-							font-weight: normal;
-						}
-						.form{
-							margin-top: 9px;
-							background:rgba(#8498c1, 0.5);
-				 			padding: 63px 84px 90px;
-				 			text-align: center;
-				 			form{
-				 				@include position(relative);
-				 				input.wpcf7-text{
-				 					width: 47%;
-				 					float: left;
-    								&:nth-child(2n+2) {
-    									margin-left: 6%;
-    								}
-				 				}
-				 				input.wpcf7-text-full{
-				 					width: 100%;
-				 					margin-bottom: 0;
-				 				}
-				 			}
-				 			input[type="submit"]{
-				 				position: absolute;
-				 				@extend %btnlarge;
-				 				margin-top: 56px;
-    							margin-left: -97px;
-				 				&.black{
-				 					background:#333333;
-				 					margin-right: -23px;
-				 					right: 0;
-				 				}
-				 			}
-						}
-					}
-				}
-			}
+			@extend %appointment;
 		}
 	}
 }

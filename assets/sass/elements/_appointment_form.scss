@@ -1,0 +1,139 @@
+%appointment {
+    @include background(images,contact-us,jpg, no-repeat,center, center);
+    background-color:$white;
+    @include media($short-xxlg22){
+        background-size: cover;
+    }
+    @include media($short-xxxlg){
+        background-size: cover;
+    }
+    .contentbox {
+        vertical-align: middle;
+        display: table-cell;
+        .middle-cont{
+            @include outer-container($kaiju);
+            width: 100%;
+            @include media($desktop-lg-large){
+                @include outer-container($gipsy-danger);
+            }
+            @include media($desktop-sm-mid){
+                @include outer-container($millenniumfalcon);    
+            }
+            @include media($mobile-slg){
+                @include outer-container($xenomorph);
+            }
+            @include media($mobile-smd){
+                @include outer-container($mobile-only);
+            }
+            .contact_form{
+                text-align: center;
+                h2{
+                    color: $mailcolor;
+                    @include font-size(55);
+                    text-align: center;                             
+                    font-weight: 400;
+                    letter-spacing: 0;
+                    margin-top: 0px;
+                    @include media($desktop-lg-large){
+                        @include font-size(45);
+                        margin-bottom: 18px;
+                    }
+                    @include media($desktop-sm-mid){
+                        @include font-size(28);
+                    }
+                    @include media($mobile-slg){
+                        @include font-size(22);
+                    }
+                    @include media($mobile-smd){
+                        @include font-size(17);
+                        margin-bottom: 4px;
+                    }
+                }
+                strong{
+                    @include font-size(26);
+                    font-family: $main-font;
+                    font-weight: normal;
+                    @include media($desktop-sm-mid){
+                        @include font-size(16);
+                    }
+                    @include media($mobile-slg){
+                        @include font-size(13);
+                        
+                    }
+                }
+                .form{
+                    margin-top: 9px;
+                    background:rgba(#8498c1, 0.5);
+                    padding: 63px 84px 90px;
+                    text-align: center;
+                    @include media($desktop-lg-max){
+                        padding: 53px 65px 62px;
+                    }
+                    @include media($desktop-sm-mid){
+                        padding: 40px 40px 66px;
+                    }
+                    @include media($mobile-slg){
+                         padding: 20px 20px 20px;
+                    }
+                    form{
+                        @include position(relative);
+                        input.wpcf7-text{
+                            width: 47%;
+                            float: left;
+                            &:nth-child(2n+2) {
+                                margin-left: 6%;
+                            }
+                            @include media($desktop-sm-mid){
+                                font-size: 16px;
+                                padding: 16px;
+                            }
+                            @include media($mobile-slg){
+                               font-size: 13px;
+                                padding: 13px;
+                            }
+                        }
+                        input.wpcf7-text-full{
+                            width: 100%;
+                            margin-bottom: 0;
+                            @include media($mobile-slg){
+                               font-size: 13px;
+                                padding: 13px;
+                            }
+                        }
+                    }
+                    input[type="submit"]{
+                        position: absolute;
+                        @extend %btnlarge;
+                        margin-top: 56px;
+                        margin-left: -97px;
+                        @include media($desktop-lg-max){
+                            margin-top: 31px;
+                        }
+                        @include media($desktop-sm-mid){
+                            margin-top: 33px;
+                            margin-left: -81px;
+                        }
+                        @include media($mobile-slg){
+                            padding: 13px 28px;
+                            font-size: 15px;
+                            margin-top: 12px;
+                            position: relative;
+                            margin-left: 0;
+                            left: 0;
+                            width: 100%;
+                        }
+                        @include media($mobile-smd){
+                            margin-top: 15px;
+                            margin-left: 0;
+                        }
+                        &.black{
+                            background:#333333;
+                            margin-right: -23px;
+                            right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,4 +1,15 @@
-.faq {
+body.faq{
+		@include media($mobile-slg){
+			overflow: scroll !important;
+			overflow-x: hidden !important;
+		}
+		footer{
+			@include media($mobile-slg){
+				position: relative;
+			}
+		}
+	}
+	.faq {
 	@include background(images,bg4,jpg, no-repeat,center, center);
 	background-color:#f7f7f7;
 	@include media($short-xxlg22){
@@ -10,6 +21,7 @@
 	@include media($short-xxxlg){
 		background-size: cover;
 	}
+	
 	#wrapper {
 		@include outer-container($godzilla);
 		@include size(100%, 100vh);
@@ -27,6 +39,10 @@
 		.main{
 			display:table-cell;
 			vertical-align: middle;
+			@include media($mobile-slg){
+				padding: 100px 40px 40px 40px;
+				display:block;
+			}
 			.accordian_box {
 				h2{
 					text-transform:uppercase;
@@ -35,6 +51,10 @@
 					@include margin(0 null 50px null);
 					@include media($desktop-lg-large){
 						@include font-size(60);
+					}
+					@include media($mobile-slg){
+						@include font-size(25);
+						@include margin(0 null 20px null);
 					}
 				}
 				.accordian{
@@ -48,6 +68,10 @@
 						@include media($desktop-lg-large){
 							 @include font-size(20);
 							@include line-height(24);
+						}
+						@include media($mobile-slg){
+							@include font-size(14);
+							@include line-height(16);
 						}
 						&:hover{
 							color:$mailcolor;
@@ -68,6 +92,14 @@
 					     @include media($desktop-lg-large){
 							margin-top: -75px;
 						}
+						@include media($mobile-slg){
+							margin-top: -65px;
+    						margin-left: -24px;
+    						padding: 5px 23px 10px 24px;
+						}
+						@include media($mobile-sm){
+							width: 116%;
+						}
 					    h3{
 						    font-size: 30px;
 						    line-height: 26px;
@@ -75,8 +107,16 @@
 						    cursor: auto;
 						    color:$black;
 						    @include media($desktop-lg-large){
-								 @include font-size(20);
+								@include font-size(20);
 								@include line-height(24);
+							}
+							@include media($mobile-slg){
+								@include font-size(16);
+								@include line-height(20);
+							}
+							@include media($mobile-slg){
+								@include font-size(14);
+								@include line-height(16);
 							}
 						    &:hover{
 								color:$black;
@@ -85,6 +125,10 @@
 					    p{
 					    	@include media($desktop-lg-large){
 								 @include font-size(16);
+							}
+							@include media($mobile-slg){
+								@include font-size(13);
+								line-height: 21px;
 							}
 					    }
 
@@ -103,6 +147,17 @@
 			}
 		}
 	}
-	
+	footer{
+		section{
+			@include media($mobile-slg){
+				color:$black;
+			}
+			a{
+				@include media($mobile-slg){
+					color:$black;
+				}
+			}
+		}
+	}
 }
 

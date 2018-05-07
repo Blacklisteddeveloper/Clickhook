@@ -43,6 +43,9 @@ get_header();
         </aside>
         <aside class="page3 pages" data-menuanchor="page3">
 			<div class="middle">
+				<div class="circle">
+					
+				</div>
 				<div class="content">
 					<div class="centercontent">
 						<h2>Did You Know</h2>
@@ -115,11 +118,12 @@ get_header();
 								</div>
 							</li>
 							<li class="right-align">
+								<div class="icon icon2 mobile"></div>
 								<div class="desc">
 									<h3>Do I Get To Brand The Mobile App As Well For Apple and Android?</h3>
 									<p>For an extra cost we will be happy to submit a branded version of the app to Apple and Android. Although keep in mind you will need to setup your own Apple and Android developer account and give us access. There are fees associated with an Apple development account and we cannot guarantee approval or timelines.</p>
 								</div>
-								<div class="icon icon2"></div>
+								<div class="icon icon2 web"></div>
 							</li>
 						</ul>
 					</div>

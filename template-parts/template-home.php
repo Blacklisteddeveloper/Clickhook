@@ -90,7 +90,7 @@ get_header();
 			<div class="contentbox">
 				<div class="manageleads">
 					<div class="imgbox">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/mobile.png"/>
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/phoneFrame.gif">
 					</div>
 					<div class="desciption">
 						<h3>Manage your leads while you’re on the go.</h3>
@@ -101,6 +101,7 @@ get_header();
 				
 			</div>
 		</aside>
+
 		<aside class="page5 pages" data-menuanchor="page5">
 			<div class="contentbox">
 				<section>

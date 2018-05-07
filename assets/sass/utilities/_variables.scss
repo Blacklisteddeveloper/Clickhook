@@ -40,6 +40,7 @@ $content-padding: 80px;
 // _Mobile	
 $facehugger: 0;
 $xenomorph: 420px;
+$mobile-only: 280px;
 $optimus-prime: 576px;
 $megatron: 660px;
 $millenniumfalcon: 720px;
@@ -75,7 +76,9 @@ $scuti: 2500px;
 	:: 1740px < + 1110px <    */
 			$milky-way: new-breakpoint(min-width $betelgeuse min-height $gipsy-danger+110px); /*
 	:: 1600px >  */
-			$milky-way-large: new-breakpoint(max-width 1600px); 
+			$milky-way-large: new-breakpoint(max-width 1600px); /*
+	:: 1680px >  */
+			$milky-way-large-new: new-breakpoint(max-width 1680px);  /*
  // _Desktop
  /* 
 	:: 1570px >    */
@@ -91,7 +94,7 @@ $scuti: 2500px;
 	:: 1440px >    */
 		$desktop-lg-large: new-breakpoint(max-width $kaiju + 70); /*	
 	:: 1370px < + 1280px <    */
-		$desktop-lg-wh: new-breakpoint(max-width $kaiju min-width 1280px); /*
+		$desktop-lg-wh: new-breakpoint(max-width $kaiju min-width 1281px); /*
 	:: 1260px > + 770px <    */
 		$desktop-md-wh: new-breakpoint(max-width $king-ghidorah+60px min-height $megatron+110px); /*
 	:: 1300px >    */
@@ -116,6 +119,8 @@ $scuti: 2500px;
  /*
 	:: 840px >    */
 		$mobile-lg: new-breakpoint(max-width $voltron); /*
+	:: 690px >    */
+		$short-sm-width: new-breakpoint(max-width $megatron+30px); /*
 	:: 660px >    */
 		$mobile-slg: new-breakpoint(max-width $megatron); /*
 	:: 660px <    */
@@ -138,13 +143,23 @@ $scuti: 2500px;
 		$short-xxlg: new-breakpoint(max-height $gipsy-danger+110px); /*
 	::1200px >    */
 		$short-xxxlg: new-breakpoint(max-height $king-ghidorah); /*
+	::1200px <    */
+		$short-xxxlg-min: new-breakpoint(min-height $king-ghidorah); /*
 	:: 1024px >    */
-		$short-xlg: new-breakpoint(max-height $gipsy-danger+24px); /*
+		$short-xlg: new-breakpoint(min-height $gipsy-danger+24px); /*
 	:: 900px >    */
-		$short-lg: new-breakpoint(max-height $voltron+60px); /*
+		$short-lg: new-breakpoint(min-height $voltron+60px); /*
+	:: 900px >    */
+		$short-lg-max: new-breakpoint(max-height $voltron+60px); /*
 	:: 820px >    */
 		$short-md: new-breakpoint(max-height $voltron - 20px); /*
+	:: 800px >    */
+		$short-md-min: new-breakpoint(min-height $voltron - 40px); /*
 	:: 690px >    */
 		$short-sm: new-breakpoint(max-height $megatron+30px); /*
 	:: 600px >    */
 		$short-xsm: new-breakpoint(max-height $megatron - 60px);
+
+	// _landscape
+
+	$landscape: new-breakpoint( orientation landscape max-height $megatron - 60px );

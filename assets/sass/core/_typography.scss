@@ -82,7 +82,10 @@ a {
 }
 h1,h2,h3,h4,h5,div.title{
 	font-family:$main-font;
-	letter-spacing: rem(3);
+	letter-spacing: 3px;
+	@include media($mobile-md){
+		letter-spacing: 1px;
+	}
 }
 
 ul,li{

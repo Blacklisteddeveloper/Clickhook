@@ -10,6 +10,7 @@
  */
 
 ?>
+
 <footer >
 		<section>
 			<div class="copyright animated bounceInUp">Copyright © ClickHook. A Division of EMethod. </div>
@@ -25,6 +26,8 @@
 		</section>
 	</footer>
 </section>
+
+<div id="rotate" class="rotate"><div class="middle"><?php inline_svg(rotate);?></div></div>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/jquery-1.9.1.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url'); ?>/assets/js/main.js"></script> 
 

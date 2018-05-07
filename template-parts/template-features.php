@@ -13,6 +13,9 @@ get_header();
 		<aside class="page1 pages active" data-menuanchor="page1">
 			<div class="contentbox ri-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>01</span>
 						<h2>Lead Dashboard</h2>
@@ -23,9 +26,7 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>See any unassigned leads</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
@@ -45,13 +46,15 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Add directly to a workflow</li>
 						</ul>
 					</div>
-					
 				</div>
 			</div>
 		</aside>
 		<aside class="page3 pages" data-menuanchor="page3">
 			<div class="contentbox ri-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>03</span>
 						<h2>KanBan Style Workflow</h2>
@@ -62,15 +65,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>See total deal value per stage of workflow</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page4 pages" data-menuanchor="page4">
 			<div class="contentbox li-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>04</span>
 						<h2>Workflow Stats At A Glance</h2>
@@ -81,15 +85,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Open up statistics to gain valuable insights at a glance</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page5 pages" data-menuanchor="page5">
 			<div class="contentbox ri-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt=""  class="graphic"/>
+					</div>
 					<div class="content">
 						<span>05</span>
 						<h2>Add A Lead To Another Workflow</h2>
@@ -100,15 +105,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Track referrals</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt=""  class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page6 pages" data-menuanchor="page6">
 			<div class="contentbox li-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>06</span>
 						<h2>Custom Stages</h2>
@@ -119,15 +125,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Rearrange stages by drag n' drop</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page7 pages" data-menuanchor="page7">
 			<div class="contentbox ri-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>07</span>
 						<h2>Notes </h2>
@@ -138,15 +145,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Team members who are looped into the note will receive an email and can respond right from their email</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page8 pages" data-menuanchor="page8">
 			<div class="contentbox li-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>08</span>
 						<h2>TASKS</h2>
@@ -157,15 +165,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Get notified of a task coming due</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page9 pages" data-menuanchor="page9">
 			<div class="contentbox ri-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>09</span>
 						<h2>Touch Points </h2>
@@ -176,15 +185,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Add a custom label & follow up reminder</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page10 pages" data-menuanchor="page10">
 			<div class="contentbox li-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>10</span>
 						<h2>Automated Emails</h2>
@@ -195,15 +205,16 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Emails are automatically triggered based on the stage and time allotted</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>
 		<aside class="page11 pages" data-menuanchor="page11">
 			<div class="contentbox ri-content">
 				<div class="middle">
+					<div class="circle">
+						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					</div>
 					<div class="content">
 						<span>11</span>
 						<h2>REPORTS </h2>
@@ -214,9 +225,7 @@ get_header();
 							<li><i class="fa fa-caret-right"></i>Export to excel or PDF if needed</li>
 						</ul>
 					</div>
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
-					</div>
+					
 				</div>
 			</div>
 		</aside>

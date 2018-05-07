@@ -48,7 +48,6 @@
 					@include font-size(21);
 					@include line-height(24);
 				}
-
 			}
 			span{
 				font-family:$main-font;
@@ -120,6 +119,7 @@ footer {
 		}
 		@include media($mobile-md){
 			color: #fff;
+			font-size: 11px;
 		}
 	}
 	.copyright {
@@ -179,5 +179,42 @@ footer {
 		float: left;
 		margin-top: -1px;
 		margin-right: 6px;
+	}
+}
+
+
+body {
+	.rotate{
+		display: none;
+	}
+}
+body {
+	.rotate{
+		display: none;
+		
+			@include media($landscape){
+				display: block;	
+			}
+		@include background(images,contact-us,jpg, no-repeat,center, center);
+		background-color:$white;
+		position: absolute;
+	    z-index: 200;
+	    top: 0;
+    	right: 0;
+    	@include position(absolute, $top:0, $left:0);
+	    @include size(100%, 100%);
+		.middle{
+			display:table;
+			.Rotate-icon{
+				left: 0;
+			    right: 0;
+			    width: 127px;
+			    height: 135px;
+			    top: 50%;
+			    margin: -67px auto auto auto;
+			    position: absolute;
+			    stroke:$mailcolor;
+			}
+		}
 	}
 }

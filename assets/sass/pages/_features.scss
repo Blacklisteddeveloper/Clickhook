@@ -16,41 +16,6 @@
 		}
 		.pages.pp-section{
 			background: $white;
-			div.contentbox.li-content{
-				@include background(images,box-l,png, no-repeat,left, top);
-				@include media($desktop-lg-max){
-					background-size: contain;
-				}
-				@include media($short-xlg){
-					background-size: 50%;	
-				}
-				div.content{
-					padding-left: 0%;
-				    padding-right: 11%;
-				    float: right;
-				    text-align: right;
-				    ul{
-				    	margin: 55px 55px 0 0;
-				    	@include media($milky-way-large) {
-							margin: 40px 40px 0 0 ;
-						}
-				    	li{
-					    	i{
-					    		margin-right: -27px;
-	    						transform: rotate(180deg);
-	    						float: right;
-	    						margin-left: 19px;
-					    	}
-					    }
-				    }
-				}
-				.circle{
-					float: left;
-					text-align: left;
-					padding-left: 9%;
-					padding-right: 0;
-				}
-			}
 			.contentbox{
 				@include size(100%);
 				display: table;
@@ -61,16 +26,28 @@
 				@include media($short-xlg){
 					background-size: 50%;	
 				}
+				@include media($mobile-slg){
+					background:$white;
+				}
 				.middle{
 					@include size(100%, null);
 				    display: table-cell;
    					vertical-align: middle;
+   					@include media($mobile-slg){
+						padding: 0% 10%;
+					}
 					.content{
 						width: 46%;
-					    padding-left: 11%;
+					    padding-left: 9%;
 					    float: left;
 					    @include media($milky-way-large) {
 							padding-left: 9%;
+						}
+						@include media($mobile-slg){
+							width: 100%;
+						    padding: 0;
+						    float: left;
+						    text-align: center;
 						}
 						span{
 							color: #e5e5e5;
@@ -80,6 +57,12 @@
 							}
 							@include media($desktop-lg-max){
 								font-size: 125px;
+							}
+							@include media($desktop-mds){
+								font-size: 100px;	
+							}
+							@include media($mobile-slg){
+								font-size: 60px;	
 							}
 						}
 						h2{
@@ -96,6 +79,13 @@
 							@include media($desktop-lg-max){
 								font-size: 40px;
 							}
+							@include media($desktop-mds){
+								font-size: 30px;	
+							}
+							@include media($mobile-slg){
+								font-size: 22px;	
+								margin-top: -11px;
+							}
 						}
 						p{
 							font-size: 30px;
@@ -106,6 +96,12 @@
 							}
 							@include media($desktop-lg-max){
 								font-size: 18px;
+							}
+							@include media($desktop-mds){
+								font-size: 16px;
+							}
+							@include media($mobile-slg){
+								font-size: 16px;	
 							}
 						}
 						ul{
@@ -118,17 +114,30 @@
 							}
 							@include media($desktop-lg-max){
 								font-size: 16px;
-								margin: 20px 0 0 20px;
+								margin: 20px 0 0 40px;
+							}
+							@include media($desktop-mds){
+								font-size: 14px;
+							}
+							@include media($mobile-slg){
+								font-size: 13px;
+								margin: 0;	
 							}
 							li{
 							    margin-bottom: 15px;
-    							padding-left: 32px;
-
+    							padding-right: -32px;
 							   	i{
 							   		color: #4870f5;
 							   		margin-right: 19px;
 							   		margin-left: -27px;
+							   		@include media($desktop-mds){
+		    							margin-left:0px;
+		    							margin-right: 9px;
+									}
 							   	}
+							   	@include media($mobile-slg){
+									margin-bottom: 10px;
+								}
 							}
 						}
 					}
@@ -141,11 +150,18 @@
     					@include media($milky-way-large) {
 							padding-top: 120px;
 						}
+						
+						@include media($mobile-slg){
+							width: 62%;
+						    padding: 0;
+						    float: none;
+						    margin: 0 auto;
+						}
 						img.graphic {
 						    border: 28px solid #dcdcdc;
     						border-radius: 33px;
     						@include media($desktop-lg-max){
-								border-size:18px;
+								border:18px solid #dcdcdc;
 								border-radius: 20px;
 							}
 						}
@@ -160,6 +176,7 @@
 							width: 44%;
 							height: 100%;
     						display: table;
+
     						.centercontent{
     							display: table-cell;
     							vertical-align: middle;
@@ -209,7 +226,69 @@
 					}
 				}
 			}
-
+			div.contentbox.li-content{
+				@include background(images,box-l,png, no-repeat,left, top);
+				@include media($desktop-lg-max){
+					background-size: contain;
+				}
+				@include media($short-xlg){
+					background-size: 50%;	
+				}
+				@include media($mobile-slg){
+					background:$white;
+				}
+				div.content{
+					padding-left: 0%;
+				    padding-right: 11%;
+				    float: right;
+				    text-align: right;
+				    @include media($mobile-slg){
+						width: 100%;
+					    padding: 0;
+					    float: left;
+					    text-align: center;
+					}
+				    ul{
+				    	margin: 55px 55px 0 0;
+				    	@include media($milky-way-large) {
+							margin: 40px 40px 0 0 ;
+						}
+						@include media($desktop-lg-max){
+							margin: 20px 40px 0 0 ;
+						}
+						@include media($desktop-mds){
+							font-size: 14px;
+							margin:0;
+						}
+				    	li{
+					    	i{
+					    		margin-right: -27px;
+	    						transform: rotate(180deg);
+	    						float: right;
+	    						margin-left: 19px;
+	    						@include media($desktop-mds){
+	    							margin-left: 0px;
+								    margin-right: 9px;
+								    float: none;
+								    transform: rotate(0deg);
+								}
+					    	}
+					    }
+				    }
+				}
+				.circle{
+					float: left;
+					text-align: left;
+					padding-left: 9%;
+					padding-right: 0;
+					@include media($mobile-slg){
+						width: 62%;
+					    padding: 0;
+					    float: none;
+					    margin: 0 auto;
+					}
+				}
+			}
 		}
 	}
 }

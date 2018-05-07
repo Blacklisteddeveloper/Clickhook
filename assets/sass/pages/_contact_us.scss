@@ -1,3 +1,25 @@
+body.contact-us{
+	@include media($mobile-slg){
+		overflow: scroll !important;
+		overflow-x: hidden !important;
+	}
+	footer{
+		@include media($mobile-slg){
+			position: relative;
+		}
+		section{
+			@include media($mobile-slg){
+				color:$black;
+			}
+			a{
+				@include media($mobile-slg){
+					color:$black;
+				}
+			}
+		}
+	}
+}
+
 .contact {
 	@include background(images,contact-us,jpg, no-repeat,center, center);
 	background-color:#fff;
@@ -8,7 +30,11 @@
 		background-size: cover;
 	}
 	@include media($mobile-md){
-		@include padding(100px 10% 100px 10%);
+		padding: 70px 40px 40px 40px;
+	}
+	@include media($mobile-smd){
+		padding-bottom: 80px;
+		padding-top: 98px;
 	}
 	#wrapper {
 		@include outer-container($godzilla);
@@ -35,6 +61,10 @@
 					@include size(30%,null);
 					float: left;
 					margin-top: 18px;
+					@include media($mobile-slg){
+						@include size(100%,null);
+						text-align: center;
+					}
 					h2{
 						@include font-size(76);
 						color:$mailcolor;
@@ -42,6 +72,12 @@
 						@include media($desktop-lg-large) {
 							margin-bottom: 26px;
 							@include font-size(65);
+						}
+						@include media($mobile-slg){
+							@include font-size(35);
+						}
+						@include media($mobile-smd){
+							@include font-size(25);	
 						}
 					}
 					address{
@@ -57,12 +93,26 @@
 							@include font-size(16);
     						line-height: 22px;
 						}
+						@include media($mobile-slg){
+							font-size: 14px;
+	    					line-height: 23px;
+	    					padding: 0 2%;
+	    					@include size(33%,null);
+							float: left;
+						}
+						@include media($mobile-smd){
+							@include size(100%,null);
+							float: none;
+						}
 					}
 				}
 				.contact_form{
 					@include size(51%,null);
 					float: right;
-					
+					@include media($mobile-slg){
+						@include size(100%,null);
+						text-align: center;
+					}
 					strong{
 						@include font-size(26);
 						font-family: $main-font;
@@ -83,6 +133,12 @@
 						}
 			 			form{
 			 				@include position(relative);
+			 				input{
+			 					@include media($mobile-slg){
+									@include size(100%,null);
+									font-size: 13px;
+								}
+			 				}
 
 			 			}
 			 			input[type="submit"]{

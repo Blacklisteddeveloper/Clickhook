@@ -3500,6 +3500,10 @@ th {
 :: 1740px < + 1110px <    */
 		                                                                                  /*
 :: 1600px >  */
+		                                                    /*
+:: 1680px >  */
+			                                                         /*
+ // _Desktop
  /* 
 	:: 1570px >    */
 	                                                   /*
@@ -3537,6 +3541,8 @@ th {
  /*
 	:: 840px >    */
 	                                                /*
+:: 690px >    */
+	                                                           /*
 :: 660px >    */
 	                                                  /*
 :: 660px <    */
@@ -3557,12 +3563,18 @@ th {
 	                                                             /*
 ::1200px >    */
 	                                                         /*
+::1200px <    */
+	                                                             /*
 :: 1024px >    */
 	                                                           /*
 :: 900px >    */
 	                                                     /*
+:: 900px >    */
+	                                                         /*
 :: 820px >    */
 	                                                       /*
+:: 800px >    */
+	                                                           /*
 :: 690px >    */
 	                                                      /*
 :: 600px >    */
@@ -3667,7 +3679,10 @@ a {
 
 h1, h2, h3, h4, h5, div.title {
   font-family: content-font;
-  letter-spacing: 0.1875rem; }
+  letter-spacing: 3px; }
+  @media screen and (max-width: 600px) {
+    h1, h2, h3, h4, h5, div.title {
+      letter-spacing: 1px; } }
 
 ul, li {
   margin: 0;
@@ -3841,7 +3856,7 @@ header {
     @media screen and (max-width: 420px) {
       header .logo img {
         width: 150px; } }
-  @media screen and (max-width: 1370px) and (min-width: 1280px) {
+  @media screen and (max-width: 1370px) and (min-width: 1281px) {
     header {
       padding: 20px 0 20px 20px; } }
   @media screen and (max-width: 840px) {
@@ -3852,7 +3867,7 @@ header {
       padding: 20px 0 20px 20px; } }
   @media screen and (max-width: 600px) {
     header {
-      position: absolute;
+      position: fixed;
       background: #fff;
       padding: 15px; } }
 
@@ -3868,18 +3883,19 @@ nav {
         display: none; } }
   nav .hamburger {
     float: right;
-    padding: 19px 16px 16px 17px;
+    padding: 19px 16px 11px 17px;
     border-radius: 100%;
     margin-left: 11px;
     margin-right: 11px; }
     @media screen and (max-width: 600px) {
       nav .hamburger {
-        margin-top: -53px;
+        margin-top: -46px;
         position: absolute;
-        left: -8px; } }
+        left: 4px;
+        padding: 11px 11px 7px 11px; } }
     @media screen and (max-width: 420px) {
       nav .hamburger {
-        margin-top: -46px; } }
+        margin-top: -38px; } }
     nav .hamburger.is-active {
       background: #4870f5;
       color: #ffffff; }
@@ -3890,18 +3906,36 @@ nav {
     display: inline-block;
     width: 33px;
     height: 30px; }
+    @media screen and (max-width: 600px) {
+      nav .hamburger-box {
+        width: 27px;
+        height: 24px; } }
   nav .hamburger-inner {
     width: 33px;
     height: 6px;
     background-color: #4870f5; }
+    @media screen and (max-width: 600px) {
+      nav .hamburger-inner {
+        width: 27px;
+        height: 4px; } }
     nav .hamburger-inner:after, nav .hamburger-inner:before {
       width: 33px;
       height: 6px;
       background-color: #4870f5; }
+      @media screen and (max-width: 600px) {
+        nav .hamburger-inner:after, nav .hamburger-inner:before {
+          width: 27px;
+          height: 4px; } }
   nav .hamburger--spring .hamburger-inner:before {
     top: 12px; }
+    @media screen and (max-width: 600px) {
+      nav .hamburger--spring .hamburger-inner:before {
+        top: 9px; } }
   nav .hamburger--spring .hamburger-inner:after {
     top: 24px; }
+    @media screen and (max-width: 600px) {
+      nav .hamburger--spring .hamburger-inner:after {
+        top: 18px; } }
 
 .bgbackground {
   position: absolute;
@@ -3912,8 +3946,8 @@ nav {
   height: 100px;
   background: #FFF;
   border-radius: 50% 50% 50% 50%;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
   -webkit-box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
   box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
   cursor: pointer;
@@ -3922,6 +3956,9 @@ nav {
     -webkit-box-shadow: 0 0 0 101vw #4870f5, 0 0 0 100vh #4870f5;
     box-shadow: 0 0 0 100vw #4870f5, 0 0 0 100vh #4870f5;
     border-radius: 0; }
+  @media screen and (max-width: 1000px) {
+    .bgbackground {
+      display: none !important; } }
 
 .hamburgerbox2 {
   position: absolute;
@@ -3932,8 +3969,8 @@ nav {
   height: 100px;
   background: #FFF;
   border-radius: 50% 50% 50% 50%;
-  -webkit-transition: 1s ease-in-out;
-  transition: 1s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
   -webkit-box-shadow: 0 0 0 0 #ffffff, 0 0 0 0 #ffffff;
   box-shadow: 0 0 0 0 #ffffff, 0 0 0 0 #ffffff;
   cursor: pointer;
@@ -3942,6 +3979,18 @@ nav {
     -webkit-box-shadow: 0 0 0 101vw #ffffff, 0 0 0 63vh #ffffff;
     box-shadow: 0 0 0 101vw #ffffff, 0 0 0 63vh #ffffff;
     border-radius: 13px; }
+    @media screen and (max-width: 1200px) {
+      .hamburgerbox2.active {
+        -webkit-box-shadow: 0 0 0 109vw #ffffff, 0 0 0 63vh #ffffff;
+        box-shadow: 0 0 0 109vw #ffffff, 0 0 0 63vh #ffffff; } }
+@media screen and (max-width: 1300px) and (min-height: 1024px) {
+  .hamburgerbox2.active {
+    -webkit-box-shadow: 0 0 0 111vw #ffffff, 0 0 0 63vh #ffffff;
+    box-shadow: 0 0 0 111vw #ffffff, 0 0 0 63vh #ffffff; } }
+
+  @media screen and (max-width: 1000px) {
+    .hamburgerbox2 {
+      display: none !important; } }
 
 .hamburgerbox {
   position: absolute;
@@ -3951,33 +4000,81 @@ nav {
   display: none; }
   .hamburgerbox.active {
     display: block; }
+    @media screen and (max-width: 600px) {
+      .hamburgerbox.active {
+        display: table;
+        z-index: 20;
+        position: fixed; } }
+  @media screen and (max-width: 660px) {
+    .hamburgerbox {
+      background: #ffffff; } }
   .hamburgerbox .section {
     width: 100%;
     height: 100%;
     opacity: 1; }
-    .hamburgerbox .section .boximg {
-      width: 70%;
+    @media screen and (max-width: 1300px) {
+      .hamburgerbox .section {
+        display: table; } }
+    @media screen and (max-width: 1300px) {
+      .hamburgerbox .section .middle {
+        vertical-align: middle;
+        display: table-cell; } }
+    .hamburgerbox .section .middle .boximg {
+      width: 63%;
       float: left;
-      padding: 15% 0px 0 10%; }
-    .hamburgerbox .section .navbar {
-      width: 30%;
-      float: left;
-      padding: 14% 11% 0 0;
+      padding: 11% 0px 0 10%; }
+      @media screen and (max-width: 1300px) {
+        .hamburgerbox .section .middle .boximg {
+          padding-top: 0; } }
+      @media screen and (max-width: 660px) {
+        .hamburgerbox .section .middle .boximg {
+          display: none; } }
+      .hamburgerbox .section .middle .boximg.delay {
+        animation-delay: 0.5s; }
+    .hamburgerbox .section .middle .navbar {
+      width: 35%;
+      float: right;
+      padding: 10% 14% 0 0;
       text-align: right;
       font-family: content-font;
-      font-size: 2.625rem; }
-      .hamburgerbox .section .navbar ul {
+      font-size: 42px; }
+      @media screen and (max-width: 1440px) {
+        .hamburgerbox .section .middle .navbar {
+          font-size: 35px; } }
+      @media screen and (max-width: 1200px) {
+        .hamburgerbox .section .middle .navbar {
+          font-size: 21px; } }
+      @media screen and (max-width: 1300px) {
+        .hamburgerbox .section .middle .navbar {
+          padding-top: 0; } }
+      @media screen and (max-width: 660px) {
+        .hamburgerbox .section .middle .navbar {
+          width: 100%;
+          padding: 20% 10% 10% 10%;
+          text-align: center; } }
+      .hamburgerbox .section .middle .navbar ul {
         display: inline-block; }
-        .hamburgerbox .section .navbar ul li {
+        .hamburgerbox .section .middle .navbar ul li {
           list-style: none;
-          margin-bottom: 3.75rem; }
-          .hamburgerbox .section .navbar ul li a {
+          margin-bottom: 60px; }
+          @media screen and (max-width: 1200px) {
+            .hamburgerbox .section .middle .navbar ul li {
+              margin-bottom: 35px; } }
+          .hamburgerbox .section .middle .navbar ul li a {
             color: #4870f5;
             text-transform: uppercase; }
-          .hamburgerbox .section .navbar ul li.downloadbtn {
-            margin-top: 7.5rem; }
-            .hamburgerbox .section .navbar ul li.downloadbtn a {
+          .hamburgerbox .section .middle .navbar ul li.downloadbtn {
+            margin-top: 90px; }
+            @media screen and (max-width: 1440px) {
+              .hamburgerbox .section .middle .navbar ul li.downloadbtn {
+                font-size: 21px !important; } }
+            @media screen and (max-width: 1200px) {
+              .hamburgerbox .section .middle .navbar ul li.downloadbtn {
+                font-size: 14px !important; } }
+            .hamburgerbox .section .middle .navbar ul li.downloadbtn a {
               color: #ffffff; }
+      .hamburgerbox .section .middle .navbar.delay {
+        animation-delay: 0.5s; }
 
 label .menu {
   position: absolute;
@@ -4049,7 +4146,7 @@ label a {
   @media screen and (max-width: 1300px) {
     .home #wrapper .footer {
       background-size: cover; } }
-  @media screen and (max-width: 1370px) and (min-width: 1280px) {
+  @media screen and (max-width: 1370px) and (min-width: 1281px) {
     .home #wrapper .footer {
       background-size: cover; } }
   .home #wrapper .footer .contentbox {
@@ -4170,7 +4267,8 @@ footer {
         text-align: center; } }
     @media screen and (max-width: 600px) {
       footer section {
-        color: #fff; } }
+        color: #fff;
+        font-size: 11px; } }
   footer .copyright {
     float: left; }
     @media screen and (max-width: 1300px) {
@@ -4223,6 +4321,39 @@ footer {
     float: left;
     margin-top: -1px;
     margin-right: 6px; }
+
+body .rotate {
+  display: none; }
+
+body .rotate {
+  display: none;
+  background-image: url(../images/contact-us.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff;
+  position: absolute;
+  z-index: 200;
+  top: 0;
+  right: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+  @media screen and (orientation: landscape) and (max-height: 600px) {
+    body .rotate {
+      display: block; } }
+  body .rotate .middle {
+    display: table; }
+    body .rotate .middle .Rotate-icon {
+      left: 0;
+      right: 0;
+      width: 127px;
+      height: 135px;
+      top: 50%;
+      margin: -67px auto auto auto;
+      position: absolute;
+      stroke: #4870f5; }
 
 input, select, textarea {
   text-shadow: none;
@@ -4470,7 +4601,7 @@ textarea {
 	:: Sidebar
 	:: Forms
 	*/
-nav .getdemo, .hamburgerbox .section .navbar ul li.downloadbtn, .home #wrapper .contentbox .getdemo, .contact #wrapper .main .contentbox .contact_form .form input[type="submit"], .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom, .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+nav .getdemo, .hamburgerbox .section .middle .navbar ul li.downloadbtn, .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .home #wrapper .contentbox .getdemo, .contact #wrapper .main .contentbox .contact_form .form input[type="submit"], .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .buttom, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom {
   color: #ffffff;
   background: #4870f5;
   text-decoration: none;
@@ -4482,11 +4613,11 @@ nav .getdemo, .hamburgerbox .section .navbar ul li.downloadbtn, .home #wrapper .
   font-weight: 600;
   transition-property: background; }
   @media screen and (max-width: 1370px) {
-    nav .getdemo, .hamburgerbox .section .navbar ul li.downloadbtn, .home #wrapper .contentbox .getdemo, .contact #wrapper .main .contentbox .contact_form .form input[type="submit"], .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom, .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+    nav .getdemo, .hamburgerbox .section .middle .navbar ul li.downloadbtn, .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .home #wrapper .contentbox .getdemo, .contact #wrapper .main .contentbox .contact_form .form input[type="submit"], .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .buttom, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom {
       padding: 16px 34px;
       font-size: 20px;
       margin-top: 7px; } }
-  nav .getdemo:hover, .hamburgerbox .section .navbar ul li.downloadbtn:hover, .home #wrapper .contentbox .getdemo:hover, .contact #wrapper .main .contentbox .contact_form .form input[type="submit"]:hover, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom:hover, .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"]:hover, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"]:hover, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"]:hover {
+  nav .getdemo:hover, .hamburgerbox .section .middle .navbar ul li.downloadbtn:hover, .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"]:hover, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"]:hover, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"]:hover, .home #wrapper .contentbox .getdemo:hover, .contact #wrapper .main .contentbox .contact_form .form input[type="submit"]:hover, .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .buttom:hover, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom:hover {
     background: #303030; }
 
 .home #wrapper .footer .contentbox .copyright a, .home #wrapper .page5 .contentbox .calltoaction a {
@@ -4941,15 +5072,23 @@ object {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover; }
+    @media screen and (max-width: 1200px) {
+      .home #wrapper .page5 .contentbox .testimonials:after, .insurance #wrapper .page5.pp-section .contentbox .testimonials:after, .home #wrapper .page5 .contentbox .testimonials:before, .insurance #wrapper .page5.pp-section .contentbox .testimonials:before {
+        width: 48px;
+        height: 39px;
+        top: 10px; } }
     @media screen and (max-width: 840px) {
       .home #wrapper .page5 .contentbox .testimonials:after, .insurance #wrapper .page5.pp-section .contentbox .testimonials:after, .home #wrapper .page5 .contentbox .testimonials:before, .insurance #wrapper .page5.pp-section .contentbox .testimonials:before {
         display: none; } }
   .home #wrapper .page5 .contentbox .testimonials:after, .insurance #wrapper .page5.pp-section .contentbox .testimonials:after {
     content: '';
     left: -150px; }
-    @media screen and (max-width: 1370px) {
+    @media screen and (max-width: 1440px) {
       .home #wrapper .page5 .contentbox .testimonials:after, .insurance #wrapper .page5.pp-section .contentbox .testimonials:after {
-        left: -100px; } }
+        left: -95px; } }
+    @media screen and (max-width: 1200px) {
+      .home #wrapper .page5 .contentbox .testimonials:after, .insurance #wrapper .page5.pp-section .contentbox .testimonials:after {
+        left: -65px; } }
   .home #wrapper .page5 .contentbox .testimonials:before, .insurance #wrapper .page5.pp-section .contentbox .testimonials:before {
     content: '';
     right: -150px;
@@ -4957,9 +5096,12 @@ object {
     background-repeat: no-repeat;
     background-position: 0 0;
     background-size: cover; }
-    @media screen and (max-width: 1370px) {
+    @media screen and (max-width: 1440px) {
       .home #wrapper .page5 .contentbox .testimonials:before, .insurance #wrapper .page5.pp-section .contentbox .testimonials:before {
-        right: -100px; } }
+        right: -95px; } }
+    @media screen and (max-width: 1200px) {
+      .home #wrapper .page5 .contentbox .testimonials:before, .insurance #wrapper .page5.pp-section .contentbox .testimonials:before {
+        right: -65px; } }
   .home #wrapper .page5 .contentbox .testimonials li.testimonial, .insurance #wrapper .page5.pp-section .contentbox .testimonials li.testimonial {
     list-style: none;
     background-image: url(../images/testimonials_bg.png);
@@ -4985,7 +5127,7 @@ object {
         padding-bottom: 55px;
         background-size: 115px;
         padding-left: 18px; } }
-    @media screen and (max-width: 1370px) and (min-width: 1280px) {
+    @media screen and (max-width: 1370px) and (min-width: 1281px) {
       .home #wrapper .page5 .contentbox .testimonials li.testimonial, .insurance #wrapper .page5.pp-section .contentbox .testimonials li.testimonial {
         font-size: 36px; } }
     @media screen and (max-width: 1100px) {
@@ -7670,6 +7812,158 @@ object {
     #lightcase-overlay {
       opacity: 1 !important; } }
 
+.pricing #wrapper .page3.pp-section, .insurance #wrapper .page6.pp-section, .white_label #wrapper .page7.pp-section {
+  background-image: url(../images/contact-us.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-color: #ffffff; }
+  @media screen and (max-width: 1600px) and (min-height: 1200px) {
+    .pricing #wrapper .page3.pp-section, .insurance #wrapper .page6.pp-section, .white_label #wrapper .page7.pp-section {
+      background-size: cover; } }
+  @media screen and (max-height: 1200px) {
+    .pricing #wrapper .page3.pp-section, .insurance #wrapper .page6.pp-section, .white_label #wrapper .page7.pp-section {
+      background-size: cover; } }
+  .pricing #wrapper .page3.pp-section .contentbox, .insurance #wrapper .page6.pp-section .contentbox, .white_label #wrapper .page7.pp-section .contentbox {
+    vertical-align: middle;
+    display: table-cell; }
+    .pricing #wrapper .page3.pp-section .contentbox .middle-cont, .insurance #wrapper .page6.pp-section .contentbox .middle-cont, .white_label #wrapper .page7.pp-section .contentbox .middle-cont {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      max-width: 1370px;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%; }
+      @media screen and (max-width: 1440px) {
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont, .insurance #wrapper .page6.pp-section .contentbox .middle-cont, .white_label #wrapper .page7.pp-section .contentbox .middle-cont {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 1050px) {
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont, .insurance #wrapper .page6.pp-section .contentbox .middle-cont, .white_label #wrapper .page7.pp-section .contentbox .middle-cont {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 720px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 660px) {
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont, .insurance #wrapper .page6.pp-section .contentbox .middle-cont, .white_label #wrapper .page7.pp-section .contentbox .middle-cont {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 420px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 450px) {
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont, .insurance #wrapper .page6.pp-section .contentbox .middle-cont, .white_label #wrapper .page7.pp-section .contentbox .middle-cont {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 280px;
+          margin-left: auto;
+          margin-right: auto; } }
+      .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form {
+        text-align: center; }
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form h2, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form h2 {
+          color: #4870f5;
+          font-size: 55px;
+          text-align: center;
+          font-weight: 400;
+          letter-spacing: 0;
+          margin-top: 0px; }
+          @media screen and (max-width: 1440px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form h2, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form h2 {
+              font-size: 45px;
+              margin-bottom: 18px; } }
+          @media screen and (max-width: 1050px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form h2, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form h2 {
+              font-size: 28px; } }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form h2, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form h2 {
+              font-size: 22px; } }
+          @media screen and (max-width: 450px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form h2, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form h2 {
+              font-size: 17px;
+              margin-bottom: 4px; } }
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form strong, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form strong, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form strong {
+          font-size: 26px;
+          font-family: content-font;
+          font-weight: normal; }
+          @media screen and (max-width: 1050px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form strong, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form strong, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form strong {
+              font-size: 16px; } }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form strong, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form strong, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form strong {
+              font-size: 13px; } }
+        .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form {
+          margin-top: 9px;
+          background: rgba(132, 152, 193, 0.5);
+          padding: 63px 84px 90px;
+          text-align: center; }
+          @media screen and (max-width: 1370px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form {
+              padding: 53px 65px 62px; } }
+          @media screen and (max-width: 1050px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form {
+              padding: 40px 40px 66px; } }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form {
+              padding: 20px 20px 20px; } }
+          .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form {
+            position: relative; }
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
+              width: 47%;
+              float: left; }
+              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text:nth-child(2n+2), .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text:nth-child(2n+2), .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text:nth-child(2n+2) {
+                margin-left: 6%; }
+              @media screen and (max-width: 1050px) {
+                .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
+                  font-size: 16px;
+                  padding: 16px; } }
+              @media screen and (max-width: 660px) {
+                .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
+                  font-size: 13px;
+                  padding: 13px; } }
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full {
+              width: 100%;
+              margin-bottom: 0; }
+              @media screen and (max-width: 660px) {
+                .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full {
+                  font-size: 13px;
+                  padding: 13px; } }
+          .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+            position: absolute;
+            margin-top: 56px;
+            margin-left: -97px; }
+            @media screen and (max-width: 1370px) {
+              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+                margin-top: 31px; } }
+            @media screen and (max-width: 1050px) {
+              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+                margin-top: 33px;
+                margin-left: -81px; } }
+            @media screen and (max-width: 660px) {
+              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+                padding: 13px 28px;
+                font-size: 15px;
+                margin-top: 12px;
+                position: relative;
+                margin-left: 0;
+                left: 0;
+                width: 100%; } }
+            @media screen and (max-width: 450px) {
+              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"], .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
+                margin-top: 15px;
+                margin-left: 0; } }
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"].black, .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"].black, .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"].black {
+              background: #333333;
+              margin-right: -23px;
+              right: 0; }
+
 .fancybox-lock {
   overflow: hidden; }
 
@@ -7898,6 +8192,24 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   overflow-y: scroll;
   height: 100%; }
 
+.preloader {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #fff;
+  z-index: 100;
+  display: none; }
+  .preloader #preloader_inner {
+    z-index: 100;
+    width: 150px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -75px;
+    margin-left: -75px; }
+  .preloader.show {
+    display: none; }
+
 /* Elements
 	:: Elemental Index
 	:: Buttons
@@ -8017,7 +8329,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     @media screen and (max-width: 660px) {
       .home #wrapper .contentbox {
         display: block;
-        margin-top: 32%; } }
+        margin-top: 25%; } }
     .home #wrapper .contentbox h1 {
       color: #4870f5;
       font-size: 65px;
@@ -8032,7 +8344,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         .home #wrapper .contentbox h1 {
           font-size: 36px;
           text-align: center; } }
-      @media screen and (max-width: 1370px) and (min-width: 1280px) {
+      @media screen and (max-width: 1370px) and (min-width: 1281px) {
         .home #wrapper .contentbox h1 {
           font-size: 36px; } }
       @media screen and (max-width: 1300px) {
@@ -8065,7 +8377,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       @media screen and (max-width: 1300px) {
         .home #wrapper .contentbox .imagecenter {
           margin-top: 52px; } }
-      @media screen and (max-width: 1370px) and (min-width: 1280px) {
+      @media screen and (max-width: 1370px) and (min-width: 1281px) {
         .home #wrapper .contentbox .imagecenter {
           margin-top: 22px; } }
       @media screen and (max-width: 660px) {
@@ -8096,9 +8408,6 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         .home #wrapper .contentbox .getdemo {
           padding: 12px 27px;
           font-size: 16px; } }
-      @media screen and (max-width: 375px) {
-        .home #wrapper .contentbox .getdemo {
-          bottom: 0; } }
   .home #wrapper .page2 {
     background-image: url(../images/bg2.jpg);
     background-repeat: no-repeat;
@@ -8120,7 +8429,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         display: table; } }
     .home #wrapper .page2 .pp-tableCell {
       width: 100%; }
-      @media screen and (max-width: 1370px) and (min-width: 1280px) {
+      @media screen and (max-width: 1370px) and (min-width: 1281px) {
         .home #wrapper .page2 .pp-tableCell {
           display: table; } }
     @media screen and (max-width: 1300px) {
@@ -8198,7 +8507,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               font-size: 35px;
               line-height: 40px;
               margin-bottom: 27px; } }
-          @media screen and (max-width: 1370px) and (min-width: 1280px) {
+          @media screen and (max-width: 1370px) and (min-width: 1281px) {
             .home #wrapper .page2 .contentbox .comment p {
               font-size: 30px; } }
           @media screen and (max-width: 1300px) {
@@ -8229,7 +8538,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           @media screen and (max-width: 1440px) {
             .home #wrapper .page2 .contentbox .comment span {
               font-size: 24px; } }
-          @media screen and (max-width: 1370px) and (min-width: 1280px) {
+          @media screen and (max-width: 1370px) and (min-width: 1281px) {
             .home #wrapper .page2 .contentbox .comment span {
               font-size: 20px; } }
           @media screen and (max-width: 1300px) {
@@ -8281,7 +8590,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           font-size: 32px;
           padding-right: 3%;
           margin-top: 40px; }
-          @media screen and (max-width: 1370px) and (min-width: 1280px) {
+          @media screen and (max-width: 1370px) and (min-width: 1281px) {
             .home #wrapper .page2 .contentbox .intro_section .box {
               font-size: 28px; } }
           @media screen and (max-width: 1300px) {
@@ -8337,7 +8646,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               .home #wrapper .page2 .contentbox .intro_section .box:nth-child(2) {
                 padding: 2% 4%;
                 font-size: 16px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page2 .contentbox .intro_section .box:nth-child(2) {
                 padding: 1% 3%;
                 font-size: 16px; } }
@@ -8427,7 +8736,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     @media screen and (max-width: 1100px) {
       .home #wrapper .page3.pp-section {
         display: table; } }
-    @media screen and (max-width: 1370px) and (min-width: 1280px) {
+    @media screen and (max-width: 1370px) and (min-width: 1281px) {
       .home #wrapper .page3.pp-section {
         display: table; } }
     @media screen and (max-width: 1300px) {
@@ -8436,7 +8745,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     @media screen and (max-width: 1600px) and (min-height: 1200px) {
       .home #wrapper .page3.pp-section {
         display: table; } }
-    @media screen and (max-width: 1370px) and (min-width: 1280px) {
+    @media screen and (max-width: 1370px) and (min-width: 1281px) {
       .home #wrapper .page3 .pp-tableCell {
         display: table;
         width: 100%; } }
@@ -8459,7 +8768,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         vertical-align: middle;
         margin-top: 0;
         display: table-cell; } }
-    @media screen and (max-width: 1370px) and (min-width: 1280px) {
+    @media screen and (max-width: 1370px) and (min-width: 1281px) {
       .home #wrapper .page3 .middle {
         vertical-align: middle;
         margin-top: 0;
@@ -8488,7 +8797,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         .home #wrapper .page3 .contentbox {
           margin: 0 auto;
           padding: 0; } }
-      @media screen and (max-width: 1370px) and (min-width: 1280px) {
+      @media screen and (max-width: 1370px) and (min-width: 1281px) {
         .home #wrapper .page3 .contentbox {
           margin-top: 0;
           content: "";
@@ -8562,7 +8871,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           .home #wrapper .page3 .contentbox span {
             font-size: 30px;
             margin-bottom: 50px; } }
-        @media screen and (max-width: 1370px) and (min-width: 1280px) {
+        @media screen and (max-width: 1370px) and (min-width: 1281px) {
           .home #wrapper .page3 .contentbox span {
             font-size: 27px;
             margin-bottom: 20px; } }
@@ -8628,7 +8937,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               .home #wrapper .page3 .contentbox .service .box i img {
                 padding: 37px 0;
                 width: 68px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page3 .contentbox .service .box i img {
                 padding: 32px 0;
                 width: 56px; } }
@@ -8666,7 +8975,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 height: 147px;
                 background-size: contain;
                 margin-left: -63px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page3 .contentbox .service .box i:after {
                 width: 109px;
                 height: 129px;
@@ -8708,7 +9017,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 background-size: 100%;
                 margin-top: 4px;
                 margin-bottom: -10px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page3 .contentbox .service .box h4 {
                 font-size: 19px;
                 background-size: 90%; } }
@@ -8743,7 +9052,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             @media screen and (max-width: 1440px) {
               .home #wrapper .page3 .contentbox .service .box p {
                 font-size: 16px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page3 .contentbox .service .box p {
                 font-size: 16px;
                 line-height: 19px; } }
@@ -8787,7 +9096,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     @media screen and (max-width: 1440px) {
       .home #wrapper .page4 {
         background-size: 105%; } }
-    @media screen and (max-width: 1370px) and (min-width: 1280px) {
+    @media screen and (max-width: 1370px) and (min-width: 1281px) {
       .home #wrapper .page4 {
         background-size: 105%;
         background-image: url(../images/bg3_small.jpg);
@@ -8869,7 +9178,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           @media screen and (max-width: 1440px) {
             .home #wrapper .page4 .contentbox .manageleads .imgbox {
               width: 24%; } }
-          @media screen and (max-width: 1370px) and (min-width: 1280px) {
+          @media screen and (max-width: 1370px) and (min-width: 1281px) {
             .home #wrapper .page4 .contentbox .manageleads .imgbox {
               width: 20%; } }
           @media screen and (max-width: 660px) {
@@ -8904,7 +9213,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 font-size: 58px;
                 line-height: 62px;
                 margin-top: 37px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page4 .contentbox .manageleads .desciption h3 {
                 font-size: 52px;
                 line-height: 56px;
@@ -8941,7 +9250,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               .home #wrapper .page4 .contentbox .manageleads .desciption p {
                 font-size: 20px;
                 line-height: 26px; } }
-            @media screen and (max-width: 1370px) and (min-width: 1280px) {
+            @media screen and (max-width: 1370px) and (min-width: 1281px) {
               .home #wrapper .page4 .contentbox .manageleads .desciption p {
                 margin-top: 19px;
                 margin-bottom: 22px; } }
@@ -9153,6 +9462,14 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 .home.pp-viewing-footer footer .footernav a {
   color: #ffffff; }
 
+@media screen and (max-width: 660px) {
+  body.faq {
+    overflow: scroll !important;
+    overflow-x: hidden !important; } }
+@media screen and (max-width: 660px) {
+  body.faq footer {
+    position: relative; } }
+
 .faq {
   background-image: url(../images/bg4.jpg);
   background-repeat: no-repeat;
@@ -9205,6 +9522,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     .faq #wrapper .main {
       display: table-cell;
       vertical-align: middle; }
+      @media screen and (max-width: 660px) {
+        .faq #wrapper .main {
+          padding: 100px 40px 40px 40px;
+          display: block; } }
       .faq #wrapper .main .accordian_box h2 {
         text-transform: uppercase;
         font-size: 76px;
@@ -9214,6 +9535,11 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         @media screen and (max-width: 1440px) {
           .faq #wrapper .main .accordian_box h2 {
             font-size: 60px; } }
+        @media screen and (max-width: 660px) {
+          .faq #wrapper .main .accordian_box h2 {
+            font-size: 25px;
+            margin-top: 0;
+            margin-bottom: 20px; } }
       .faq #wrapper .main .accordian_box .accordian {
         position: relative; }
         .faq #wrapper .main .accordian_box .accordian h3 {
@@ -9226,6 +9552,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             .faq #wrapper .main .accordian_box .accordian h3 {
               font-size: 20px;
               line-height: 24px; } }
+          @media screen and (max-width: 660px) {
+            .faq #wrapper .main .accordian_box .accordian h3 {
+              font-size: 14px;
+              line-height: 16px; } }
           .faq #wrapper .main .accordian_box .accordian h3:hover {
             color: #4870f5; }
         .faq #wrapper .main .accordian_box .accordian div {
@@ -9243,6 +9573,14 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           @media screen and (max-width: 1440px) {
             .faq #wrapper .main .accordian_box .accordian div {
               margin-top: -75px; } }
+          @media screen and (max-width: 660px) {
+            .faq #wrapper .main .accordian_box .accordian div {
+              margin-top: -65px;
+              margin-left: -24px;
+              padding: 5px 23px 10px 24px; } }
+          @media screen and (max-width: 420px) {
+            .faq #wrapper .main .accordian_box .accordian div {
+              width: 116%; } }
           .faq #wrapper .main .accordian_box .accordian div h3 {
             font-size: 30px;
             line-height: 26px;
@@ -9253,15 +9591,47 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               .faq #wrapper .main .accordian_box .accordian div h3 {
                 font-size: 20px;
                 line-height: 24px; } }
+            @media screen and (max-width: 660px) {
+              .faq #wrapper .main .accordian_box .accordian div h3 {
+                font-size: 16px;
+                line-height: 20px; } }
+            @media screen and (max-width: 660px) {
+              .faq #wrapper .main .accordian_box .accordian div h3 {
+                font-size: 14px;
+                line-height: 16px; } }
             .faq #wrapper .main .accordian_box .accordian div h3:hover {
               color: #000000; }
           @media screen and (max-width: 1440px) {
             .faq #wrapper .main .accordian_box .accordian div p {
               font-size: 16px; } }
+          @media screen and (max-width: 660px) {
+            .faq #wrapper .main .accordian_box .accordian div p {
+              font-size: 13px;
+              line-height: 21px; } }
         .faq #wrapper .main .accordian_box .accordian.active div {
           display: block; }
       .faq #wrapper .main .accordian_box.active div {
         display: block; }
+  @media screen and (max-width: 660px) {
+    .faq footer section {
+      color: #000000; } }
+  @media screen and (max-width: 660px) {
+    .faq footer section a {
+      color: #000000; } }
+
+@media screen and (max-width: 660px) {
+  body.contact-us {
+    overflow: scroll !important;
+    overflow-x: hidden !important; } }
+@media screen and (max-width: 660px) {
+  body.contact-us footer {
+    position: relative; } }
+@media screen and (max-width: 660px) {
+  body.contact-us footer section {
+    color: #000000; } }
+@media screen and (max-width: 660px) {
+  body.contact-us footer section a {
+    color: #000000; } }
 
 .contact {
   background-image: url(../images/contact-us.jpg);
@@ -9276,7 +9646,11 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       background-size: cover; } }
   @media screen and (max-width: 600px) {
     .contact {
-      padding: 100px 10%; } }
+      padding: 70px 40px 40px 40px; } }
+  @media screen and (max-width: 450px) {
+    .contact {
+      padding-bottom: 80px;
+      padding-top: 98px; } }
   .contact #wrapper {
     content: "";
     display: table;
@@ -9327,6 +9701,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         width: 30%;
         float: left;
         margin-top: 18px; }
+        @media screen and (max-width: 660px) {
+          .contact #wrapper .main .contentbox .contactdetail {
+            width: 100%;
+            text-align: center; } }
         .contact #wrapper .main .contentbox .contactdetail h2 {
           font-size: 76px;
           color: #4870f5;
@@ -9336,6 +9714,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             .contact #wrapper .main .contentbox .contactdetail h2 {
               margin-bottom: 26px;
               font-size: 65px; } }
+          @media screen and (max-width: 660px) {
+            .contact #wrapper .main .contentbox .contactdetail h2 {
+              font-size: 35px; } }
+          @media screen and (max-width: 450px) {
+            .contact #wrapper .main .contentbox .contactdetail h2 {
+              font-size: 25px; } }
         .contact #wrapper .main .contentbox .contactdetail address {
           font-family: content-font;
           font-style: normal;
@@ -9348,9 +9732,24 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             .contact #wrapper .main .contentbox .contactdetail address {
               font-size: 16px;
               line-height: 22px; } }
+          @media screen and (max-width: 660px) {
+            .contact #wrapper .main .contentbox .contactdetail address {
+              font-size: 14px;
+              line-height: 23px;
+              padding: 0 2%;
+              width: 33%;
+              float: left; } }
+          @media screen and (max-width: 450px) {
+            .contact #wrapper .main .contentbox .contactdetail address {
+              width: 100%;
+              float: none; } }
       .contact #wrapper .main .contentbox .contact_form {
         width: 51%;
         float: right; }
+        @media screen and (max-width: 660px) {
+          .contact #wrapper .main .contentbox .contact_form {
+            width: 100%;
+            text-align: center; } }
         .contact #wrapper .main .contentbox .contact_form strong {
           font-size: 26px;
           font-family: content-font;
@@ -9370,6 +9769,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               padding: 26px; } }
           .contact #wrapper .main .contentbox .contact_form .form form {
             position: relative; }
+            @media screen and (max-width: 660px) {
+              .contact #wrapper .main .contentbox .contact_form .form form input {
+                width: 100%;
+                font-size: 13px; } }
           .contact #wrapper .main .contentbox .contact_form .form input[type="submit"] {
             position: absolute;
             margin-left: -23px;
@@ -9419,36 +9822,6 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     height: 100%; }
   .features #wrapper .pages.pp-section {
     background: #ffffff; }
-    .features #wrapper .pages.pp-section div.contentbox.li-content {
-      background-image: url(../images/box-l.png);
-      background-repeat: no-repeat;
-      background-position: left top; }
-      @media screen and (max-width: 1370px) {
-        .features #wrapper .pages.pp-section div.contentbox.li-content {
-          background-size: contain; } }
-      @media screen and (max-height: 1024px) {
-        .features #wrapper .pages.pp-section div.contentbox.li-content {
-          background-size: 50%; } }
-      .features #wrapper .pages.pp-section div.contentbox.li-content div.content {
-        padding-left: 0%;
-        padding-right: 11%;
-        float: right;
-        text-align: right; }
-        .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul {
-          margin: 55px 55px 0 0; }
-          @media screen and (max-width: 1600px) {
-            .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul {
-              margin: 40px 40px 0 0; } }
-          .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul li i {
-            margin-right: -27px;
-            transform: rotate(180deg);
-            float: right;
-            margin-left: 19px; }
-      .features #wrapper .pages.pp-section div.contentbox.li-content .circle {
-        float: left;
-        text-align: left;
-        padding-left: 9%;
-        padding-right: 0; }
     .features #wrapper .pages.pp-section .contentbox {
       width: 100%;
       height: 100%;
@@ -9459,20 +9832,32 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       @media screen and (max-width: 1370px) {
         .features #wrapper .pages.pp-section .contentbox {
           background-size: contain; } }
-      @media screen and (max-height: 1024px) {
+      @media screen and (min-height: 1024px) {
         .features #wrapper .pages.pp-section .contentbox {
           background-size: 50%; } }
+      @media screen and (max-width: 660px) {
+        .features #wrapper .pages.pp-section .contentbox {
+          background: #ffffff; } }
       .features #wrapper .pages.pp-section .contentbox .middle {
         width: 100%;
         display: table-cell;
         vertical-align: middle; }
+        @media screen and (max-width: 660px) {
+          .features #wrapper .pages.pp-section .contentbox .middle {
+            padding: 0% 10%; } }
         .features #wrapper .pages.pp-section .contentbox .middle .content {
           width: 46%;
-          padding-left: 11%;
+          padding-left: 9%;
           float: left; }
           @media screen and (max-width: 1600px) {
             .features #wrapper .pages.pp-section .contentbox .middle .content {
               padding-left: 9%; } }
+          @media screen and (max-width: 660px) {
+            .features #wrapper .pages.pp-section .contentbox .middle .content {
+              width: 100%;
+              padding: 0;
+              float: left;
+              text-align: center; } }
           .features #wrapper .pages.pp-section .contentbox .middle .content span {
             color: #e5e5e5;
             font-size: 180px; }
@@ -9482,6 +9867,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             @media screen and (max-width: 1370px) {
               .features #wrapper .pages.pp-section .contentbox .middle .content span {
                 font-size: 125px; } }
+            @media screen and (max-width: 1100px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content span {
+                font-size: 100px; } }
+            @media screen and (max-width: 660px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content span {
+                font-size: 60px; } }
           .features #wrapper .pages.pp-section .contentbox .middle .content h2 {
             margin-top: -23px;
             color: #4870f5;
@@ -9496,6 +9887,13 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             @media screen and (max-width: 1370px) {
               .features #wrapper .pages.pp-section .contentbox .middle .content h2 {
                 font-size: 40px; } }
+            @media screen and (max-width: 1100px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content h2 {
+                font-size: 30px; } }
+            @media screen and (max-width: 660px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content h2 {
+                font-size: 22px;
+                margin-top: -11px; } }
           .features #wrapper .pages.pp-section .contentbox .middle .content p {
             font-size: 30px;
             color: #373737;
@@ -9506,6 +9904,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             @media screen and (max-width: 1370px) {
               .features #wrapper .pages.pp-section .contentbox .middle .content p {
                 font-size: 18px; } }
+            @media screen and (max-width: 1100px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content p {
+                font-size: 16px; } }
+            @media screen and (max-width: 660px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content p {
+                font-size: 16px; } }
           .features #wrapper .pages.pp-section .contentbox .middle .content ul {
             margin: 55px 0 0 55px;
             font-size: 23px;
@@ -9517,14 +9921,28 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             @media screen and (max-width: 1370px) {
               .features #wrapper .pages.pp-section .contentbox .middle .content ul {
                 font-size: 16px;
-                margin: 20px 0 0 20px; } }
+                margin: 20px 0 0 40px; } }
+            @media screen and (max-width: 1100px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content ul {
+                font-size: 14px; } }
+            @media screen and (max-width: 660px) {
+              .features #wrapper .pages.pp-section .contentbox .middle .content ul {
+                font-size: 13px;
+                margin: 0; } }
             .features #wrapper .pages.pp-section .contentbox .middle .content ul li {
               margin-bottom: 15px;
-              padding-left: 32px; }
+              padding-right: -32px; }
               .features #wrapper .pages.pp-section .contentbox .middle .content ul li i {
                 color: #4870f5;
                 margin-right: 19px;
                 margin-left: -27px; }
+                @media screen and (max-width: 1100px) {
+                  .features #wrapper .pages.pp-section .contentbox .middle .content ul li i {
+                    margin-left: 0px;
+                    margin-right: 9px; } }
+              @media screen and (max-width: 660px) {
+                .features #wrapper .pages.pp-section .contentbox .middle .content ul li {
+                  margin-bottom: 10px; } }
         .features #wrapper .pages.pp-section .contentbox .middle .circle {
           width: 54%;
           float: right;
@@ -9534,12 +9952,18 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           @media screen and (max-width: 1600px) {
             .features #wrapper .pages.pp-section .contentbox .middle .circle {
               padding-top: 120px; } }
+          @media screen and (max-width: 660px) {
+            .features #wrapper .pages.pp-section .contentbox .middle .circle {
+              width: 62%;
+              padding: 0;
+              float: none;
+              margin: 0 auto; } }
           .features #wrapper .pages.pp-section .contentbox .middle .circle img.graphic {
             border: 28px solid #dcdcdc;
             border-radius: 33px; }
             @media screen and (max-width: 1370px) {
               .features #wrapper .pages.pp-section .contentbox .middle .circle img.graphic {
-                border-size: 18px;
+                border: 18px solid #dcdcdc;
                 border-radius: 20px; } }
       .features #wrapper .pages.pp-section .contentbox.launch {
         background-image: url(../images/box-large.png);
@@ -9589,6 +10013,168 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                   text-align: right;
                   font-weight: 500;
                   line-height: 25px; }
+    .features #wrapper .pages.pp-section div.contentbox.li-content {
+      background-image: url(../images/box-l.png);
+      background-repeat: no-repeat;
+      background-position: left top; }
+      @media screen and (max-width: 1370px) {
+        .features #wrapper .pages.pp-section div.contentbox.li-content {
+          background-size: contain; } }
+      @media screen and (min-height: 1024px) {
+        .features #wrapper .pages.pp-section div.contentbox.li-content {
+          background-size: 50%; } }
+      @media screen and (max-width: 660px) {
+        .features #wrapper .pages.pp-section div.contentbox.li-content {
+          background: #ffffff; } }
+      .features #wrapper .pages.pp-section div.contentbox.li-content div.content {
+        padding-left: 0%;
+        padding-right: 11%;
+        float: right;
+        text-align: right; }
+        @media screen and (max-width: 660px) {
+          .features #wrapper .pages.pp-section div.contentbox.li-content div.content {
+            width: 100%;
+            padding: 0;
+            float: left;
+            text-align: center; } }
+        .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul {
+          margin: 55px 55px 0 0; }
+          @media screen and (max-width: 1600px) {
+            .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul {
+              margin: 40px 40px 0 0; } }
+          @media screen and (max-width: 1370px) {
+            .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul {
+              margin: 20px 40px 0 0; } }
+          @media screen and (max-width: 1100px) {
+            .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul {
+              font-size: 14px;
+              margin: 0; } }
+          .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul li i {
+            margin-right: -27px;
+            transform: rotate(180deg);
+            float: right;
+            margin-left: 19px; }
+            @media screen and (max-width: 1100px) {
+              .features #wrapper .pages.pp-section div.contentbox.li-content div.content ul li i {
+                margin-left: 0px;
+                margin-right: 9px;
+                float: none;
+                transform: rotate(0deg); } }
+      .features #wrapper .pages.pp-section div.contentbox.li-content .circle {
+        float: left;
+        text-align: left;
+        padding-left: 9%;
+        padding-right: 0; }
+        @media screen and (max-width: 660px) {
+          .features #wrapper .pages.pp-section div.contentbox.li-content .circle {
+            width: 62%;
+            padding: 0;
+            float: none;
+            margin: 0 auto; } }
+
+@media screen and (max-width: 660px) {
+  body.pricing footer section {
+    color: #000000; } }
+@media screen and (max-width: 660px) {
+  body.pricing footer section a {
+    color: #000000; } }
+
+.pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list {
+  list-style: none;
+  width: 24%;
+  vertical-align: baseline;
+  display: inline-block;
+  margin: 0 5.2% 0 4%;
+  text-align: center; }
+  @media screen and (max-width: 1440px) {
+    .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list {
+      width: 29%;
+      margin: 0 2% 0 2%; } }
+  @media screen and (max-width: 1050px) {
+    .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list {
+      width: 31%;
+      margin: 0 1% 0 1%; } }
+  .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box {
+    text-align: left;
+    background: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 1px 12px #b1b1b1; }
+    .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box i, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box i {
+      margin-top: -50px;
+      margin-left: -15px;
+      position: absolute; }
+      .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box i svg, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box i svg {
+        width: 62px;
+        height: 67px; }
+    .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title {
+      background: #e7ecfe;
+      font-size: 17px;
+      text-align: center;
+      padding: 28px 28px 22px 28px; }
+      @media screen and (max-width: 1440px) {
+        .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title {
+          padding: 15px 28px 15px 28px;
+          font-size: 15px; } }
+      @media screen and (max-width: 1050px) {
+        .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title {
+          padding: 11px 28px 11px 28px;
+          font-size: 13px; } }
+      .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title h3, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title h3 {
+        color: #333333;
+        margin: 0;
+        padding: 0;
+        font-family: heading-bold;
+        font-weight: bold;
+        letter-spacing: 0;
+        text-transform: uppercase; }
+      .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title p, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title p {
+        line-height: 18px;
+        letter-spacing: 0px;
+        margin: 0;
+        padding: 11px 32px 0px; }
+        @media screen and (max-width: 1050px) {
+          .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title p, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title p {
+            padding: 11px 13px 0px; } }
+    .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box ul, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul {
+      color: #828282;
+      font-size: 18px;
+      text-align: center;
+      padding: 18px 28px 22px 28px;
+      line-height: 34px; }
+      @media screen and (max-width: 1440px) {
+        .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box ul, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul {
+          font-size: 15px;
+          line-height: 27px;
+          padding: 9px 28px 9px 28px; } }
+      @media screen and (max-width: 1050px) {
+        .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box ul, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul {
+          font-size: 13px;
+          line-height: 24px;
+          padding: 8px 28px 8px 28px; } }
+      .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box ul li, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul li {
+        list-style: none;
+        font-family: content-font; }
+    .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box span, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box span {
+      background: #646464;
+      text-align: center;
+      color: #ffffff;
+      font-size: 19px;
+      width: 100%;
+      float: left;
+      padding: 18px;
+      text-transform: uppercase; }
+      @media screen and (max-width: 1440px) {
+        .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box span, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box span {
+          padding: 10px;
+          font-size: 16px; } }
+  .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .buttom, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom {
+    display: inline-block;
+    margin-top: 34px; }
+    @media screen and (max-width: 1050px) {
+      .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .buttom, .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom {
+        font-size: 16px;
+        padding: 13px 29px; } }
 
 .pricing #wrapper {
   width: 100%;
@@ -9620,6 +10206,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     .pricing #wrapper .page1.pp-section .contentbox {
       vertical-align: middle;
       display: table-cell; }
+      @media screen and (max-width: 660px) {
+        .pricing #wrapper .page1.pp-section .contentbox {
+          display: block;
+          margin-top: 90px; } }
       .pricing #wrapper .page1.pp-section .contentbox .middle-cont {
         content: "";
         display: table;
@@ -9652,10 +10242,32 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             max-width: 720px;
             margin-left: auto;
             margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .pricing #wrapper .page1.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 450px) {
+          .pricing #wrapper .page1.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto; } }
         .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top {
           position: absolute;
           width: 52%;
           margin-left: -4%; }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top {
+              width: 100%;
+              margin-left: 0%;
+              position: relative;
+              text-align: center; } }
           .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top h2 {
             color: #4870f5;
             font-size: 65px;
@@ -9669,6 +10281,13 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             @media screen and (max-width: 1050px) {
               .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top h2 {
                 font-size: 32px; } }
+            @media screen and (max-width: 660px) {
+              .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top h2 {
+                width: 100%;
+                margin-left: 0%;
+                font-size: 22px;
+                position: relative;
+                text-align: center; } }
           .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top p {
             font-size: 21px; }
             @media screen and (max-width: 1440px) {
@@ -9680,107 +10299,36 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 font-size: 13px;
                 line-height: 19px;
                 width: 47%; } }
+            @media screen and (max-width: 660px) {
+              .pricing #wrapper .page1.pp-section .contentbox .middle-cont .content-top p {
+                width: 100%;
+                margin-left: 0%;
+                position: relative;
+                text-align: center; } }
       .pricing #wrapper .page1.pp-section .contentbox .pricing {
         margin-top: 2%; }
+        @media screen and (max-width: 660px) {
+          .pricing #wrapper .page1.pp-section .contentbox .pricing.web {
+            display: none; } }
+        .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile {
+          display: none; }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile {
+              display: block;
+              margin-top: -16px; } }
+          .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list {
+            margin-top: 75px;
+            margin-left: 25px; }
+            .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box i {
+              left: 50%;
+              margin-left: -35px; }
+            .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list .box .title {
+              padding: 22px 28px 17px 28px; }
+            .pricing #wrapper .page1.pp-section .contentbox .pricing.mobile .list ul {
+              display: none; }
         .pricing #wrapper .page1.pp-section .contentbox .pricing ul {
           display: table;
           width: 100%; }
-          .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list {
-            list-style: none;
-            width: 24%;
-            vertical-align: baseline;
-            display: inline-block;
-            margin: 0 5.2% 0 4%;
-            text-align: center; }
-            @media screen and (max-width: 1440px) {
-              .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list {
-                width: 29%;
-                margin: 0 2% 0 2%; } }
-            @media screen and (max-width: 1050px) {
-              .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list {
-                width: 31%;
-                margin: 0 1% 0 1%; } }
-            .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box {
-              text-align: left;
-              background: #ffffff;
-              border-radius: 20px;
-              overflow: hidden;
-              box-shadow: 0 1px 12px #b1b1b1; }
-              .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box i {
-                margin-top: -50px;
-                margin-left: -15px;
-                position: absolute; }
-                .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box i svg {
-                  width: 62px;
-                  height: 67px; }
-              .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title {
-                background: #e7ecfe;
-                font-size: 17px;
-                text-align: center;
-                padding: 28px 28px 22px 28px; }
-                @media screen and (max-width: 1440px) {
-                  .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title {
-                    padding: 15px 28px 15px 28px;
-                    font-size: 15px; } }
-                @media screen and (max-width: 1050px) {
-                  .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title {
-                    padding: 11px 28px 11px 28px;
-                    font-size: 13px; } }
-                .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title h3 {
-                  color: #333333;
-                  margin: 0;
-                  padding: 0;
-                  font-family: heading-bold;
-                  font-weight: bold;
-                  letter-spacing: 0;
-                  text-transform: uppercase; }
-                .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title p {
-                  line-height: 18px;
-                  letter-spacing: 0px;
-                  margin: 0;
-                  padding: 11px 32px 0px; }
-                  @media screen and (max-width: 1050px) {
-                    .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box .title p {
-                      padding: 11px 13px 0px; } }
-              .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul {
-                color: #828282;
-                font-size: 18px;
-                text-align: center;
-                padding: 18px 28px 22px 28px;
-                line-height: 34px; }
-                @media screen and (max-width: 1440px) {
-                  .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul {
-                    font-size: 15px;
-                    line-height: 27px;
-                    padding: 9px 28px 9px 28px; } }
-                @media screen and (max-width: 1050px) {
-                  .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul {
-                    font-size: 13px;
-                    line-height: 24px;
-                    padding: 8px 28px 8px 28px; } }
-                .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box ul li {
-                  list-style: none;
-                  font-family: content-font; }
-              .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box span {
-                background: #646464;
-                text-align: center;
-                color: #ffffff;
-                font-size: 19px;
-                width: 100%;
-                float: left;
-                padding: 18px;
-                text-transform: uppercase; }
-                @media screen and (max-width: 1440px) {
-                  .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .box span {
-                    padding: 10px;
-                    font-size: 16px; } }
-            .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom {
-              display: inline-block;
-              margin-top: 34px; }
-              @media screen and (max-width: 1050px) {
-                .pricing #wrapper .page1.pp-section .contentbox .pricing ul li.list .buttom {
-                  font-size: 16px;
-                  padding: 13px 29px; } }
   .pricing #wrapper .page2.pp-section {
     background-image: url(../images/bg2.jpg);
     background-repeat: no-repeat;
@@ -9795,6 +10343,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     .pricing #wrapper .page2.pp-section .contentbox {
       vertical-align: middle;
       display: table-cell; }
+      @media screen and (max-width: 660px) {
+        .pricing #wrapper .page2.pp-section .contentbox {
+          display: block;
+          margin-top: 90px; } }
       .pricing #wrapper .page2.pp-section .contentbox .middle-cont {
         content: "";
         display: table;
@@ -9819,6 +10371,22 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             max-width: 720px;
             margin-left: auto;
             margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .pricing #wrapper .page2.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 420px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 450px) {
+          .pricing #wrapper .page2.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 280px;
+            margin-left: auto;
+            margin-right: auto; } }
         .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top h2 {
           color: #4870f5;
           font-size: 60px;
@@ -9837,6 +10405,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               margin-top: 0;
               margin-bottom: 9px;
               width: 100%; } }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top h2 {
+              font-size: 22px; } }
+          @media screen and (max-width: 450px) {
+            .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top h2 {
+              font-size: 18px; } }
         .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box {
           padding-left: 50px;
           width: 50%;
@@ -9850,107 +10424,42 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           @media screen and (max-width: 1050px) {
             .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box {
               font-size: 16px; } }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box {
+              width: 100%;
+              padding-left: 0px; } }
+          @media screen and (max-width: 450px) {
+            .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box {
+              font-size: 13px; } }
           .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box.last {
             padding-left: 100px; }
             @media screen and (max-width: 1440px) {
               .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box.last {
                 padding-left: 50px; } }
+            @media screen and (max-width: 660px) {
+              .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box.last {
+                padding-left: 0px; } }
+            @media screen and (max-width: 450px) {
+              .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box.last p {
+                display: none; } }
           @media screen and (max-width: 1050px) {
             .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box p {
               line-height: 21px; } }
-  .pricing #wrapper .page3.pp-section {
-    background-image: url(../images/contact-us.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #ffffff; }
-    @media screen and (max-width: 1600px) and (min-height: 1200px) {
-      .pricing #wrapper .page3.pp-section {
-        background-size: cover; } }
-    @media screen and (max-height: 1200px) {
-      .pricing #wrapper .page3.pp-section {
-        background-size: cover; } }
-    .pricing #wrapper .page3.pp-section .contentbox {
-      vertical-align: middle;
-      display: table-cell; }
-      .pricing #wrapper .page3.pp-section .contentbox .middle-cont {
-        content: "";
-        display: table;
-        table-layout: fixed;
-        max-width: 1370px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%; }
-        @media screen and (max-width: 1440px) {
-          .pricing #wrapper .page3.pp-section .contentbox .middle-cont {
-            content: "";
-            display: table;
-            table-layout: fixed;
-            max-width: 1000px;
-            margin-left: auto;
-            margin-right: auto; } }
-        @media screen and (max-width: 1050px) {
-          .pricing #wrapper .page3.pp-section .contentbox .middle-cont {
-            content: "";
-            display: table;
-            table-layout: fixed;
-            max-width: 720px;
-            margin-left: auto;
-            margin-right: auto; } }
-        .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2 {
-          color: #4870f5;
-          font-size: 55px;
-          text-align: center;
-          font-weight: 400;
-          letter-spacing: 0;
-          margin-top: 0px; }
-          @media screen and (max-width: 1440px) {
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2 {
-              font-size: 45px;
-              margin-bottom: 18px; } }
-          @media screen and (max-width: 1050px) {
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form h2 {
-              font-size: 28px; } }
-        .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form strong {
-          font-size: 26px;
-          font-family: content-font;
-          font-weight: normal; }
-          @media screen and (max-width: 1050px) {
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form strong {
-              font-size: 16px; } }
-        .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form {
-          margin-top: 9px;
-          background: rgba(132, 152, 193, 0.5);
-          padding: 63px 84px 90px;
-          text-align: center; }
-          @media screen and (max-width: 1050px) {
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form {
-              padding: 40px 40px 66px; } }
-          .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form {
-            position: relative; }
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
-              width: 47%;
-              float: left; }
-              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text:nth-child(2n+2) {
-                margin-left: 6%; }
-              @media screen and (max-width: 1050px) {
-                .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
-                  font-size: 16px;
-                  padding: 16px; } }
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full {
-              width: 100%;
-              margin-bottom: 0; }
-          .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
-            position: absolute;
-            margin-top: 56px;
-            margin-left: -97px; }
-            @media screen and (max-width: 1050px) {
-              .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
-                margin-top: 33px;
-                margin-left: -81px; } }
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"].black {
-              background: #333333;
-              margin-right: -23px;
-              right: 0; }
+          @media screen and (max-width: 660px) {
+            .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box p {
+              font-size: 13px;
+              line-height: 13px; } }
+          @media screen and (max-width: 450px) {
+            .pricing #wrapper .page2.pp-section .contentbox .middle-cont .content-top .box p {
+              font-size: 12px;
+              line-height: 17px; } }
+
+@media screen and (max-width: 660px) {
+  body.insurance footer section {
+    color: #000000; } }
+@media screen and (max-width: 660px) {
+  body.insurance footer section a {
+    color: #000000; } }
 
 .insurance #wrapper {
   width: 100%;
@@ -9973,10 +10482,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         display: table;
         width: 100%; } }
   .insurance #wrapper .page1.pp-section {
-    background-image: url(../images/box-ins.png);
-    background-repeat: no-repeat;
-    background-position: left top;
     background-color: #fff; }
+    @media screen and (max-width: 660px) {
+      .insurance #wrapper .page1.pp-section {
+        background-color: #f4f7fc; } }
     .insurance #wrapper .page1.pp-section .middle {
       display: block;
       height: 100%; }
@@ -9984,10 +10493,21 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         width: 50%;
         height: 100%;
         display: table; }
+        @media screen and (max-width: 1600px) {
+          .insurance #wrapper .page1.pp-section .middle .content {
+            width: 48%; } }
+        @media screen and (max-width: 660px) {
+          .insurance #wrapper .page1.pp-section .middle .content {
+            width: 100%;
+            height: auto;
+            padding: 15% 10% 0% 10%; } }
         .insurance #wrapper .page1.pp-section .middle .content .centercontent {
           display: table-cell;
           vertical-align: middle;
           text-align: right; }
+          @media screen and (max-width: 660px) {
+            .insurance #wrapper .page1.pp-section .middle .content .centercontent {
+              text-align: center; } }
           .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
             text-transform: capitalize;
             margin-top: 0;
@@ -9996,46 +10516,101 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             font-weight: 400;
             margin-bottom: 0;
             letter-spacing: 0; }
+            @media screen and (max-width: 1680px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
+                font-size: 55px; } }
+            @media screen and (max-width: 1600px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
+                font-size: 49px; } }
+            @media screen and (max-width: 1570px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
+                font-size: 46px; } }
+            @media screen and (max-width: 1370px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
+                font-size: 42px; } }
+            @media screen and (max-width: 1300px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
+                font-size: 38px; } }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent h2 {
+                font-size: 20px; } }
           .insurance #wrapper .page1.pp-section .middle .content .centercontent p {
             font-size: 30px;
             color: #373737;
             margin-top: 12px; }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent p {
+                font-size: 14px;
+                line-height: 18px; } }
+            @media screen and (max-width: 450px) {
+              .insurance #wrapper .page1.pp-section .middle .content .centercontent p {
+                font-size: 12px;
+                line-height: 16px; } }
       .insurance #wrapper .page1.pp-section .middle .circle {
         width: 45%;
-        padding-top: 109px;
-        padding-right: 3px;
+        height: 100%;
         text-align: right;
-        float: left; }
+        float: left;
+        position: relative;
+        background: #f5f7fd; }
+        @media screen and (max-width: 1600px) {
+          .insurance #wrapper .page1.pp-section .middle .circle {
+            width: 48%; } }
+        @media screen and (max-width: 660px) {
+          .insurance #wrapper .page1.pp-section .middle .circle {
+            width: 100%;
+            height: 60%; } }
+        .insurance #wrapper .page1.pp-section .middle .circle:after {
+          content: '';
+          background-image: url(../svg/right-shape.svg);
+          background-repeat: no-repeat;
+          background-position: right center;
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 200; }
+          @media screen and (max-width: 660px) {
+            .insurance #wrapper .page1.pp-section .middle .circle:after {
+              display: none; } }
         .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+          width: 86%;
           border: 0;
-          border-radius: 0; }
-        .insurance #wrapper .page1.pp-section .middle .circle .rightbtn {
-          position: relative;
-          right: -7px;
-          float: right;
-          margin-top: -172px;
-          font-family: heading-thin; }
-          .insurance #wrapper .page1.pp-section .middle .circle .rightbtn span {
-            color: #ffffff;
-            background: #4870f5;
-            float: right;
-            margin-right: 7px;
-            padding: 30px 29px 26px 29px; }
-            .insurance #wrapper .page1.pp-section .middle .circle .rightbtn span img {
-              width: 11px;
-              height: 21px; }
-            .insurance #wrapper .page1.pp-section .middle .circle .rightbtn span.txt {
-              padding: 16px 29px;
-              font-size: 21px;
-              width: 300px;
-              text-align: right;
-              font-weight: 500;
-              line-height: 25px; }
+          border-radius: 0;
+          padding: 22% 0  0% 0; }
+          @media screen and (max-width: 1680px) {
+            .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+              padding: 29% 0 0% 0; } }
+          @media screen and (max-width: 1370px) {
+            .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+              padding: 19% 0 0% 0;
+              width: 80%; } }
+@media screen and (max-width: 1300px) and (min-height: 1024px) {
+  .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+    padding: 39% 0 0% 0; } }
+
+          @media screen and (max-width: 1050px) {
+            .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+              padding: 39% 0 0% 0;
+              width: 80%; } }
+          @media screen and (max-width: 660px) {
+            .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+              padding-top: 32px;
+              width: 85%;
+              margin-right: -24px; } }
+          @media screen and (max-width: 450px) {
+            .insurance #wrapper .page1.pp-section .middle .circle img.graphic {
+              padding-top: 16%;
+              width: 95%; } }
   .insurance #wrapper .page2.pp-section, .insurance #wrapper .page4.pp-section {
     background-image: url(../images/contact-us.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #ffffff; }
+    @media screen and (min-height: 1200px) {
+      .insurance #wrapper .page2.pp-section, .insurance #wrapper .page4.pp-section {
+        background-size: cover; } }
     .insurance #wrapper .page2.pp-section .contentbox, .insurance #wrapper .page4.pp-section .contentbox {
       vertical-align: middle;
       display: table-cell; }
@@ -10048,9 +10623,44 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         margin-right: auto;
         width: 100%;
         font-size: 30px; }
+        @media screen and (max-width: 1680px) {
+          .insurance #wrapper .page2.pp-section .contentbox .middle-cont, .insurance #wrapper .page4.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1570px) {
+          .insurance #wrapper .page2.pp-section .contentbox .middle-cont, .insurance #wrapper .page4.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1200px) {
+          .insurance #wrapper .page2.pp-section .contentbox .middle-cont, .insurance #wrapper .page4.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .insurance #wrapper .page2.pp-section .contentbox .middle-cont, .insurance #wrapper .page4.pp-section .contentbox .middle-cont {
+            width: 100%;
+            height: auto;
+            padding: 10% 10% 0% 10%; } }
         .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
           float: left;
           width: 57%; }
+          @media screen and (max-width: 1680px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
+              width: 50%; } }
+          @media screen and (max-width: 660px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
+              width: 63%; } }
           .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content h2, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
             color: #4870f5;
             font-size: 67px;
@@ -10058,13 +10668,73 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             font-weight: 400;
             letter-spacing: 0;
             margin-bottom: 19px; }
+            @media screen and (max-width: 1680px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content h2, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 60px; } }
+            @media screen and (max-width: 1570px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content h2, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 48px; } }
+            @media screen and (max-width: 1200px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content h2, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 34px; } }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content h2, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 24px; } }
+            @media screen and (max-width: 450px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content h2, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 19px; } }
+          @media screen and (max-width: 1570px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+              font-size: 21px;
+              line-height: 24px; } }
+          @media screen and (max-width: 1200px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+              font-size: 19px;
+              line-height: 22px; } }
+          @media screen and (max-width: 660px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+              font-size: 13px;
+              line-height: 14px; } }
+          @media screen and (max-width: 450px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+              font-size: 11px;
+              line-height: 13px; } }
           .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content .box, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
             margin-top: 55px;
             padding-left: 70px;
             box-sizing: border-box;
             font-size: 20px; }
+            @media screen and (max-width: 1570px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content .box, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
+                font-size: 18px;
+                margin-top: 22px; } }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content .box, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
+                font-size: 13px;
+                margin-top: 0px;
+                padding-left: 0px; } }
+            @media screen and (max-width: 1570px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content .box p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                font-size: 18px; } }
+            @media screen and (max-width: 1200px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content .box p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                font-size: 16px;
+                line-height: 19px; } }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page2.pp-section .contentbox .middle-cont .content .box p, .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                font-size: 13px;
+                line-height: 14px; } }
         .insurance #wrapper .page2.pp-section .contentbox .middle-cont img.graphic, .insurance #wrapper .page4.pp-section .contentbox .middle-cont img.graphic {
           float: right; }
+          @media screen and (max-width: 1680px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont img.graphic, .insurance #wrapper .page4.pp-section .contentbox .middle-cont img.graphic {
+              width: 45%; } }
+          @media screen and (max-width: 1370px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont img.graphic, .insurance #wrapper .page4.pp-section .contentbox .middle-cont img.graphic {
+              width: 40%; } }
+          @media screen and (max-width: 660px) {
+            .insurance #wrapper .page2.pp-section .contentbox .middle-cont img.graphic, .insurance #wrapper .page4.pp-section .contentbox .middle-cont img.graphic {
+              width: 30%; } }
     .insurance #wrapper .page2.pp-section .largetxt, .insurance #wrapper .page4.pp-section .largetxt {
       margin-top: 26px;
       display: block;
@@ -10078,6 +10748,14 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           margin-top: 20px;
           font-size: 21px;
           display: block; } }
+      @media screen and (max-width: 660px) {
+        .insurance #wrapper .page2.pp-section .largetxt, .insurance #wrapper .page4.pp-section .largetxt {
+          font-size: 21px;
+          margin-top: 10px; } }
+      @media screen and (max-width: 450px) {
+        .insurance #wrapper .page2.pp-section .largetxt, .insurance #wrapper .page4.pp-section .largetxt {
+          font-size: 14px;
+          margin-top: 5px; } }
   .insurance #wrapper .page3.pp-section {
     background-color: #ffffff; }
     .insurance #wrapper .page3.pp-section:before {
@@ -10114,6 +10792,35 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         margin-left: auto;
         margin-right: auto;
         width: 100%; }
+        @media screen and (max-width: 1680px) {
+          .insurance #wrapper .page3.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1570px) {
+          .insurance #wrapper .page3.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1200px) {
+          .insurance #wrapper .page3.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .insurance #wrapper .page3.pp-section .contentbox .middle-cont {
+            width: 100%;
+            height: auto;
+            padding: 0% 10% 0% 10%; } }
         .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo {
           text-align: center; }
           .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo h2 {
@@ -10122,13 +10829,37 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             font-weight: 400;
             letter-spacing: 0;
             margin-top: 0px; }
+            @media screen and (max-width: 1570px) {
+              .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo h2 {
+                font-size: 50px; } }
+            @media screen and (max-width: 1200px) {
+              .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo h2 {
+                font-size: 38px; } }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo h2 {
+                font-size: 23px; } }
           .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul {
             list-style: none;
             margin-top: 100px; }
+            @media screen and (max-width: 1680px) {
+              .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul {
+                margin-top: 70px; } }
+            @media screen and (max-width: 1200px) {
+              .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul {
+                margin-top: 40px; } }
+            @media screen and (max-width: 660px) {
+              .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul {
+                margin-top: 10px; } }
             .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul li {
               display: inline-block;
               padding: 0 1%;
               margin-top: 17px; }
+              @media screen and (max-width: 1680px) {
+                .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul li {
+                  width: 19%; } }
+              @media screen and (max-width: 660px) {
+                .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul li {
+                  width: 28%; } }
               .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul li a {
                 list-style: none; }
                 .insurance #wrapper .page3.pp-section .contentbox .middle-cont .client-logo ul li a img {
@@ -10139,6 +10870,9 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     background-image: url(../images/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center center; }
+    @media screen and (min-height: 1200px) {
+      .insurance #wrapper .page4.pp-section {
+        background-size: cover; } }
     .insurance #wrapper .page4.pp-section:before {
       background-image: url(../images/left-arrow_d.png);
       background-repeat: no-repeat;
@@ -10169,16 +10903,79 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       font-weight: 400;
       letter-spacing: 0;
       margin-bottom: 47px; }
-    .insurance #wrapper .page4.pp-section .middle-cont .content {
+      @media screen and (max-width: 1680px) {
+        .insurance #wrapper .page4.pp-section h2 {
+          font-size: 60px;
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 1570px) {
+        .insurance #wrapper .page4.pp-section h2 {
+          font-size: 50px;
+          margin-bottom: 20px; } }
+      @media screen and (max-width: 1370px) {
+        .insurance #wrapper .page4.pp-section h2 {
+          font-size: 45px;
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 1200px) {
+        .insurance #wrapper .page4.pp-section h2 {
+          font-size: 38px;
+          margin-bottom: 10px; } }
+      @media screen and (max-width: 660px) {
+        .insurance #wrapper .page4.pp-section h2 {
+          font-size: 21px;
+          margin-bottom: 0px; } }
+      @media screen and (max-width: 450px) {
+        .insurance #wrapper .page4.pp-section h2 {
+          font-size: 19px; } }
+    .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
       margin-top: 36px;
       width: 65%; }
-      .insurance #wrapper .page4.pp-section .middle-cont .content p {
+      @media screen and (max-width: 1570px) {
+        .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
+          width: 50%; } }
+      @media screen and (max-width: 1370px) {
+        .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
+          margin-top: 5px; } }
+      @media screen and (max-width: 660px) {
+        .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content {
+          width: 65%;
+          margin-top: 0px; } }
+      .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
         font-size: 21px;
         line-height: 27px; }
+        @media screen and (max-width: 1680px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+            font-size: 20px;
+            line-height: 25px; } }
+        @media screen and (max-width: 1570px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+            font-size: 17px;
+            line-height: 21px; } }
+        @media screen and (max-width: 1370px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+            font-size: 16px;
+            line-height: 20px; } }
+        @media screen and (max-width: 1200px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+            font-size: 14px;
+            line-height: 17px; } }
+        @media screen and (max-width: 660px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+            font-size: 11px;
+            line-height: 13px; } }
+        @media screen and (max-width: 450px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p {
+            font-size: 11px;
+            line-height: 13px; } }
+        @media screen and (max-width: 450px) {
+          .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p:nth-child(4n), .insurance #wrapper .page4.pp-section .contentbox .middle-cont .content p:nth-child(3n) {
+            display: none; } }
   .insurance #wrapper .page5.pp-section {
     background-image: url(../images/bg4.jpg);
     background-repeat: no-repeat;
     background-position: center center; }
+    @media screen and (min-height: 1200px) {
+      .insurance #wrapper .page5.pp-section {
+        background-size: cover; } }
     @media screen and (max-width: 600px) {
       .insurance #wrapper .page5.pp-section {
         padding: 50px 10%; } }
@@ -10211,6 +11008,14 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       @media screen and (max-width: 1600px) and (min-height: 1200px) {
         .insurance #wrapper .page5.pp-section .contentbox {
           padding: 0; } }
+      @media screen and (max-width: 1300px) {
+        .insurance #wrapper .page5.pp-section .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 840px;
+          margin-left: auto;
+          margin-right: auto; } }
       @media screen and (max-width: 1100px) {
         .insurance #wrapper .page5.pp-section .contentbox {
           content: "";
@@ -10242,56 +11047,13 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         .insurance #wrapper .page5.pp-section .contentbox {
           max-width: 100%;
           padding: 0; } }
-  .insurance #wrapper .page6.pp-section {
-    background-image: url(../images/contact-us.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #ffffff; }
-    .insurance #wrapper .page6.pp-section .contentbox {
-      vertical-align: middle;
-      display: table-cell; }
-      .insurance #wrapper .page6.pp-section .contentbox .middle-cont {
-        content: "";
-        display: table;
-        table-layout: fixed;
-        max-width: 1370px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%; }
-        .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form h2 {
-          color: #4870f5;
-          font-size: 55px;
-          text-align: center;
-          font-weight: 400;
-          letter-spacing: 0;
-          margin-top: 0; }
-        .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form strong {
-          font-size: 26px;
-          font-family: content-font;
-          font-weight: normal; }
-        .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form {
-          margin-top: 9px;
-          background: rgba(132, 152, 193, 0.5);
-          padding: 63px 84px 90px;
-          text-align: center; }
-          .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form {
-            position: relative; }
-            .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
-              width: 47%;
-              float: left; }
-              .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text:nth-child(2n+2) {
-                margin-left: 6%; }
-            .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full {
-              width: 100%;
-              margin-bottom: 0; }
-          .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
-            position: absolute;
-            margin-top: 56px;
-            margin-left: -97px; }
-            .insurance #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"].black {
-              background: #333333;
-              margin-right: -23px;
-              right: 0; }
+
+@media screen and (max-width: 660px) {
+  body.white_label footer section {
+    color: #000000; } }
+@media screen and (max-width: 660px) {
+  body.white_label footer section a {
+    color: #000000; } }
 
 .white_label #wrapper {
   width: 100%;
@@ -10314,10 +11076,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         display: table;
         width: 100%; } }
   .white_label #wrapper .page1.pp-section, .white_label #wrapper .page3.pp-section {
-    background-image: url(../images/box-ins_right.png);
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-color: #fff; }
+    background-color: #ffffff; }
+    @media screen and (max-width: 450px) {
+      .white_label #wrapper .page1.pp-section, .white_label #wrapper .page3.pp-section {
+        background-color: #f4f7fc; } }
     .white_label #wrapper .page1.pp-section .middle, .white_label #wrapper .page3.pp-section .middle {
       display: block;
       height: 100%; }
@@ -10326,10 +11088,18 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         height: 100%;
         display: table;
         padding-left: 10%; }
+        @media screen and (max-width: 660px) {
+          .white_label #wrapper .page1.pp-section .middle .content, .white_label #wrapper .page3.pp-section .middle .content {
+            width: 100%;
+            height: auto;
+            padding: 7% 10% 0% 10%; } }
         .white_label #wrapper .page1.pp-section .middle .content .centercontent, .white_label #wrapper .page3.pp-section .middle .content .centercontent {
           display: table-cell;
           vertical-align: middle;
           text-align: left; }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page1.pp-section .middle .content .centercontent, .white_label #wrapper .page3.pp-section .middle .content .centercontent {
+              text-align: center; } }
           .white_label #wrapper .page1.pp-section .middle .content .centercontent h2, .white_label #wrapper .page3.pp-section .middle .content .centercontent h2 {
             text-transform: capitalize;
             margin-top: 0;
@@ -10338,25 +11108,117 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             font-weight: 400;
             margin-bottom: 0;
             letter-spacing: 0; }
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent h2, .white_label #wrapper .page3.pp-section .middle .content .centercontent h2 {
+                font-size: 55px; } }
+            @media screen and (max-width: 1370px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent h2, .white_label #wrapper .page3.pp-section .middle .content .centercontent h2 {
+                font-size: 40px; } }
+            @media screen and (max-width: 1050px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent h2, .white_label #wrapper .page3.pp-section .middle .content .centercontent h2 {
+                font-size: 32px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent h2, .white_label #wrapper .page3.pp-section .middle .content .centercontent h2 {
+                font-size: 22px; } }
           .white_label #wrapper .page1.pp-section .middle .content .centercontent p, .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
             font-size: 30px;
             color: #333333;
             margin-top: 12px;
             line-height: 38px; }
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent p, .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+                font-size: 26px; } }
+            @media screen and (max-width: 1370px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent p, .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+                font-size: 21px; } }
+            @media screen and (max-width: 1050px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent p, .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+                font-size: 17px;
+                line-height: 20px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent p, .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+                font-size: 14px;
+                line-height: 18px; } }
+            @media screen and (max-width: 450px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent p, .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+                font-size: 12px;
+                line-height: 16px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page1.pp-section .middle .content .centercontent p br, .white_label #wrapper .page3.pp-section .middle .content .centercontent p br {
+                display: none; } }
       .white_label #wrapper .page1.pp-section .middle .circle, .white_label #wrapper .page3.pp-section .middle .circle {
         width: 45%;
-        padding-top: 299px;
         padding-right: 3px;
         text-align: right;
-        float: right; }
+        float: right;
+        height: 100%;
+        position: relative;
+        background-image: url(../images/box-ins_right.jpg);
+        background-repeat: repeat;
+        background-position: right top; }
+@media screen and (max-width: 1600px) and (min-height: 1200px) {
+  .white_label #wrapper .page1.pp-section .middle .circle, .white_label #wrapper .page3.pp-section .middle .circle {
+    width: 50%; } }
+
+@media screen and (max-width: 1300px) and (min-height: 1024px) {
+  .white_label #wrapper .page1.pp-section .middle .circle, .white_label #wrapper .page3.pp-section .middle .circle {
+    width: 50%; } }
+
+        @media screen and (max-width: 1050px) {
+          .white_label #wrapper .page1.pp-section .middle .circle, .white_label #wrapper .page3.pp-section .middle .circle {
+            width: 50%; } }
+        @media screen and (max-width: 660px) {
+          .white_label #wrapper .page1.pp-section .middle .circle, .white_label #wrapper .page3.pp-section .middle .circle {
+            width: 100%;
+            height: 60%; } }
         .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
           border: 0;
-          border-radius: 0; }
+          border-radius: 0;
+          padding-top: 27%;
+          padding-left: 2px;
+          width: 100%; }
+@media screen and (min-width: 1920px) and (min-height: 1200px) {
+  .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
+    padding-top: 36%; } }
+
+          @media screen and (max-width: 1680px) {
+            .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
+              padding-top: 44%; } }
+          @media screen and (max-width: 1370px) {
+            .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
+              padding-top: 34%; } }
+@media screen and (max-width: 1300px) and (min-height: 1024px) {
+  .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
+    padding-top: 47%; } }
+
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
+              padding-top: 21%; } }
+          @media screen and (max-width: 450px) {
+            .white_label #wrapper .page1.pp-section .middle .circle img.graphic, .white_label #wrapper .page3.pp-section .middle .circle img.graphic {
+              padding-top: 32%; } }
+        .white_label #wrapper .page1.pp-section .middle .circle:after, .white_label #wrapper .page3.pp-section .middle .circle:after {
+          content: '';
+          background-image: url(../svg/right-arrow2.svg);
+          background-repeat: no-repeat;
+          background-position: left center;
+          width: 100%;
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          z-index: 200; }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page1.pp-section .middle .circle:after, .white_label #wrapper .page3.pp-section .middle .circle:after {
+              display: none; } }
   .white_label #wrapper .page2.pp-section {
     background-image: url(../images/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #ffffff; }
+    @media screen and (min-height: 1200px) {
+      .white_label #wrapper .page2.pp-section {
+        background-size: cover; } }
     .white_label #wrapper .page2.pp-section .contentbox {
       vertical-align: middle;
       display: table-cell; }
@@ -10369,9 +11231,44 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         margin-right: auto;
         width: 100%;
         font-size: 30px; }
+        @media screen and (max-width: 1680px) {
+          .white_label #wrapper .page2.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1440px) {
+          .white_label #wrapper .page2.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1100px) {
+          .white_label #wrapper .page2.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .white_label #wrapper .page2.pp-section .contentbox .middle-cont {
+            width: 100%;
+            height: auto;
+            padding: 22% 10% 0% 10%; } }
         .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content {
           float: left;
           width: 52%; }
+          @media screen and (max-width: 1100px) {
+            .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content {
+              width: 48%; } }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content {
+              width: 100%; } }
           .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content h2 {
             color: #4870f5;
             font-size: 63px;
@@ -10380,9 +11277,27 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             letter-spacing: 0;
             margin-bottom: 19px;
             margin-top: 0px; }
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 48px; } }
+            @media screen and (max-width: 1440px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 40px; } }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 28px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 22px; } }
+            @media screen and (max-width: 450px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 18px; } }
           .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content img.graphic {
             float: left;
             margin-top: 112px; }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .content img.graphic {
+                margin-top: 0px; } }
         .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box {
           margin-top: 74px;
           padding-left: 70px;
@@ -10390,22 +11305,103 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           font-size: 20px;
           float: right;
           width: 47%; }
+          @media screen and (max-width: 1680px) {
+            .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box {
+              font-size: 18px; } }
+          @media screen and (max-width: 1440px) {
+            .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box {
+              margin-top: 20px;
+              padding-left: 40px; } }
+          @media screen and (max-width: 1100px) {
+            .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box {
+              width: 52%;
+              margin-top: 0px; } }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box {
+              width: 100%;
+              padding: 0px; } }
           .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p {
             line-height: 25px; }
-  .white_label #wrapper .page3.pp-section {
-    background-image: url(../images/whitelabel3.png);
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p {
+                line-height: 22px; } }
+            @media screen and (max-width: 1440px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p {
+                font-size: 16px;
+                line-height: 16px; } }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p {
+                font-size: 14px;
+                line-height: 14px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p {
+                font-size: 11px;
+                line-height: 11px; } }
+            @media screen and (max-width: 450px) {
+              .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p:nth-child(3n), .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p:nth-child(4n), .white_label #wrapper .page2.pp-section .contentbox .middle-cont .box p:nth-child(5n) {
+                display: none; } }
+  @media screen and (max-width: 450px) {
+    .white_label #wrapper .page3.pp-section {
+      background-color: #fff; } }
+  .white_label #wrapper .page3.pp-section .middle .circle {
+    width: 55%;
+    background-image: url(../images/whitelabel3.jpg);
     background-repeat: no-repeat;
     background-position: right top; }
-    .white_label #wrapper .page3.pp-section .middle .content {
-      width: 42%; }
-      .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
-        font-size: 20px;
-        line-height: 26px; }
+@media screen and (max-width: 1600px) and (min-height: 1200px) {
+  .white_label #wrapper .page3.pp-section .middle .circle {
+    background-size: cover;
+    background-position: center; } }
+
+    @media screen and (max-width: 1680px) {
+      .white_label #wrapper .page3.pp-section .middle .circle {
+        background-size: cover;
+        background-position: center; } }
+    @media screen and (max-width: 660px) {
+      .white_label #wrapper .page3.pp-section .middle .circle {
+        width: 100%;
+        background-size: cover;
+        height: 56%;
+        margin-top: 55px; } }
+    @media screen and (max-width: 450px) {
+      .white_label #wrapper .page3.pp-section .middle .circle {
+        margin-top: 25px;
+        height: 66%; } }
+  .white_label #wrapper .page3.pp-section .middle .content {
+    width: 42%; }
+    @media screen and (max-width: 660px) {
+      .white_label #wrapper .page3.pp-section .middle .content {
+        width: 100%;
+        padding-top: 0; } }
+    @media screen and (max-width: 660px) {
+      .white_label #wrapper .page3.pp-section .middle .content .centercontent h2 {
+        font-size: 22px; } }
+    .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+      font-size: 20px;
+      line-height: 26px; }
+      @media screen and (max-width: 1440px) {
+        .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+          font-size: 18px;
+          line-height: 22px; } }
+      @media screen and (max-width: 1300px) {
+        .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+          font-size: 16px;
+          line-height: 18px; } }
+      @media screen and (max-width: 660px) {
+        .white_label #wrapper .page3.pp-section .middle .content .centercontent p {
+          font-size: 11px;
+          line-height: 12px; } }
+      @media screen and (max-width: 450px) {
+        .white_label #wrapper .page3.pp-section .middle .content .centercontent p:nth-child(2n) {
+          display: none; } }
   .white_label #wrapper .page4.pp-section {
     background-image: url(../images/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #ffffff; }
+    @media screen and (min-height: 1200px) {
+      .white_label #wrapper .page4.pp-section {
+        background-size: cover; } }
     .white_label #wrapper .page4.pp-section .contentbox {
       vertical-align: middle;
       display: table-cell; }
@@ -10418,9 +11414,44 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         margin-right: auto;
         width: 100%;
         font-size: 30px; }
+        @media screen and (max-width: 1680px) {
+          .white_label #wrapper .page4.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1440px) {
+          .white_label #wrapper .page4.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1100px) {
+          .white_label #wrapper .page4.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .white_label #wrapper .page4.pp-section .contentbox .middle-cont {
+            width: 100%;
+            height: auto;
+            padding: 10% 10% 0% 10%; } }
+        @media screen and (max-width: 450px) {
+          .white_label #wrapper .page4.pp-section .contentbox .middle-cont {
+            padding: 22% 10% 0% 10%; } }
         .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content {
           float: left;
           width: 47%; }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content {
+              width: 100%; } }
           .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
             color: #4870f5;
             font-size: 65px;
@@ -10429,21 +11460,73 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             letter-spacing: 0;
             margin-bottom: 19px;
             margin-top: 0px; }
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 48px; } }
+            @media screen and (max-width: 1440px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 38px; } }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 30px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 21px;
+                margin-bottom: 5px; } }
+            @media screen and (max-width: 450px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content h2 {
+                margin-bottom: 0px; } }
           .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
             margin-top: 16px;
             box-sizing: border-box;
             font-size: 20px;
             float: right;
             width: 90%; }
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
+                font-size: 18px; } }
+            @media screen and (max-width: 1440px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
+                margin-top: 5px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box {
+                width: 100%;
+                margin-top: 0px; } }
             .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
               line-height: 25px; }
+              @media screen and (max-width: 1680px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                  line-height: 23px; } }
+              @media screen and (max-width: 1100px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                  font-size: 14px;
+                  line-height: 18px; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                  font-size: 11px;
+                  line-height: 12px; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .content .box p {
+                  margin-bottom: 0; } }
         .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox {
           width: 50%;
           float: right; }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox {
+              width: 100%; } }
+          @media screen and (max-width: 660px) {
+            .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul {
+              margin-top: 20px; } }
           .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li {
             list-style: none;
             margin-top: 66px;
             display: inline-block; }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li {
+                margin-top: 20px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li {
+                margin-top: 0px; } }
             .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .number {
               width: 193px;
               height: 193px;
@@ -10456,10 +11539,42 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               line-height: 201px;
               float: left;
               font-family: heading-thin; }
+              @media screen and (max-width: 1440px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .number {
+                  width: 150px;
+                  height: 150px;
+                  font-size: 101px;
+                  font-weight: 100;
+                  line-height: 150px; } }
+              @media screen and (max-width: 1100px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .number {
+                  width: 100px;
+                  height: 100px;
+                  font-size: 50px;
+                  line-height: 100px; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .number {
+                  width: 75px;
+                  height: 75px;
+                  font-size: 35px;
+                  line-height: 75px; } }
+              @media screen and (max-width: 450px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .number {
+                  display: none; } }
             .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc {
               float: left;
               width: 75%;
               padding-left: 6%; }
+              @media screen and (max-width: 1680px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc {
+                  width: 66%; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc {
+                  width: 75%; } }
+              @media screen and (max-width: 450px) {
+                .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc {
+                  width: 100%;
+                  padding-left: 0%; } }
               .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
                 margin: 0;
                 font-size: 34px;
@@ -10468,14 +11583,48 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 font-family: heading-thin; }
                 .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc h3 span {
                   color: #4870f5; }
+                @media screen and (max-width: 1680px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 28px; } }
+                @media screen and (max-width: 1440px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 23px; } }
+                @media screen and (max-width: 1100px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 18px; } }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 16px; } }
               .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc p {
                 font-size: 20px;
                 line-height: 26px; }
+                @media screen and (max-width: 1680px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 18px;
+                    line-height: 23px; } }
+                @media screen and (max-width: 1440px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 16px;
+                    line-height: 18px; } }
+                @media screen and (max-width: 1100px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 14px;
+                    line-height: 16px; } }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 11px;
+                    line-height: 13px; } }
+                @media screen and (max-width: 450px) {
+                  .white_label #wrapper .page4.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    margin-top: 4px; } }
   .white_label #wrapper .page5.pp-section {
     background-image: url(../images/bg2.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-color: #ffffff; }
+    @media screen and (min-height: 1200px) {
+      .white_label #wrapper .page5.pp-section {
+        background-size: cover; } }
     .white_label #wrapper .page5.pp-section .contentbox {
       vertical-align: middle;
       display: table-cell; }
@@ -10488,6 +11637,40 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         margin-right: auto;
         width: 100%;
         font-size: 30px; }
+        @media screen and (max-width: 1680px) {
+          .white_label #wrapper .page5.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 28px; } }
+        @media screen and (max-width: 1440px) {
+          .white_label #wrapper .page5.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1100px) {
+          .white_label #wrapper .page5.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .white_label #wrapper .page5.pp-section .contentbox .middle-cont {
+            width: 100%;
+            height: auto;
+            padding: 10% 10% 0% 10%;
+            text-align: center; } }
+        @media screen and (max-width: 450px) {
+          .white_label #wrapper .page5.pp-section .contentbox .middle-cont {
+            padding: 18% 10% 0% 10%; } }
         .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content {
           float: left;
           width: 100%; }
@@ -10499,6 +11682,20 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             letter-spacing: 0;
             margin-bottom: 19px;
             margin-top: 0px; }
+            @media screen and (max-width: 1680px) {
+              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 70px; } }
+            @media screen and (max-width: 1440px) {
+              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 55px; } }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 35px;
+                margin-bottom: 5px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content h2 {
+                font-size: 21px;
+                text-align: center; } }
           .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box {
             margin-top: 16px;
             box-sizing: border-box;
@@ -10506,26 +11703,71 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             float: right;
             width: 100%;
             padding-left: 5%; }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box {
+                margin-top: 5px; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box {
+                padding-left: 0%;
+                margin-top: 0px; } }
             .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p {
               line-height: 25px; }
               .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p:nth-child(4n), .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p:nth-child(5n) {
                 width: 44%; }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p:nth-child(4n), .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p:nth-child(5n) {
+                    width: 100%; } }
+              @media screen and (max-width: 1680px) {
+                .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p {
+                  line-height: 24px; } }
+              @media screen and (max-width: 1440px) {
+                .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p {
+                  font-size: 18px;
+                  line-height: 19px; } }
+              @media screen and (max-width: 1100px) {
+                .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p {
+                  font-size: 14px;
+                  line-height: 16px; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box p {
+                  font-size: 11px;
+                  line-height: 12px; } }
             .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment {
               position: relative;
               float: right;
               width: 60%;
               margin-top: -53px;
               margin-left: 6%; }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment {
+                  width: 100%;
+                  margin-top: 0px;
+                  margin-left: 0%; } }
               .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment p {
-                font-size: 40px;
                 font-size: 40px;
                 padding: 0 11%;
                 line-height: 50px;
                 margin-bottom: 40px;
                 margin-top: 13px; }
-              .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment span {
-                font-size: 30px;
-                font-family: content-font; }
+                @media screen and (max-width: 1440px) {
+                  .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment p {
+                    font-size: 24px;
+                    padding: 0 14%;
+                    line-height: 33px; } }
+                @media screen and (max-width: 1100px) {
+                  .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment p {
+                    font-size: 20px;
+                    line-height: 33px; } }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment p {
+                    font-size: 14px;
+                    line-height: 16px;
+                    margin-bottom: 25px; } }
+                @media screen and (max-width: 450px) {
+                  .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment p {
+                    font-size: 12px;
+                    line-height: 15px;
+                    margin-bottom: 16px; } }
               .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment:after, .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment:before {
                 position: absolute;
                 top: 0;
@@ -10535,6 +11777,10 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 background-repeat: no-repeat;
                 background-position: 0 0;
                 background-size: cover; }
+                @media screen and (max-width: 1100px) {
+                  .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment:after, .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment:before {
+                    width: 40px;
+                    height: 33px; } }
                 @media screen and (max-width: 660px) {
                   .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment:after, .white_label #wrapper .page5.pp-section .contentbox .middle-cont .content .box .comment:before {
                     width: 40px;
@@ -10597,6 +11843,35 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
         margin-right: auto;
         width: 100%;
         font-size: 30px; }
+        @media screen and (max-width: 1680px) {
+          .white_label #wrapper .page6.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+            font-size: 28px; } }
+        @media screen and (max-width: 1440px) {
+          .white_label #wrapper .page6.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 1100px) {
+          .white_label #wrapper .page6.pp-section .contentbox .middle-cont {
+            content: "";
+            display: table;
+            table-layout: fixed;
+            max-width: 720px;
+            margin-left: auto;
+            margin-right: auto; } }
+        @media screen and (max-width: 660px) {
+          .white_label #wrapper .page6.pp-section .contentbox .middle-cont {
+            width: 100%;
+            padding: 10% 10% 0% 10%; } }
         .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox {
           width: 100%; }
           .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li {
@@ -10604,6 +11879,18 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
             margin-top: 66px;
             display: table;
             padding-right: 10%; }
+            @media screen and (max-width: 1440px) {
+              .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li {
+                margin-top: 26px; } }
+            @media screen and (max-width: 1100px) {
+              .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li {
+                margin-top: 30px;
+                padding-right: 5%;
+                padding-left: 0%; } }
+            @media screen and (max-width: 660px) {
+              .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li {
+                margin-top: 10px;
+                padding-right: 0; } }
             .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon {
               width: 346px;
               height: 346px;
@@ -10617,6 +11904,26 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               float: left;
               font-family: heading-thin;
               position: relative; }
+              @media screen and (max-width: 1440px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon {
+                  width: 250px;
+                  height: 250px; } }
+              @media screen and (max-width: 1100px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon {
+                  width: 200px;
+                  height: 200px; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon {
+                  width: 80px;
+                  height: 80px;
+                  float: none;
+                  margin: 0 auto;
+                  margin-bottom: 18px; } }
+              @media screen and (max-width: 450px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon {
+                  width: 60px;
+                  height: 60px;
+                  margin-bottom: 10px; } }
               .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon:after {
                 content: '';
                 width: 100%;
@@ -10624,6 +11931,9 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 position: absolute;
                 top: 0;
                 left: 0; }
+                @media screen and (max-width: 1440px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon:after {
+                    background-size: 70%; } }
               .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .icon.icon1:after {
                 background-image: url(../images/icon_1.png);
                 background-repeat: no-repeat;
@@ -10637,6 +11947,12 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               padding-left: 3%;
               vertical-align: middle;
               display: table-cell; }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc {
+                  width: 100%;
+                  padding-left: 0%;
+                  text-align: center;
+                  display: inline-block; } }
               .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
                 margin: 0;
                 font-size: 54px;
@@ -10644,67 +11960,72 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
                 letter-spacing: 0;
                 color: #4870f5;
                 font-family: heading-thin; }
+                @media screen and (max-width: 1680px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 45px; } }
+                @media screen and (max-width: 1440px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 35px; } }
+                @media screen and (max-width: 1100px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 26px; } }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 21px; } }
+                @media screen and (max-width: 450px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc h3 {
+                    font-size: 18px; } }
               .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc p {
                 font-size: 20px;
                 line-height: 26px; }
+                @media screen and (max-width: 1440px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 18px;
+                    line-height: 20px; } }
+                @media screen and (max-width: 1100px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 16px;
+                    line-height: 18px; } }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 11px;
+                    line-height: 12px; } }
+                @media screen and (max-width: 450px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li .desc p {
+                    font-size: 10px;
+                    line-height: 12px; } }
             .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align {
               padding-right: 0%;
               padding-left: 10%; }
+              @media screen and (max-width: 1100px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align {
+                  padding-left: 5%; } }
+              @media screen and (max-width: 660px) {
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align {
+                  padding-right: 0%;
+                  padding-left: 0%; } }
               .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .icon {
                 float: right; }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .icon {
+                    float: none; } }
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .icon.mobile {
+                  display: none; }
+                  @media screen and (max-width: 840px) {
+                    .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .icon.mobile {
+                      display: block; } }
+                .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .icon.web {
+                  display: block; }
+                  @media screen and (max-width: 840px) {
+                    .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .icon.web {
+                      display: none; } }
               .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .desc {
                 padding-right: 7%;
                 padding-left: 0%; }
-  .white_label #wrapper .page7.pp-section {
-    background-image: url(../images/contact-us.jpg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-color: #ffffff; }
-    .white_label #wrapper .page7.pp-section .contentbox {
-      vertical-align: middle;
-      display: table-cell; }
-      .white_label #wrapper .page7.pp-section .contentbox .middle-cont {
-        content: "";
-        display: table;
-        table-layout: fixed;
-        max-width: 1370px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%; }
-        .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form h2 {
-          color: #4870f5;
-          font-size: 55px;
-          text-align: center;
-          font-weight: 400;
-          letter-spacing: 0;
-          margin-top: 0; }
-        .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form strong {
-          font-size: 26px;
-          font-family: content-font;
-          font-weight: normal; }
-        .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form {
-          margin-top: 9px;
-          background: rgba(132, 152, 193, 0.5);
-          padding: 63px 84px 90px;
-          text-align: center; }
-          .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form {
-            position: relative; }
-            .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text {
-              width: 47%;
-              float: left; }
-              .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text:nth-child(2n+2) {
-                margin-left: 6%; }
-            .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form form input.wpcf7-text-full {
-              width: 100%;
-              margin-bottom: 0; }
-          .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"] {
-            position: absolute;
-            margin-top: 56px;
-            margin-left: -97px; }
-            .white_label #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form input[type="submit"].black {
-              background: #333333;
-              margin-right: -23px;
-              right: 0; }
+                @media screen and (max-width: 660px) {
+                  .white_label #wrapper .page6.pp-section .contentbox .middle-cont .listbox ul li.right-align .desc {
+                    padding-right: 0%;
+                    padding-left: 0%; } }
 
 /* Pages
 	:: Pages
