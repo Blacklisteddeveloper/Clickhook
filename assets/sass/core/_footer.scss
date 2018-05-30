@@ -93,7 +93,7 @@
 footer {
 	@include size(100%,auto);	
 	@include position(absolute, $bottom: 40px);
-	z-index: 2;
+	z-index: 4;
 	
 	@include media($desktop-md-mid){
 		@include position(absolute, $bottom: 18px);
@@ -140,6 +140,12 @@ footer {
 		@include media($mobile-md){
 			color:$white;
 		}
+        &:hover{
+            color: #4870f5;
+        }
+	}
+	span:last-child{
+		display:none;
 	}
 	}
 }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    

@@ -1,4 +1,4 @@
-body.insurance {
+body.crm_for_insurance_agents_brokers_to_manage_leads {
 	footer{
 		section{
 			@include media($mobile-slg){
@@ -13,7 +13,7 @@ body.insurance {
 	}
 }
 
-.insurance {
+.crm_for_insurance_agents_brokers_to_manage_leads {
 	#wrapper {
 		@include size(100%);
 		z-index: -1;
@@ -198,6 +198,9 @@ body.insurance {
 						@include media($milky-way-large-new){
 							width: 50%;
 						}
+						@include media($desktop-lg-max){
+							width: 64%;
+						}
 						@include media($mobile-slg){
 							width: 63%;
 						}
@@ -208,11 +211,15 @@ body.insurance {
     						font-weight: 400;
     						letter-spacing: 0;
     						margin-bottom: 19px;
+    						margin-top: 0;
     						@include media($milky-way-large-new){
 								@include font-size(60);
 							}
 							@include media($desktop-xlg){
-								@include font-size(48);
+								@include font-size(45);
+							}
+							@include media($desktop-lg-max){
+								@include font-size(37);
 							}
 							@include media($desktop-md){
 								@include font-size(34);
@@ -229,6 +236,7 @@ body.insurance {
 								@include font-size(21);
 								line-height: 24px;
 							}
+							
 							@include media($desktop-md){
 								@include font-size(19);
 								line-height: 22px;
@@ -260,6 +268,9 @@ body.insurance {
 								@include media($desktop-xlg){
 									@include font-size(18);
 								}
+								@include media($desktop-lg-max){
+									@include font-size(16);
+								}
 								@include media($desktop-md){
 									@include font-size(16);
 									line-height: 19px;
@@ -277,7 +288,7 @@ body.insurance {
 							width: 45%;
 						}
 						@include media($desktop-lg-max){
-							width: 40%;
+							width: 30%;
 						}
 						@include media($mobile-slg){
 							width: 30%;
@@ -316,12 +327,17 @@ body.insurance {
 				content:'';
 				@include size(351px, 143px);
 				@include position(absolute,$top:180px, $left:0 );
+				@include media($milky-way-large-new){
+					left: -25px;
+				}
 				@include media($milky-way-large){
 				    left: -55px;
 				}
 				@include media($desktop-lg-large) {
-					@include size(186px, null);
+					@include size(221px, null);
 					background-position: center right;
+				    left: 0;
+				    top: 11%;
 				}
 				@include media($mobile-lg){
 					display:none;
@@ -438,11 +454,11 @@ body.insurance {
 				letter-spacing: 0;
 				margin-bottom: 47px;
 				@include media($milky-way-large-new){
-					@include font-size(60);
+					@include font-size(56);
 					margin-bottom: 20px;
 				}
 				@include media($desktop-xlg){
-					@include font-size(50);
+					@include font-size(46);
 					margin-bottom: 20px;
 				}
 				@include media($desktop-lg-max){
@@ -466,11 +482,16 @@ body.insurance {
 					.content{
 						margin-top: 36px;
 						width: 65%;
+						@include media($milky-way-large-new){
+							width: 50%;
+							margin-top: 10px;
+						}
 						@include media($desktop-xlg){
 							width: 50%;
 						}
 						@include media($desktop-lg-max){
 							margin-top: 5px;
+							width: 65%;
 						}
 						@include media($mobile-slg){
 							width: 65%;
@@ -480,16 +501,16 @@ body.insurance {
 							@include font-size(21);	
 							line-height: 27px;	
 							@include media($milky-way-large-new){
-								@include font-size(20);	
-								line-height: 25px;	
+								@include font-size(18);	
+								line-height: 24px;	
 							}
 							@include media($desktop-xlg){
-								@include font-size(17);
-								line-height: 21px;
+								@include font-size(16);
+								line-height: 19px;
 							}
 							@include media($desktop-lg-max){
 								@include font-size(16);
-								line-height: 20px;
+								line-height: 19px;
 							}
 							@include media($desktop-md){
 								@include font-size(14);

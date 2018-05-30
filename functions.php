@@ -15,6 +15,15 @@ if ( ! function_exists( 'clickhook_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
+	 function wpb_custom_new_menu() {
+	  register_nav_menus(
+		array(
+		  'Footer-menu' => __( 'Footer Menu' ),
+		  		  'Header-menu' => __( 'Top Menu' )
+		)
+	  );
+	}
+	add_action( 'init', 'wpb_custom_new_menu' );
 	function clickhook_setup() {
 		/*
 		 * Make theme available for translation.
@@ -23,7 +32,8 @@ if ( ! function_exists( 'clickhook_setup' ) ) :
 		 * to change 'clickhook' to the name of your theme in all the template files.
 		 */
 		load_theme_textdomain( 'clickhook', get_template_directory() . '/languages' );
-
+		
+		
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
 
@@ -177,7 +187,6 @@ function inline_svg($name) {
 function crunchify_stop_loading_wp_embed_and_jquery() {
 	if (!is_admin()) {
 		wp_deregister_script('wp-embed');
-		wp_deregister_script('jquery');  // Bonus: remove jquery too if it's not required
 	}
 }
 add_action('init', 'crunchify_stop_loading_wp_embed_and_jquery');

@@ -291,5 +291,8 @@
 			}
 		}
 	}
+	.pp-tooltip{
+		@extend %pp-tooltip;
+	}
 }
 

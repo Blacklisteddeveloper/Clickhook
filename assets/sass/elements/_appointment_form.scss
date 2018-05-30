@@ -35,8 +35,11 @@
                     letter-spacing: 0;
                     margin-top: 0px;
                     @include media($desktop-lg-large){
-                        @include font-size(45);
-                        margin-bottom: 18px;
+                        @include font-size(39);
+                        margin-bottom: 9px;
+                    }
+                    @include media($desktop-lg-max){
+                       @include font-size(33);
                     }
                     @include media($desktop-sm-mid){
                         @include font-size(28);
@@ -47,6 +50,11 @@
                     @include media($mobile-smd){
                         @include font-size(17);
                         margin-bottom: 4px;
+                    }
+                    br{
+                        @include media($desktop-lg-max){
+                           display: none;
+                        }
                     }
                 }
                 strong{
@@ -64,10 +72,14 @@
                 .form{
                     margin-top: 9px;
                     background:rgba(#8498c1, 0.5);
-                    padding: 63px 84px 90px;
+                    padding: 63px 84px 62px;
                     text-align: center;
+                    display: table;
+                    @include media($desktop-lg-large){
+                        padding: 40px 45px 65px;
+                    }
                     @include media($desktop-lg-max){
-                        padding: 53px 65px 62px;
+                        padding: 40px 45px 55px;
                     }
                     @include media($desktop-sm-mid){
                         padding: 40px 40px 66px;
@@ -75,11 +87,13 @@
                     @include media($mobile-slg){
                          padding: 20px 20px 20px;
                     }
-                    form{
+                    span{
+                        width: 47%;
+                        float: left;
+                        &.Comments {
+                            width: 100%;
+                        }
                         @include position(relative);
-                        input.wpcf7-text{
-                            width: 47%;
-                            float: left;
                             &:nth-child(2n+2) {
                                 margin-left: 6%;
                             }
@@ -91,21 +105,30 @@
                                font-size: 13px;
                                 padding: 13px;
                             }
+                        input.wpcf7-text{
+                            
                         }
                         input.wpcf7-text-full{
-                            width: 100%;
-                            margin-bottom: 0;
+                           
                             @include media($mobile-slg){
                                font-size: 13px;
                                 padding: 13px;
                             }
                         }
                     }
+                    .formsubmit {
+                        width: 100%;
+                        float: left;
+                    }
                     input[type="submit"]{
                         position: absolute;
                         @extend %btnlarge;
-                        margin-top: 56px;
+                        margin-top: 27px;
                         margin-left: -97px;
+                        clear:both;
+                        @include media($desktop-lg-large){
+                            margin-top: 31px;
+                        }
                         @include media($desktop-lg-max){
                             margin-top: 31px;
                         }

@@ -73,6 +73,9 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
 	top: 50%;
 	margin-top: -120px;
 	list-style: none;
+  @include media($desktop-lg-max){
+    left:30px;
+  }
 	@include media($mobile-lg){
 		left: 20px;
 	}
@@ -137,6 +140,9 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   margin: 0;
   padding: 0;
   list-style:none;
+  li{
+    position: relative;
+  }
 }
 
 .pp-slidesNav {
@@ -177,19 +183,31 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   }
 }
 
-.pp-tooltip {
+%pp-tooltip {
   position: absolute;
-  top: -2px;
+  top: 2px;
   color: #fff;
-  font-size: 14px;
-  font-family: arial, helvetica, sans-serif;
+  font-size: 13px;
   white-space: nowrap;
-  max-width: 220px;
-  &.right {
-    right: 20px;
-  }
+  background: #4971f5;
+  padding: 6px 15px;
+  border-radius: 5px;
   &.left {
-    left: 20px;
+    left: 40px;
+  }
+  &:before{
+    content: '';
+    width: 20px;
+    height: 15px;
+    float: left;
+    position: absolute;
+    left: -18px;
+    border-bottom: 7px solid transparent;
+    border-right: 7px solid #4971f5;
+    border-top: 7px solid transparent;
+    border-left: 7px solid transparent;
+    background: none;
+    margin-top: 0px;
   }
 }
 

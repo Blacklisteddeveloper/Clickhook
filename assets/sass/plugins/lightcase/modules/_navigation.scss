@@ -1,7 +1,7 @@
 #lightcase-nav {
 
   // Generic styles for all navigation links
-  a[class*='lightcase-icon-'] {
+  a {
     @include icon-hover(#{map-get($lightcase-settings, 'icon-color')}, #{map-get($lightcase-settings, 'icon-color-hover')});
 
     outline: none;
@@ -36,23 +36,7 @@
       }
     }
 
-    // Close button
-    &.lightcase-icon-close {
-      top: 15px;
-      right: 15px;
-      bottom: auto;
-      margin: 0;
-      opacity: 0;
-      outline: none;
-
-      @media screen and (max-width: #{map-get($lightcase-settings, 'breakpoint')-1}) {
-        position: absolute;
-      }
-
-      @media screen and (min-width: #{map-get($lightcase-settings, 'breakpoint')}) {
-        position: fixed;
-      }
-    }
+    
 
     @media screen and (max-width: #{map-get($lightcase-settings, 'breakpoint')-1}) {
       bottom: 15px;
@@ -70,4 +54,30 @@
     }
   }
 
+}
+.lightcase-icon-close {
+  top: 15px;
+  right: 15px;
+  bottom: auto;
+  margin: 0;
+  opacity: 0;
+  outline: none;
+  z-index: 2000;
+  color: white;
+  font-size: 35px;
+  @media screen and (max-width: #{map-get($lightcase-settings, 'breakpoint')-1}) {
+    position: absolute;
+  }
+  @media screen and (min-width: #{map-get($lightcase-settings, 'breakpoint')}) {
+    position: fixed;
+  }
+  &:before{
+
+  }
+  span{
+    display: none;
+  }
+  &:hover{
+    color: white;
+  }
 }

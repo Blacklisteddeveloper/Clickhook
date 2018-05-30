@@ -13,16 +13,28 @@
 
 <footer >
 		<section>
-			<div class="copyright animated bounceInUp">Copyright © ClickHook. A Division of EMethod. </div>
+			<div class="copyright animated bounceInUp"><?php the_field('copy_right_text',option); ?> </div>
 			<div class="footernav animated bounceInUp">
-				<a href="#">White Label CRM</a> | 
-				<a href="#">Private Label</a>   |   
-				<a href="#">Privacy</a>   |   
-				<a href="#">Terms of Service</a>   |   
-				<a href="#">Insurance</a>   |   
-				<a href="#">API Documentation</a>
+				
+                <?php 
+				
+				class cwp_custom_menu_walker extends Walker
+{
+    public function walk( $elements, $max_depth )
+    {
+        $list = array ();
+
+        foreach ( $elements as $item )
+            $list[] = "<a href='$item->url'>$item->title</a> <span>|</span>";
+
+        return join( "\n", $list );
+    }
+} wp_nav_menu( array( 'menu_id' => 'Footer-menu', 'container' => '', 'menu' => '', 'walker' => new cwp_custom_menu_walker, 'items_wrap'     => '%3$s' ) );
+				
+				?>
+                
 			</div>
-			<a class="chatus" href="#">Chat With Us</a>
+			
 		</section>
 	</footer>
 </section>

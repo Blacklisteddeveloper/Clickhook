@@ -1,0 +1,181 @@
+%download_app {
+	@include background(images,bg3,jpg, no-repeat,center, center);
+	background-color: #f2f2f2;
+	@include media($milky-way-large){
+		background-size: 122%;
+	}
+	@include media($desktop-lg-large){
+		background-size: 105%;
+	}
+	@include media($desktop-lg-wh){
+		background-size: 105%;
+		@include background(images,bg3_small,jpg, no-repeat,center, center);
+	}
+	@include media($desktop-mds){
+		background-size: 112%;
+	}
+	@include media($mobile-lg){
+		background-size: 161%;
+	}
+	@include media($mobile-slg){
+		background-size: 186%;
+	}
+	@include media($mobile-md){
+		@include background(images,bg3-m,png, no-repeat,center, center);
+		background-size: cover;
+		@include padding(82px 10% 0px 10%);
+		
+	}
+	@include media($mobile-xsm){
+		@include padding(50px 10% 0px 10%);
+	}
+	.contentbox {
+		@include outer-container($king-ghidorah);
+		@include size(100%, 100%);
+		@include margin( 0px null null null );
+		@include media($desktop-lg-large){
+			@include outer-container($gipsy-danger);
+		}
+		@include media($short-xxlg22){
+			padding:0;
+		}
+		@include media($desktop-mds){
+			@include outer-container($megatron);
+		}
+		@include media($mobile-lg){
+			@include outer-container($optimus-prime);
+		}
+		@include media($mobile-slg){
+			@include outer-container($xenomorph);
+		}
+		@include media($mobile-md){
+			max-width:100%;
+			padding:0;
+		}
+		.manageleads{
+			vertical-align: middle;
+			display: table-cell;
+			.imgbox {
+				float:left;
+				@include media($desktop-lg-large){
+					width: 24%;
+				}
+				@include media($desktop-lg-wh){
+					width: 20%;
+				}
+				@include media($mobile-slg){
+					width: 24%;
+					margin: 0 auto;
+					float: none;
+				}
+				@include media($mobile-md){
+					width: 32%;
+				}
+			}
+			.desciption {
+				@include size(63%, null);
+				float:right;
+				color: $white;
+				text-align: left;
+				@include media($mobile-slg){
+					@include size(100%, null);
+					text-align: center;
+					margin: 0 auto;
+					float: none;
+				}
+				
+				h3 {
+					@include font-size(72);
+					@include line-height(88);
+					font-family:$main-font;
+					font-weight: normal;
+					letter-spacing: 0px;
+					margin-bottom: 0;
+					margin-top: 129px;
+					@include media($desktop-lg-large){
+						@include font-size(58);
+						@include line-height(62);
+						margin-top: 37px;
+					}
+					@include media($desktop-lg-wh){
+						@include font-size(52);
+						@include line-height(56);
+						margin-top: 32px;
+					}
+					@include media($desktop-mds){
+						font-size: 39px;
+						line-height: 40px;
+						margin-top: 36px;
+					}
+					@include media($mobile-lg){
+						font-size: 32px;
+						line-height: 34px;
+					}
+					@include media($mobile-slg){
+						font-size: 32px;
+						line-height: 34px;
+						margin-top: 29px;
+					}
+					@include media($mobile-xsm){
+						font-size: 22px;
+					    line-height: 27px;
+					    margin-top: 14px;
+					}
+				}
+				p {
+					@include font-size(21);
+					@include line-height(33);
+					margin-bottom: 40px;
+					margin-top: 32px;
+					@include media($milky-way-large){
+						@include font-size(25);
+						@include line-height(37);
+					}
+					@include media($desktop-lg-large){
+						@include font-size(20);
+						@include line-height(26);
+					}
+					@include media($desktop-lg-wh){
+						margin-top: 19px;
+						margin-bottom: 22px;
+					}
+					@include media($desktop-mds){
+						font-size: 15px;
+						line-height: 26px;
+					}
+					@include media($mobile-lg){
+						font-size: 15px;
+						line-height: 26px;
+						margin-top: 19px;
+						margin-bottom: 22px;
+					}
+					@include media($mobile-slg){
+						font-size: 16px;
+						line-height: 24px;
+						margin-top: 14px;
+						margin-bottom: 21px
+					}
+					@include media($mobile-xsm){
+						font-size: 13px;
+					    line-height: 21px;
+					    margin-top: 9px;
+					    margin-bottom: 19px;
+					}
+				}
+				a {
+					margin-right:31px;
+					@include media($desktop-mds){
+						margin-right:15px;
+					}
+					img {
+						@include media($mobile-lg){
+							width: 34%;
+						}
+					}
+					
+				}
+			}
+		}
+
+	}
+}

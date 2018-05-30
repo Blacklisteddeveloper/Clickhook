@@ -18,10 +18,13 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link href="<?php bloginfo('template_url'); ?>/assets/css/main.css" rel="stylesheet" type="text/css" />
 	<link rel="shortcut icon" href="<?php bloginfo('template_url'); ?>/assets/images/chaticon.png" />
-	<?php wp_head(); ?>
+	<?php wp_head();
+		$page_id = get_the_ID();
+	 ?>
 </head>
 
 <body <?php body_class(); ?> style="overflow:hidden">
+
 <div class="hamburgerbox" id="hamburger" >
 	<div class="section ">
 		<div class="middle">
@@ -32,9 +35,10 @@
 				<ul>
 					<?php 
 					$my_menu = array(
-						'menu_id' => 'primary-menu',
+						'menu_id' => 'Header-menu',
 						'menu' => 'main-menu',
 						'container' => '',
+						'theme_location' => 'Header-menu',
 						'items_wrap' => '%3$s' 
 					);
 					wp_nav_menu( $my_menu );
@@ -50,11 +54,11 @@
 	<header >
 		<div class="logo animated bounceInDown">
 			<a href="<?php bloginfo( 'url' ); ?>" title="<?php bloginfo( 'name' ); ?>">
-				<img src="<?php bloginfo('template_url'); ?>/assets/images/logo.png" alt="" />
+				<img src="<?php the_field('element_logo',option); ?>" alt="" />
 			 </a>
 		</div>
 		<nav class="animated bounceInDown">
-			<a href="https://leads.clickhook.io/create" class="getdemo">TRY FOR FREE</a>
+			<a href="<?php the_field('header_button_link',option); ?>" class="getdemo"><?php the_field('header_button_text',option); ?></a>
 			<div class="hamburger hamburger--spring">
 				<div class="hamburger-box">
 				  <div class="hamburger-inner"></div>

@@ -131,7 +131,7 @@ body.contact-us{
 						@include media($desktop-md){
 							padding: 26px;
 						}
-			 			form{
+			 			.formsubmit{
 			 				@include position(relative);
 			 				input{
 			 					@include media($mobile-slg){
@@ -139,7 +139,6 @@ body.contact-us{
 									font-size: 13px;
 								}
 			 				}
-
 			 			}
 			 			input[type="submit"]{
 			 				position: absolute;

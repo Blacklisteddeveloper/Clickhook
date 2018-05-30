@@ -74,10 +74,46 @@ input[type="time"],
 input[type="datetime"],
 input[type="datetime-local"],
 input[type="color"] {
+	&.wpcf7-not-valid{
+		color:red;
+		&:focus,&:placeholder {
+			color:red;
+		}
+		&::-webkit-input-placeholder {
+			color:red;
+		}
+		 
+		&:-moz-placeholder { /* Firefox 18- */
+			color:red;
+		}
+		 
+		&::-moz-placeholder {  /* Firefox 19+ */
+			color:red;
+		}
+		 
+		&:-ms-input-placeholder {  
+			color:red;
+		}
+	}
+
 	
 }
 
 textarea {
 	padding-left: 3px;
 	width: 100%;
+}
+
+
+
+.wpcf7-not-valid-tip {
+	display: none !important;
+}
+
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing,.div.wpcf7-mail-sent-ng {
+	display: none !important;
+}
+
+.ajax-loader {
+	display: none !important;
 }

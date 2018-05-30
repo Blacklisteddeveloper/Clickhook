@@ -14,12 +14,14 @@ get_header();
 			<div class="contentbox ri-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Dashboard.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Dashboard.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>01</span>
 						<h2>Lead Dashboard</h2>
-						<p>Manage & View All Your Leads At A Glance</p>
+						<p>Manage & View All Your Leads At  A Glance</p>
 						<ul>
 							<li><i class="fa fa-caret-right"></i>Quick view of all leads</li>
 							<li><i class="fa fa-caret-right"></i>Search through leads based on various criteria</li>
@@ -34,7 +36,9 @@ get_header();
 			<div class="contentbox li-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Add-A-Lead-To-Another-Worklow.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Add-A-Lead-To-Another-Worklow.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>02</span>
@@ -53,11 +57,14 @@ get_header();
 			<div class="contentbox ri-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Moving-Leads-In-A-Workflow.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Moving-Leads-In-A-Workflow.gif" alt="" class="graphic"/>
+						</a>
+						
 					</div>
 					<div class="content">
 						<span>03</span>
-						<h2>KanBan Style Workflow</h2>
+						<h2>Kanban Style Workflow</h2>
 						<p>Drag n' Drop Leads In Custom Stages</p>
 						<ul>
 							<li><i class="fa fa-caret-right"></i>Click and drag leads to a stage</li>
@@ -73,7 +80,9 @@ get_header();
 			<div class="contentbox li-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Workflow-Stats-At-A-Glance.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Workflow-Stats-At-A-Glance.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>04</span>
@@ -93,11 +102,13 @@ get_header();
 			<div class="contentbox ri-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt=""  class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Add-A-Lead-To-Another-Worklow.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Add-A-Lead-To-Another-Worklow.gif" alt=""  class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>05</span>
-						<h2>Add A Lead To Another Workflow</h2>
+						<h2>Add A Lead to Another Workflow</h2>
 						<p>Why Not Make Cross Selling Easier?</p>
 						<ul>
 							<li><i class="fa fa-caret-right"></i>Leads can live in multiple workflows</li>
@@ -113,7 +124,9 @@ get_header();
 			<div class="contentbox li-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Add-and-Move-Stages-In-A-Workflow.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Add-and-Move-Stages-In-A-Workflow.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>06</span>
@@ -132,8 +145,10 @@ get_header();
 		<aside class="page7 pages" data-menuanchor="page7">
 			<div class="contentbox ri-content">
 				<div class="middle">
-					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+					<div class="circle">	
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Notes.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Notes.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>07</span>
@@ -141,7 +156,7 @@ get_header();
 						<p>Loop In Team Members Anytime You Want</p>
 						<ul>
 							<li><i class="fa fa-caret-right"></i>Quick access to a simple note message board</li>
-							<li><i class="fa fa-caret-right"></i>Loop in team members by starting note with the @ symbol</li>
+							<li><i class="fa fa-caret-right"></i>Loop in team members by starting note with the @ symbol </li>
 							<li><i class="fa fa-caret-right"></i>Team members who are looped into the note will receive an email and can respond right from their email</li>
 						</ul>
 					</div>
@@ -153,14 +168,16 @@ get_header();
 			<div class="contentbox li-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Tasks.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Tasks.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>08</span>
-						<h2>TASKS</h2>
+						<h2>Tasks</h2>
 						<p>Add A Task In Under A Minute</p>
 						<ul>
-							<li><i class="fa fa-caret-right"></i>Simple task manage</li>
+							<li><i class="fa fa-caret-right"></i>Simple task manager</li>
 							<li><i class="fa fa-caret-right"></i>Assign task to anyone</li>
 							<li><i class="fa fa-caret-right"></i>Get notified of a task coming due</li>
 						</ul>
@@ -173,14 +190,16 @@ get_header();
 			<div class="contentbox ri-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Touch-Points.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Touch-Points.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>09</span>
-						<h2>Touch Points </h2>
+						<h2>Touch Points</h2>
 						<p>Keep Track of All Your Touch Points With A Lead</p>
 						<ul>
-							<li><i class="fa fa-caret-right"></i>Gain valuable insights into how many touch points is required on average to close a deal.</li>
+							<li><i class="fa fa-caret-right"></i>Gain valuable insights into how many touch points is required on average to close a deal</li>
 							<li><i class="fa fa-caret-right"></i>Add a touch point in seconds</li>
 							<li><i class="fa fa-caret-right"></i>Add a custom label & follow up reminder</li>
 						</ul>
@@ -193,7 +212,9 @@ get_header();
 			<div class="contentbox li-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Automated-Emails-Email-Templates.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Automated-Emails-Email-Templates.gif" alt="" class="graphic"/>
+						</a>
 					</div>
 					<div class="content">
 						<span>10</span>
@@ -213,11 +234,14 @@ get_header();
 			<div class="contentbox ri-content">
 				<div class="middle">
 					<div class="circle">
-						<img src="<?php bloginfo('template_url'); ?>/assets/images/img1.jpg" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Reports.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Reports.gif" alt="" class="graphic"/>
+						</a>
+						
 					</div>
 					<div class="content">
 						<span>11</span>
-						<h2>REPORTS </h2>
+						<h2>Reports</h2>
 						<p>Say Good-Bye to Convoluted & Hard To Use Reporting</p>
 						<ul>
 							<li><i class="fa fa-caret-right"></i>Quick 7 day or 30 day reports</li>
@@ -241,7 +265,7 @@ get_header();
 					</div>
 					<div class="circle">
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/lastscreen.png" class="graphic" alt="" />
-						<a href="#" class="rightbtn">
+						<a  href="https://leads.clickhook.io/create" class="rightbtn">
 							<span><img src="<?php bloginfo('template_url'); ?>/assets/svg/right-arrow.svg" alt="" /></span>
 							<span class="txt">Respond To Notes Right From Your Email</span>
 						</a>

@@ -1,0 +1,163 @@
+.page-template-default {
+	overflow: inherit !important;
+	header {
+	    height: auto;
+	    position: fixed;
+	    padding-bottom:20px;
+	    background: #fff;
+	}
+	footer {
+	    position: fixed;
+	    bottom: 0;
+	    background: #fff;
+	    padding-bottom: 40px;
+	    padding-top: 11px;
+	}
+	#wrapper {
+		@include size(100%);
+		z-index: -1;
+		@include background(images,strip,png, no-repeat,69%, 90px);
+		@include position(absolute);
+		@include media($mobile-md){
+			height: auto;			
+			position: inherit;
+		}
+		.content-page {
+			@include size(100%);
+			display: table;
+		}
+		.pp-tableCell{
+			@include media($desktop-md-mid){
+				display: table;
+				width: 100%;
+			}
+		}
+		.page{
+			display: table-cell;
+			vertical-align: middle;
+			
+		}
+		.contentbox {
+			@include outer-container($king-ghidorah);
+			text-align: left;
+			@include margin(159px null 159px null );
+			@include media($desktop-lg-large){
+				@include outer-container($gipsy-danger);
+				@include margin( 159px null null null );
+			}
+			@include media($desktop-lg-max){
+				@include outer-container($clover);
+				@include margin( 150px null null null );
+			}
+			@include media($desktop-mds){
+				@include outer-container($megatron);
+				vertical-align: middle;
+				margin-top: 0;
+				display: table-cell;
+			}
+			@include media($desktop-md-mid){
+				display: table-cell;
+				vertical-align: middle;
+			}
+			@include media($short-xxlg22){
+				padding: 0 10%;
+				vertical-align: middle;
+				margin-top: 0;
+				display: table-cell;
+			}
+			@include media($mobile-slg){
+				display: block;
+				margin-top: 25%;
+			}
+			
+			h1 {
+				color: $mailcolor;
+				@include font-size(55);
+				text-align: left;
+				font-weight: 600;
+				@include media($milky-way-large){
+					@include font-size(50);
+					margin-left: 0;
+				}
+				@include media($desktop-mds){
+					@include font-size(36);
+					text-align: center;
+				}
+				@include media($desktop-lg-wh){
+					@include font-size(36);
+				}
+				@include media($desktop-md-mid){
+					@include font-size(36);
+					text-align: center;
+				}
+				@include media($mobile-lg){
+					@include font-size(45);
+					padding: 0 10%;
+				}
+				@include media($mobile-slg){
+					@include font-size(25);
+				}
+				@include media($mobile-xsm){
+					@include font-size(23);
+				}
+			}
+			.box{
+			    @include size(100%,null);
+				h3 {
+					color: $mailcolor;
+					@include font-size(30);
+					text-align: left;
+					font-weight: 600;
+					margin-bottom: 0;
+					margin-top: 22px;
+					@include media($milky-way-large){
+						@include font-size(20);
+						margin-left: 0;
+					}
+					@include media($desktop-mds){
+						@include font-size(20);
+						text-align: center;
+					}
+					@include media($desktop-lg-wh){
+						@include font-size(20);
+					}
+					@include media($desktop-md-mid){
+						@include font-size(18);
+						text-align: center;
+					}
+					@include media($mobile-lg){
+						@include font-size(16);
+						padding: 0 10%;
+					}
+					@include media($mobile-slg){
+						@include font-size(16);
+					}
+					@include media($mobile-xsm){
+						@include font-size(16);
+					}
+				}
+				p{
+					@include font-size(18);
+					line-height: 24px;
+					@include media($milky-way-large){
+						@include font-size(16);
+						line-height: 20px;
+					}
+				}
+			}
+		}
+	}
+	&.pp-viewing-footer {
+		footer {
+			section{
+				color:$white;
+			}
+			.footernav{
+				a{
+					color:$white;
+				}
+			}
+		}
+	}
+}
+
