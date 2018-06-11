@@ -12,13 +12,16 @@ get_header();
 
 
 <div id="wrapper">
+	<div class="cloudbox">
+		<div class="cloud-loop"></div>
+	</div>
   <div class="main">
 	<aside class="pages" >
 		<div class="contentbox">
 			<div class="middle-cont">
 				<div class="content">
 					<h1><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'clickhook' ); ?></h1>
-                    <p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below.', 'clickhook' ); ?></p>
+                    <p><?php esc_html_e( 'It looks like nothing was found at this location.', 'clickhook' ); ?></p>
                     <a href="<?php bloginfo( 'url' ); ?>">Back To Home</a>
 				</div>
 			</div>

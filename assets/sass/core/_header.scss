@@ -117,7 +117,7 @@ nav {
 	position: absolute;
 	left: -100px;
 	top: -100px;
-	z-index: 1;
+	z-index: 3;
 	width: 100px;
 	height: 100px;
 	background: #FFF;
@@ -141,7 +141,7 @@ nav {
 	position: absolute;
 	left: -100px;
 	top: -100px;
-	z-index: 2;
+	z-index: 4;
 	width: 100px;
 	height: 100px;
 	background: #FFF;
@@ -173,7 +173,7 @@ nav {
 }
 .hamburgerbox{
 	position: absolute;
-	z-index: 4;
+	z-index: 5;
 	@include size(100%,100%);
 	display:none;
 	&.active {
@@ -189,7 +189,7 @@ nav {
 	}
 	.section{
 		@include size(100%,100%);
-		opacity: 1;
+		opacity: 3;
 		@include media($desktop-md-mid){
 				display: table;
 		}
@@ -218,12 +218,15 @@ nav {
 			.navbar {
 				width: 35%;
 				float: right;
-				padding: 10% 14% 0 0;
+				padding: 9% 14% 0 0;
 				text-align: right;
 				font-family:$main-font;
-				@include font-size(42);
+				@include font-size(38);
 				@include media($desktop-lg-large){
-					@include font-size(35);
+					@include font-size(33);
+				}
+				@include media($desktop-lg-max) {
+					@include font-size(25);
 				}
 				@include media($desktop-md){
 					@include font-size(21);
@@ -240,19 +243,27 @@ nav {
 					display:inline-block;
 					li {
 						list-style:none;
-						margin-bottom:60px;
-						@include media($desktop-md){
-							margin-bottom:35px;
+						margin-bottom:51px;
+						@include media($desktop-lg-large){
+							margin-bottom: 44px;
+						}
+						@include media($desktop-lg-max) {
+							margin-bottom: 38px;
 						}
 						a{	
 							color:$mailcolor;
 							text-transform: uppercase;
 						}
 						&.downloadbtn{
-							margin-top:90px;
+							margin-top:70px;
 							@extend %btnlarge;
 							@include media($desktop-lg-large){
 								font-size: 21px !important;
+								margin-top:50px;
+							}
+							@include media($desktop-lg-max) {
+								font-size: 18px !important;
+								margin-top:35px;
 							}
 							@include media($desktop-md){
 								font-size: 14px !important;

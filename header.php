@@ -43,7 +43,7 @@
 					);
 					wp_nav_menu( $my_menu );
 					?>
-					<li class="downloadbtn"><a href="#page4">Download App</a></li>
+					<li class="downloadbtn"><a href="<?php echo get_page_link(42); ?>">Download App</a></li>
 				</ul>
 			</div>
 		</div>
@@ -58,7 +58,13 @@
 			 </a>
 		</div>
 		<nav class="animated bounceInDown">
+
+			<?php if(get_field('header_button',$page_id)) { ?>
+				<a href="<?php the_field('button_url',$page_id); ?>" class="getdemo"><?php the_field('header_button',$page_id); ?></a>
+			<?php } else { ?>
 			<a href="<?php the_field('header_button_link',option); ?>" class="getdemo"><?php the_field('header_button_text',option); ?></a>
+
+			<?php } ?>	
 			<div class="hamburger hamburger--spring">
 				<div class="hamburger-box">
 				  <div class="hamburger-inner"></div>

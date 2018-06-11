@@ -1,0 +1,46 @@
+%get_sidebar {
+	@include size(30%, null);
+   	float: right;
+   	@include media($mobile-lg){
+		@include size(100%, null);
+	}
+   	h2{
+   		color: $mailcolor;
+		@include font-size(28);
+		text-align: left;
+		font-weight: 600;
+		letter-spacing: 2px;
+		@include media($milky-way-large){
+			@include font-size(26);
+			margin-left: 0;
+		}
+		@include media($desktop-mds){
+			@include font-size(26);
+			}
+		@include media($desktop-lg-wh){
+			@include font-size(24);
+		}
+		@include media($desktop-md-mid){
+			@include font-size(20);
+		}
+		@include media($mobile-lg){
+			@include font-size(20);
+			letter-spacing: 0px;
+		}
+		@include media($mobile-slg){
+			@include font-size(20);
+			letter-spacing: 0px;
+		}
+		@include media($mobile-xsm){
+			@include font-size(20);
+			letter-spacing: 0px;
+		}
+   	}
+   	ul{
+   		list-style: none;
+   		li{
+   			margin-bottom: 18px;
+			font-size: 16px;
+   		}
+   	}
+}

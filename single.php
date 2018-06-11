@@ -10,28 +10,28 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
-
-		<?php
-		while ( have_posts() ) :
-			the_post();
-
-			get_template_part( 'template-parts/content', get_post_type() );
-
-			the_post_navigation();
-
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
-
-		endwhile; // End of the loop.
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	<div id="wrapper">
+	<div class="cloudbox">
+		<div class="cloud-loop"></div>
+	</div>
+  <div class="content-page">
+	<aside class="page" >
+		<div class="contentbox">
+			<div class="middle-cont">
+				<?php while ( have_posts() ) : the_post();?>
+				<div class="content">
+					<h1><?php the_title(); ?></h1>
+					<div class="entry-meta"><?php clickhook_posted_on(); ?></div><!-- .entry-meta -->
+				</div>
+				<div class="box">
+					<?php the_content();?>
+				</div>
+			<?php endwhile;?>
+			</div>
+		</div>
+    </aside>
+  </div>
+</div>
 
 <?php
-get_sidebar();
 get_footer();

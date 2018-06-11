@@ -100,8 +100,8 @@ input[type="color"] {
 }
 
 textarea {
-	padding-left: 3px;
-	width: 100%;
+	@include size(100%,62px);
+    margin-bottom: 15px;
 }
 
 

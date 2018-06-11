@@ -1,4 +1,4 @@
-.page-template-default,.single {
+.blog {
 	overflow: inherit !important;
 	header {
 	    height: auto;
@@ -16,16 +16,15 @@
 	#wrapper {
 		@include size(100%);
 		z-index: -1;
-		
 		@include position(absolute);
 		background-color:$white;
 		.cloudbox {
 			position: absolute;
 		    top: 10%;
 		    left: 0;
-		    overflow: hidden;
 		    height: 228px;
 		    width: 100%;
+		    overflow: hidden;
 		    z-index: -1;
 			.cloud-loop{
 				@include background(images,strip,png, repeat);
@@ -82,97 +81,65 @@
 			@include media($mobile-lg){
 				max-width: 85%;
 			}
-			
-			h1 {
-				color: $mailcolor;
-				@include font-size(55);
-				text-align: left;
-				font-weight: 600;
-				@include media($milky-way-large){
-					@include font-size(45);
-					margin-left: 0;
+			.min-cont {
+				@include size(60%, null);
+   				float: left;
+   				@include media($mobile-lg){
+					@include size(100%, null);
 				}
-				@include media($desktop-mds){
-					@include font-size(40);
-				}
-				@include media($desktop-lg-wh){
-					@include font-size(35);
-				}
-				@include media($desktop-md-mid){
-					@include font-size(28);
-				}
-				@include media($mobile-lg){
-					@include font-size(26);
-				}
-				@include media($mobile-slg){
-					@include font-size(24);
-					letter-spacing: 0px;
-				}
-				@include media($mobile-xsm){
-					font-size:22px;
-					letter-spacing: 0px;
-				}
-			}
-			.entry-meta{
-				margin-top: 20px;
-			}
-			.box{
-			    @include size(100%,null);
-				h3 {
-					color: $mailcolor;
-					@include font-size(30);
-					text-align: left;
-					font-weight: 600;
-					margin-bottom: 0;
-					margin-top: 22px;
-					@include media($milky-way-large){
-						@include font-size(20);
-						margin-left: 0;
-					}
-					@include media($desktop-mds){
-						@include font-size(20);
+				.content {
+					h2 {
 						
+						a{
+							color: $mailcolor;
+							@include font-size(32);
+							text-align: left;
+							font-weight: 600;
+							letter-spacing: 2px;
+							@include media($milky-way-large){
+								@include font-size(32);
+								margin-left: 0;
+							}
+							@include media($desktop-mds){
+								@include font-size(32);
+							}
+							@include media($desktop-lg-wh){
+								@include font-size(28);
+							}
+							@include media($desktop-md-mid){
+								@include font-size(26);
+							}
+							@include media($mobile-lg){
+								@include font-size(24);
+							}
+							@include media($mobile-slg){
+								font-size: 20px;
+								letter-spacing: 0px;
+							}
+							@include media($mobile-xsm){
+								font-size: 20px;
+								letter-spacing: 0px;
+							}
+							&:hover{
+								color:$dark-blue;
+							}
+						}
 					}
-					@include media($desktop-lg-wh){
-						@include font-size(20);
-					}
-					@include media($desktop-md-mid){
+					p{
 						@include font-size(18);
-						text-align: center;
-					}
-					@include media($mobile-lg){
-						@include font-size(16);
-						padding: 0 10%;
-					}
-					@include media($mobile-slg){
-						@include font-size(16);
-					}
-					@include media($mobile-xsm){
-						@include font-size(16);
-					}
-				}
-				p{
-					@include font-size(18);
-					line-height: 24px;
-					@include media($milky-way-large){
-						@include font-size(16);
-						line-height: 20px;
-					}
-				}
-				ul{
-					margin-bottom: 1.125rem;
-				    line-height: 27px;
-				    font-family: content-font;
-				    margin-left: 23px;
-					li{
-						margin-bottom: 11px;
-						@include font-size(18);
+						line-height: 24px;
 						@include media($milky-way-large){
 							@include font-size(16);
 							line-height: 20px;
 						}
 					}
 				}
+			}
+			.get_sidebar {
+				@extend %get_sidebar;
+			}
+			.box{
+			    @include size(100%,null);
 			}
 		}
 	}

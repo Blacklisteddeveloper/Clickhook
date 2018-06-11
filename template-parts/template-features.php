@@ -36,8 +36,8 @@ get_header();
 			<div class="contentbox li-content">
 				<div class="middle">
 					<div class="circle">
-						<a href="<?php bloginfo('template_url'); ?>/assets/video/Add-A-Lead-To-Another-Worklow.gif" id="example1" class="showcase" data-rel="lightcase">
-							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Add-A-Lead-To-Another-Worklow.gif" alt="" class="graphic"/>
+						<a href="<?php bloginfo('template_url'); ?>/assets/video/Add-A-Lead.gif" id="example1" class="showcase" data-rel="lightcase">
+							<img src="<?php bloginfo('template_url'); ?>/assets/video/min/Add-A-Lead.gif" alt="" class="graphic"/>
 						</a>
 					</div>
 					<div class="content">

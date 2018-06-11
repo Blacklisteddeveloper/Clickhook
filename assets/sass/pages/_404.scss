@@ -2,8 +2,28 @@
 	#wrapper {
 		@include size(100%);
 		z-index: -1;
-		@include background(images,strip,png, no-repeat,69%, 90px);
 		@include position(absolute);
+		background-color:$white;
+		.cloudbox {
+			position: absolute;
+		    top: 10%;
+		    left: 0;
+		    overflow: hidden;
+		    height: 228px;
+		    width: 100%;
+		    z-index: -1;
+			.cloud-loop{
+				@include background(images,strip,png, repeat);
+				-moz-animation: MOVE-BG 50s infinite linear;
+				-webkit-animation: MOVE-BG 50s infinite linear;
+				animation: MOVE-BG 50s infinite linear;
+				position: absolute;
+			    right: -1600px;
+			    left: 0;
+			    bottom: 0;
+			    top: 0;
+			}
+		}
 		@include media($mobile-md){
 			height: auto;			
 			position: inherit;

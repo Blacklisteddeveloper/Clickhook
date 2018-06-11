@@ -93,7 +93,7 @@
 footer {
 	@include size(100%,auto);	
 	@include position(absolute, $bottom: 40px);
-	z-index: 4;
+	z-index: 6;
 	
 	@include media($desktop-md-mid){
 		@include position(absolute, $bottom: 18px);

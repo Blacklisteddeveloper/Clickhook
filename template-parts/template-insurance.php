@@ -19,6 +19,7 @@ get_header();
 					<div class="centercontent">
 						<h2><?php the_field('heading_1',$page_id); ?></h2>
 						<p><?php the_field('subheading_1',$page_id); ?></p>
+						<a class="showcase" data-rel="lightcase" href="https://player.vimeo.com/video/272254151?autoplay=1"><i class="fa fa-play"></i><span>Play Now</span></a>
 					</div>
 				</div>
 			</div>

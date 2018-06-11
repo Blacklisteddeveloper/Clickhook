@@ -17,9 +17,9 @@ get_header();
 						<img src="<?php bloginfo('template_url'); ?>/assets/images/phoneFrame.gif">
 					</div>
 					<div class="desciption">
-						<h3>Manage your leads while you’re on the go.</h3>
-						<p>It doesn’t matter where you go. ClickHook goes with you. With our apps for iPhone and Android, you can manage your leads anywhere you want.</p>
-						<a target="_blank" href="https://itunes.apple.com/in/app/clickhook/id1061850138?mt=8"><img src="<?php bloginfo('template_url'); ?>/assets/images/appavailable-1.png"/></a><a target="_blank" href="https://play.google.com/store/apps/details?id=com.clickhookFly&hl=en"><img src="<?php bloginfo('template_url'); ?>/assets/images/appavailable-2.png"/></a>
+						<h3><?php the_field('heading_4',2); ?></h3>
+						<p><?php the_field('description_4',2); ?></p>
+						<a target="_blank" href="<?php the_field('button_link_1',2); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/images/appavailable-1.png"/></a><a target="_blank" href="<?php the_field('button_link_2',2); ?>"><img src="<?php bloginfo('template_url'); ?>/assets/images/appavailable-2.png"/></a>
 					</div>
 				</div>
 				

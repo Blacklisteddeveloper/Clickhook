@@ -9,9 +9,10 @@
   from {
     -webkit-transform-origin: center;
     transform-origin: center;
-   -webkit-transform: none;
-    transform: none;
-    opacity: 0; }
+   
+      -webkit-transform: rotate3d(0, 0, 1, -90deg);
+    transform: rotate3d(0, 0, 1, -90deg);
+    opacity: 1;  }
   to {
     -webkit-transform-origin: center;
     transform-origin: center;
@@ -19,7 +20,8 @@
       -webkit-transform: rotate3d(0, 0, 1, -90deg);
     transform: rotate3d(0, 0, 1, -90deg);
     opacity: 1; } }
-.rotateIn22.animated {
+
+.rotateIn22 {
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     animation-delay: 1s;
@@ -30,7 +32,7 @@
   -webkit-animation-name: rotateIn22;
   animation-name: rotateIn22; }
 </style>
-<g data-svg-origin="63.45000076293945 67.00000381469727"  class="rotateIn22 animated infinite" >
+<g data-svg-origin="63.45000076293945 67.00000381469727"  class="rotateIn22 " >
 	<path class="rotate0" d="M65.5,45.4h31.3c4.3,0,7.8,3.5,7.8,7.8v27.6c0,4.3-3.5,7.8-7.8,7.8H30.1c-4.3,0-7.8-3.5-7.8-7.8V53.2
 		c0-4.3,3.5-7.8,7.8-7.8h12.4H65.5z"></path>
 	<line class="rotate1" x1="27.9" y1="70.2" x2="27.9" y2="63.9"></line>

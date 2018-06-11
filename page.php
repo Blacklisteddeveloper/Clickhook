@@ -15,6 +15,9 @@
 get_header();
 ?>
 <div id="wrapper">
+	<div class="cloudbox">
+		<div class="cloud-loop"></div>
+	</div>
   <div class="content-page">
 	<aside class="page" >
 		<div class="contentbox">

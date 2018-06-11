@@ -190,3 +190,13 @@ function crunchify_stop_loading_wp_embed_and_jquery() {
 	}
 }
 add_action('init', 'crunchify_stop_loading_wp_embed_and_jquery');
+
+function custom_loginlogo() {
+echo '<style type="text/css">
+#login h1 a{background-image: url('.get_bloginfo('template_directory').'/assets/images/logo.png) !important;  width: 100%;
+    height: 50px;
+    background-size: auto;}
+   
+</style>';
+}
+add_action('login_head', 'custom_loginlogo');

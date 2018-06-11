@@ -15,45 +15,33 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+<div id="wrapper">
+	<div class="cloudbox">
+		<div class="cloud-loop"></div>
+	</div>
+  <div class="content-page">
+	<aside class="page" >
+		<div class="contentbox">
+			<div class="min-cont">
+				<?php if ( have_posts() ) : if ( is_home() && ! is_front_page() ) while ( have_posts() ) : the_post(); ?>
+				<div class="content">
+					<h2><?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?></h2>
+					<div class="entry-meta"><?php clickhook_posted_on(); ?></div><!-- .entry-meta -->
+				 	<?php the_excerpt(); ?>
+				</div>
+			<?php endwhile;
+			the_posts_navigation(); 
+			else : endif; ?>
+			</div>
+			<div class="get_sidebar">
+				<?php get_sidebar(); ?>
+			</div>
+		</div>
+    </aside>
+  </div>
+</div>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-				?>
-				<header>
-					<h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
-				</header>
-				<?php
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				/*
-				 * Include the Post-Type-specific template for the content.
-				 * If you want to override this in a child theme, then include a file
-				 * called content-___.php (where ___ is the Post Type name) and that will be used instead.
-				 */
-				get_template_part( 'template-parts/content', get_post_type() );
-
-			endwhile;
-
-			the_posts_navigation();
-
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
-
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	
 
 <?php
-get_sidebar();
 get_footer();

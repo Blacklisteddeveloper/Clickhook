@@ -4374,7 +4374,7 @@ nav {
   position: absolute;
   left: -100px;
   top: -100px;
-  z-index: 1;
+  z-index: 3;
   width: 100px;
   height: 100px;
   background: #FFF;
@@ -4397,7 +4397,7 @@ nav {
   position: absolute;
   left: -100px;
   top: -100px;
-  z-index: 2;
+  z-index: 4;
   width: 100px;
   height: 100px;
   background: #FFF;
@@ -4427,7 +4427,7 @@ nav {
 
 .hamburgerbox {
   position: absolute;
-  z-index: 4;
+  z-index: 5;
   width: 100%;
   height: 100%;
   display: none; }
@@ -4444,7 +4444,7 @@ nav {
   .hamburgerbox .section {
     width: 100%;
     height: 100%;
-    opacity: 1; }
+    opacity: 3; }
     @media screen and (max-width: 1300px) {
       .hamburgerbox .section {
         display: table; } }
@@ -4467,13 +4467,16 @@ nav {
     .hamburgerbox .section .middle .navbar {
       width: 35%;
       float: right;
-      padding: 10% 14% 0 0;
+      padding: 9% 14% 0 0;
       text-align: right;
       font-family: content-font;
-      font-size: 42px; }
+      font-size: 38px; }
       @media screen and (max-width: 1440px) {
         .hamburgerbox .section .middle .navbar {
-          font-size: 35px; } }
+          font-size: 33px; } }
+      @media screen and (max-width: 1370px) {
+        .hamburgerbox .section .middle .navbar {
+          font-size: 25px; } }
       @media screen and (max-width: 1200px) {
         .hamburgerbox .section .middle .navbar {
           font-size: 21px; } }
@@ -4489,18 +4492,26 @@ nav {
         display: inline-block; }
         .hamburgerbox .section .middle .navbar ul li {
           list-style: none;
-          margin-bottom: 60px; }
-          @media screen and (max-width: 1200px) {
+          margin-bottom: 51px; }
+          @media screen and (max-width: 1440px) {
             .hamburgerbox .section .middle .navbar ul li {
-              margin-bottom: 35px; } }
+              margin-bottom: 44px; } }
+          @media screen and (max-width: 1370px) {
+            .hamburgerbox .section .middle .navbar ul li {
+              margin-bottom: 38px; } }
           .hamburgerbox .section .middle .navbar ul li a {
             color: #4870f5;
             text-transform: uppercase; }
           .hamburgerbox .section .middle .navbar ul li.downloadbtn {
-            margin-top: 90px; }
+            margin-top: 70px; }
             @media screen and (max-width: 1440px) {
               .hamburgerbox .section .middle .navbar ul li.downloadbtn {
-                font-size: 21px !important; } }
+                font-size: 21px !important;
+                margin-top: 50px; } }
+            @media screen and (max-width: 1370px) {
+              .hamburgerbox .section .middle .navbar ul li.downloadbtn {
+                font-size: 18px !important;
+                margin-top: 35px; } }
             @media screen and (max-width: 1200px) {
               .hamburgerbox .section .middle .navbar ul li.downloadbtn {
                 font-size: 14px !important; } }
@@ -4669,7 +4680,7 @@ footer {
   height: auto;
   position: absolute;
   bottom: 40px;
-  z-index: 4; }
+  z-index: 6; }
   @media screen and (max-width: 1300px) {
     footer {
       position: absolute;
@@ -5078,8 +5089,9 @@ input[type="color"].wpcf7-not-valid {
     color: red; }
 
 textarea {
-  padding-left: 3px;
-  width: 100%; }
+  width: 100%;
+  height: 62px;
+  margin-bottom: 15px; }
 
 .wpcf7-not-valid-tip {
   display: none !important; }
@@ -8510,7 +8522,7 @@ object {
             width: 47%;
             float: left;
             position: relative; }
-            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form span.Comments, .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form span.Comments, .request_whitelabel_access #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form span.Comments {
+            .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form span.YourMessage, .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form span.YourMessage, .request_whitelabel_access #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form span.YourMessage {
               width: 100%; }
             .pricing #wrapper .page3.pp-section .contentbox .middle-cont .contact_form .form span:nth-child(2n+2), .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page6.pp-section .contentbox .middle-cont .contact_form .form span:nth-child(2n+2), .request_whitelabel_access #wrapper .page7.pp-section .contentbox .middle-cont .contact_form .form span:nth-child(2n+2) {
               margin-left: 6%; }
@@ -9024,6 +9036,49 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           @media screen and (max-width: 840px) {
             .home #wrapper .page4 .contentbox .manageleads .desciption a img, .download_app #wrapper .contentbox .manageleads .desciption a img {
               width: 34%; } }
+
+.blog #wrapper .contentbox .get_sidebar {
+  width: 30%;
+  float: right; }
+  @media screen and (max-width: 840px) {
+    .blog #wrapper .contentbox .get_sidebar {
+      width: 100%; } }
+  .blog #wrapper .contentbox .get_sidebar h2 {
+    color: #4870f5;
+    font-size: 28px;
+    text-align: left;
+    font-weight: 600;
+    letter-spacing: 2px; }
+    @media screen and (max-width: 1600px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 26px;
+        margin-left: 0; } }
+    @media screen and (max-width: 1100px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 26px; } }
+    @media screen and (max-width: 1370px) and (min-width: 1281px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 24px; } }
+    @media screen and (max-width: 1300px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 20px; } }
+    @media screen and (max-width: 840px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 20px;
+        letter-spacing: 0px; } }
+    @media screen and (max-width: 660px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 20px;
+        letter-spacing: 0px; } }
+    @media screen and (max-width: 375px) {
+      .blog #wrapper .contentbox .get_sidebar h2 {
+        font-size: 20px;
+        letter-spacing: 0px; } }
+  .blog #wrapper .contentbox .get_sidebar ul {
+    list-style: none; }
+    .blog #wrapper .contentbox .get_sidebar ul li {
+      margin-bottom: 18px;
+      font-size: 16px; }
 
 /* Elements
 	:: Elemental Index
@@ -10205,7 +10260,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           z-index: 200;
           padding: 11px 39px 28px 39px;
           margin-top: -96px;
-          z-index: 100;
+          z-index: 2;
           width: 100%;
           margin-left: -39px; }
           @media screen and (max-width: 1440px) {
@@ -11184,6 +11239,22 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
               .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page1.pp-section .middle .content .centercontent p {
                 font-size: 12px;
                 line-height: 16px; } }
+          .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page1.pp-section .middle .content .centercontent a {
+            position: relative;
+            text-align: center;
+            float: right; }
+            .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page1.pp-section .middle .content .centercontent a span {
+              color: #4971f5;
+              font-size: 13px;
+              text-transform: uppercase;
+              display: block; }
+            .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page1.pp-section .middle .content .centercontent a i {
+              color: #4971f5;
+              border: 2px solid #4971f5;
+              padding: 20px 19px 19px 23px;
+              border-radius: 100%;
+              float: right;
+              margin-bottom: 5px; }
       .crm_for_insurance_agents_brokers_to_manage_leads #wrapper .page1.pp-section .middle .circle {
         width: 45%;
         height: 100%;
@@ -12739,48 +12810,64 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
     width: 100%;
     height: 100%;
     display: table; }
-  @media screen and (max-width: 1300px) {
-    .download_app #wrapper .pp-tableCell {
-      display: table;
-      width: 100%; } }
+  .download_app #wrapper .pages {
+    display: table-cell; }
 
-.page-template-default {
+.page-template-default, .single {
   overflow: inherit !important; }
-  .page-template-default header {
+  .page-template-default header, .single header {
     height: auto;
     position: fixed;
     padding-bottom: 20px;
     background: #fff; }
-  .page-template-default footer {
+  .page-template-default footer, .single footer {
     position: fixed;
     bottom: 0;
     background: #fff;
     padding-bottom: 40px;
     padding-top: 11px; }
-  .page-template-default #wrapper {
+  .page-template-default #wrapper, .single #wrapper {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background-image: url(../images/strip.png);
-    background-repeat: no-repeat;
-    background-position: 69% 90px;
-    position: absolute; }
+    position: absolute;
+    background-color: #ffffff; }
+    .page-template-default #wrapper .cloudbox, .single #wrapper .cloudbox {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      overflow: hidden;
+      height: 228px;
+      width: 100%;
+      z-index: -1; }
+      .page-template-default #wrapper .cloudbox .cloud-loop, .single #wrapper .cloudbox .cloud-loop {
+        background-image: url(../images/strip.png);
+        background-repeat: repeat;
+        background-position: 0 0;
+        -moz-animation: MOVE-BG 50s infinite linear;
+        -webkit-animation: MOVE-BG 50s infinite linear;
+        animation: MOVE-BG 50s infinite linear;
+        position: absolute;
+        right: -1600px;
+        left: 0;
+        bottom: 0;
+        top: 0; }
     @media screen and (max-width: 600px) {
-      .page-template-default #wrapper {
+      .page-template-default #wrapper, .single #wrapper {
         height: auto;
         position: inherit; } }
-    .page-template-default #wrapper .content-page {
+    .page-template-default #wrapper .content-page, .single #wrapper .content-page {
       width: 100%;
       height: 100%;
       display: table; }
     @media screen and (max-width: 1300px) {
-      .page-template-default #wrapper .pp-tableCell {
+      .page-template-default #wrapper .pp-tableCell, .single #wrapper .pp-tableCell {
         display: table;
         width: 100%; } }
-    .page-template-default #wrapper .page {
+    .page-template-default #wrapper .page, .single #wrapper .page {
       display: table-cell;
       vertical-align: middle; }
-    .page-template-default #wrapper .contentbox {
+    .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
       content: "";
       display: table;
       table-layout: fixed;
@@ -12791,7 +12878,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
       margin-top: 159px;
       margin-bottom: 159px; }
       @media screen and (max-width: 1440px) {
-        .page-template-default #wrapper .contentbox {
+        .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
           content: "";
           display: table;
           table-layout: fixed;
@@ -12800,7 +12887,7 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           margin-right: auto;
           margin-top: 159px; } }
       @media screen and (max-width: 1370px) {
-        .page-template-default #wrapper .contentbox {
+        .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
           content: "";
           display: table;
           table-layout: fixed;
@@ -12809,63 +12896,66 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           margin-right: auto;
           margin-top: 150px; } }
       @media screen and (max-width: 1100px) {
-        .page-template-default #wrapper .contentbox {
+        .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 840px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 960px) {
+        .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
           content: "";
           display: table;
           table-layout: fixed;
           max-width: 660px;
           margin-left: auto;
-          margin-right: auto;
-          vertical-align: middle;
-          margin-top: 0;
-          display: table-cell; } }
-      @media screen and (max-width: 1300px) {
-        .page-template-default #wrapper .contentbox {
-          display: table-cell;
-          vertical-align: middle; } }
-      @media screen and (max-width: 1600px) and (min-height: 1200px) {
-        .page-template-default #wrapper .contentbox {
-          padding: 0 10%;
-          vertical-align: middle;
-          margin-top: 0;
-          display: table-cell; } }
-      @media screen and (max-width: 660px) {
-        .page-template-default #wrapper .contentbox {
-          display: block;
-          margin-top: 25%; } }
-      .page-template-default #wrapper .contentbox h1 {
+          margin-right: auto; } }
+      @media screen and (max-width: 960px) {
+        .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 660px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 840px) {
+        .page-template-default #wrapper .contentbox, .single #wrapper .contentbox {
+          max-width: 85%; } }
+      .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
         color: #4870f5;
         font-size: 55px;
         text-align: left;
         font-weight: 600; }
         @media screen and (max-width: 1600px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 50px;
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 45px;
             margin-left: 0; } }
         @media screen and (max-width: 1100px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 36px;
-            text-align: center; } }
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 40px; } }
         @media screen and (max-width: 1370px) and (min-width: 1281px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 36px; } }
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 35px; } }
         @media screen and (max-width: 1300px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 36px;
-            text-align: center; } }
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 28px; } }
         @media screen and (max-width: 840px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 45px;
-            padding: 0 10%; } }
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 26px; } }
         @media screen and (max-width: 660px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 25px; } }
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 24px;
+            letter-spacing: 0px; } }
         @media screen and (max-width: 375px) {
-          .page-template-default #wrapper .contentbox h1 {
-            font-size: 23px; } }
-      .page-template-default #wrapper .contentbox .box {
+          .page-template-default #wrapper .contentbox h1, .single #wrapper .contentbox h1 {
+            font-size: 22px;
+            letter-spacing: 0px; } }
+      .page-template-default #wrapper .contentbox .entry-meta, .single #wrapper .contentbox .entry-meta {
+        margin-top: 20px; }
+      .page-template-default #wrapper .contentbox .box, .single #wrapper .contentbox .box {
         width: 100%; }
-        .page-template-default #wrapper .contentbox .box h3 {
+        .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
           color: #4870f5;
           font-size: 30px;
           text-align: left;
@@ -12873,50 +12963,79 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
           margin-bottom: 0;
           margin-top: 22px; }
           @media screen and (max-width: 1600px) {
-            .page-template-default #wrapper .contentbox .box h3 {
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
               font-size: 20px;
               margin-left: 0; } }
           @media screen and (max-width: 1100px) {
-            .page-template-default #wrapper .contentbox .box h3 {
-              font-size: 20px;
-              text-align: center; } }
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
+              font-size: 20px; } }
           @media screen and (max-width: 1370px) and (min-width: 1281px) {
-            .page-template-default #wrapper .contentbox .box h3 {
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
               font-size: 20px; } }
           @media screen and (max-width: 1300px) {
-            .page-template-default #wrapper .contentbox .box h3 {
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
               font-size: 18px;
               text-align: center; } }
           @media screen and (max-width: 840px) {
-            .page-template-default #wrapper .contentbox .box h3 {
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
               font-size: 16px;
               padding: 0 10%; } }
           @media screen and (max-width: 660px) {
-            .page-template-default #wrapper .contentbox .box h3 {
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
               font-size: 16px; } }
           @media screen and (max-width: 375px) {
-            .page-template-default #wrapper .contentbox .box h3 {
+            .page-template-default #wrapper .contentbox .box h3, .single #wrapper .contentbox .box h3 {
               font-size: 16px; } }
-        .page-template-default #wrapper .contentbox .box p {
+        .page-template-default #wrapper .contentbox .box p, .single #wrapper .contentbox .box p {
           font-size: 18px;
           line-height: 24px; }
           @media screen and (max-width: 1600px) {
-            .page-template-default #wrapper .contentbox .box p {
+            .page-template-default #wrapper .contentbox .box p, .single #wrapper .contentbox .box p {
               font-size: 16px;
               line-height: 20px; } }
-  .page-template-default.pp-viewing-footer footer section {
-    color: #ffffff; }
-  .page-template-default.pp-viewing-footer footer .footernav a {
-    color: #ffffff; }
+        .page-template-default #wrapper .contentbox .box ul, .single #wrapper .contentbox .box ul {
+          margin-bottom: 1.125rem;
+          line-height: 27px;
+          font-family: content-font;
+          margin-left: 23px; }
+          .page-template-default #wrapper .contentbox .box ul li, .single #wrapper .contentbox .box ul li {
+            margin-bottom: 11px;
+            font-size: 18px; }
+            @media screen and (max-width: 1600px) {
+              .page-template-default #wrapper .contentbox .box ul li, .single #wrapper .contentbox .box ul li {
+                font-size: 16px;
+                line-height: 20px; } }
+  .page-template-default footer section, .single footer section {
+    color: #4870f5; }
+  .page-template-default footer .footernav a, .single footer .footernav a {
+    color: #4870f5; }
 
 .error404 #wrapper {
   width: 100%;
   height: 100%;
   z-index: -1;
-  background-image: url(../images/strip.png);
-  background-repeat: no-repeat;
-  background-position: 69% 90px;
-  position: absolute; }
+  position: absolute;
+  background-color: #ffffff; }
+  .error404 #wrapper .cloudbox {
+    position: absolute;
+    top: 10%;
+    left: 0;
+    overflow: hidden;
+    height: 228px;
+    width: 100%;
+    z-index: -1; }
+    .error404 #wrapper .cloudbox .cloud-loop {
+      background-image: url(../images/strip.png);
+      background-repeat: repeat;
+      background-position: 0 0;
+      -moz-animation: MOVE-BG 50s infinite linear;
+      -webkit-animation: MOVE-BG 50s infinite linear;
+      animation: MOVE-BG 50s infinite linear;
+      position: absolute;
+      right: -1600px;
+      left: 0;
+      bottom: 0;
+      top: 0; }
   @media screen and (max-width: 600px) {
     .error404 #wrapper {
       height: auto;
@@ -13027,6 +13146,167 @@ body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   color: #ffffff; }
 .error404.pp-viewing-footer footer .footernav a {
   color: #ffffff; }
+
+.blog {
+  overflow: inherit !important; }
+  .blog header {
+    height: auto;
+    position: fixed;
+    padding-bottom: 20px;
+    background: #fff; }
+  .blog footer {
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    padding-bottom: 40px;
+    padding-top: 11px; }
+  .blog #wrapper {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    position: absolute;
+    background-color: #ffffff; }
+    .blog #wrapper .cloudbox {
+      position: absolute;
+      top: 10%;
+      left: 0;
+      height: 228px;
+      width: 100%;
+      overflow: hidden;
+      z-index: -1; }
+      .blog #wrapper .cloudbox .cloud-loop {
+        background-image: url(../images/strip.png);
+        background-repeat: repeat;
+        background-position: 0 0;
+        -moz-animation: MOVE-BG 50s infinite linear;
+        -webkit-animation: MOVE-BG 50s infinite linear;
+        animation: MOVE-BG 50s infinite linear;
+        position: absolute;
+        right: -1600px;
+        left: 0;
+        bottom: 0;
+        top: 0; }
+    @media screen and (max-width: 600px) {
+      .blog #wrapper {
+        height: auto;
+        position: inherit; } }
+    .blog #wrapper .content-page {
+      width: 100%;
+      height: 100%;
+      display: table; }
+    @media screen and (max-width: 1300px) {
+      .blog #wrapper .pp-tableCell {
+        display: table;
+        width: 100%; } }
+    .blog #wrapper .page {
+      display: table-cell;
+      vertical-align: middle; }
+    .blog #wrapper .contentbox {
+      content: "";
+      display: table;
+      table-layout: fixed;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+      margin-top: 159px;
+      margin-bottom: 159px; }
+      @media screen and (max-width: 1440px) {
+        .blog #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 1000px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 159px; } }
+      @media screen and (max-width: 1370px) {
+        .blog #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 960px;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top: 150px; } }
+      @media screen and (max-width: 1100px) {
+        .blog #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 840px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 960px) {
+        .blog #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 660px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 960px) {
+        .blog #wrapper .contentbox {
+          content: "";
+          display: table;
+          table-layout: fixed;
+          max-width: 660px;
+          margin-left: auto;
+          margin-right: auto; } }
+      @media screen and (max-width: 840px) {
+        .blog #wrapper .contentbox {
+          max-width: 85%; } }
+      .blog #wrapper .contentbox .min-cont {
+        width: 60%;
+        float: left; }
+        @media screen and (max-width: 840px) {
+          .blog #wrapper .contentbox .min-cont {
+            width: 100%; } }
+        .blog #wrapper .contentbox .min-cont .content h2 a {
+          color: #4870f5;
+          font-size: 32px;
+          text-align: left;
+          font-weight: 600;
+          letter-spacing: 2px; }
+          @media screen and (max-width: 1600px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 32px;
+              margin-left: 0; } }
+          @media screen and (max-width: 1100px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 32px; } }
+          @media screen and (max-width: 1370px) and (min-width: 1281px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 28px; } }
+          @media screen and (max-width: 1300px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 26px; } }
+          @media screen and (max-width: 840px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 24px; } }
+          @media screen and (max-width: 660px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 20px;
+              letter-spacing: 0px; } }
+          @media screen and (max-width: 375px) {
+            .blog #wrapper .contentbox .min-cont .content h2 a {
+              font-size: 20px;
+              letter-spacing: 0px; } }
+          .blog #wrapper .contentbox .min-cont .content h2 a:hover {
+            color: #3253c3; }
+        .blog #wrapper .contentbox .min-cont .content p {
+          font-size: 18px;
+          line-height: 24px; }
+          @media screen and (max-width: 1600px) {
+            .blog #wrapper .contentbox .min-cont .content p {
+              font-size: 16px;
+              line-height: 20px; } }
+      .blog #wrapper .contentbox .box {
+        width: 100%; }
+  .blog footer section {
+    color: #4870f5; }
+  .blog footer .footernav a {
+    color: #4870f5; }
 
 /* Pages
 	:: Pages
